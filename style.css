@@ -2,3 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+.fixed-background {
+    background-image: url('fondo.jpg'); /* Canvia 'fondo.jpg' pel camí de la teva imatge */
+    background-attachment: fixed; /* Fa que el fons sigui fix */
+    background-size: cover; /* Asegura que la imatge cobreixi tot el contenidor */
+    background-position: center; /* Centra la imatge en el contenidor */
+    width: 100%; /* Ample del contenidor */
+    height: 600px; /* Alçada fixa, ajusta segons les teves necessitats */
+    background-repeat: no-repeat; /* Evita que la imatge es repeteixi */
+    display: block;
+}
+.logo {
+    height: 70px; /* Ajusta aquest valor per fer el logo més gran o més petit */
+    width: auto; /* Manté l'amplada automàtica per preservar la proporció */
+}
+.login-link {
+    display: inline-block; /* Fa que l'enllaç es comporti com un bloc */
+    padding: 0.5rem 1rem; /* Espai interior al voltant del text */
+    background-color: black; /* Fons semitransparent negre */
+    border: 2px solid black; /* Bord de color negre */
+    border-radius: 0.5rem; /* Arrodoniment dels corners */
+    color: white; /* Color del text negre */
+    text-decoration: none; /* Elimina l'estil de subratllat de l'enllaç */
+    transition: background-color 0.3s, color 0.3s; /* Transició suau per a l'efecte hover */
+}
+
+/* Canvia el color del fons i el text en passar el ratolí */
+.login-link:hover {
+    background-color: black; /* Fons negre al passar el ratolí */
+    color: white; /* Color del text blanc al passar el ratolí */
+}
+
+
+
+
