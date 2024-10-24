@@ -19,6 +19,7 @@ document.querySelector('#app').innerHTML = `
       Click on the Vite logo to learn more
     </p>
   </div>
+  
 `
 
 setupCounter(document.querySelector('#counter'))
