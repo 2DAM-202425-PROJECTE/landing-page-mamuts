@@ -332,7 +332,6 @@ body {
     font-size: 62.5%;
     font-family: 'Roboto', Arial, Helvetica, Sans-serif, Verdana; /* Fuente general */
     line-height: 1.6; /* Espaciado entre líneas */
-    padding: 20px; /* Espaciado alrededor del contenido */
 }
 
 /* Estilos del header */
@@ -416,10 +415,9 @@ footer {
     }
 
     button {
-        width: 100%; /* Botones ocupan todo el ancho en móviles */
+        width: 100%;
     }
 }
-=======
 .fixed-background {
     background-image: url('fondo.jpg'); /* Canvia 'fondo.jpg' pel camí de la teva imatge */
     background-attachment: fixed; /* Fa que el fons sigui fix */
@@ -431,22 +429,6 @@ footer {
     display: block;
 }
 .logo {
-    height: 70px; /* Ajusta aquest valor per fer el logo més gran o més petit */
+    height: 100px; /* Ajusta aquest valor per fer el logo més gran o més petit */
     width: auto; /* Manté l'amplada automàtica per preservar la proporció */
-}
-.login-link {
-    display: inline-block; /* Fa que l'enllaç es comporti com un bloc */
-    padding: 0.5rem 1rem; /* Espai interior al voltant del text */
-    background-color: black; /* Fons semitransparent negre */
-    border: 2px solid black; /* Bord de color negre */
-    border-radius: 0.5rem; /* Arrodoniment dels corners */
-    color: white; /* Color del text negre */
-    text-decoration: none; /* Elimina l'estil de subratllat de l'enllaç */
-    transition: background-color 0.3s, color 0.3s; /* Transició suau per a l'efecte hover */
-}
-
-/* Canvia el color del fons i el text en passar el ratolí */
-.login-link:hover {
-    background-color: black; /* Fons negre al passar el ratolí */
-    color: white; /* Color del text blanc al passar el ratolí */
 }
