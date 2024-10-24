@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <title>Plans Personalitzats</title>
+    <style>
+        /* Añadiendo estilo para el efecto de elevación */
+        .plan {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza la transición */
+        }
+        .plan:hover {
+            transform: translateY(-10px); /* Eleva el plan hacia arriba */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Añade sombra para el efecto de profundidad */
+        }
+    </style>
 </head>
 
 <body>
@@ -34,7 +44,9 @@
         </div>
 
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10 mt-10">
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+            <!-- Plan Bàsic -->
+            <a href="plan-basic.html" class="bg-gray-800 p-6 rounded-lg shadow-lg block plan">
                 <h3 class="text-xl font-bold">Pla Bàsic</h3>
                 <p class="mt-4">Ideal per a iniciatives petites.</p>
                 <ul class="mt-2 list-disc list-inside text-gray-300">
@@ -43,8 +55,10 @@
                     <li>Suport per correu electrònic</li>
                 </ul>
                 <p class="mt-4 text-lg font-bold">50€ / mes</p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            </a>
+
+            <!-- Plan Avançat -->
+            <a href="plan-avancat.html" class="bg-gray-800 p-6 rounded-lg shadow-lg block plan">
                 <h3 class="text-xl font-bold">Pla Avançat</h3>
                 <p class="mt-4">Perfecte per a petites empreses.</p>
                 <ul class="mt-2 list-disc list-inside text-gray-300">
@@ -53,8 +67,10 @@
                     <li>Suport telefònic prioritari</li>
                 </ul>
                 <p class="mt-4 text-lg font-bold">100€ / mes</p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            </a>
+
+            <!-- Plan Professional -->
+            <a href="plan-professional.html" class="bg-gray-800 p-6 rounded-lg shadow-lg block plan">
                 <h3 class="text-xl font-bold">Pla Professional</h3>
                 <p class="mt-4">Ideal per a empreses mitjanes.</p>
                 <ul class="mt-2 list-disc list-inside text-gray-300">
@@ -63,8 +79,10 @@
                     <li>Suport telefònic i per correu electrònic</li>
                 </ul>
                 <p class="mt-4 text-lg font-bold">200€ / mes</p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            </a>
+
+            <!-- Plan Premium -->
+            <a href="plan-premium.html" class="bg-gray-800 p-6 rounded-lg shadow-lg block plan">
                 <h3 class="text-xl font-bold">Pla Premium</h3>
                 <p class="mt-4">La solució completa per a empreses grans.</p>
                 <ul class="mt-2 list-disc list-inside text-gray-300">
@@ -73,27 +91,15 @@
                     <li>Suport personalitzat 24/7</li>
                 </ul>
                 <p class="mt-4 text-lg font-bold">500€ / mes</p>
-            </div>
-        </div>
+            </a>
 
-        <!-- Sección de Imágenes o Íconos -->
-        <div class="benefit text-left text-gray-300 mt-12">
-            <h4 class="text-lg font-semibold"><i class="fas fa-images"></i> Imatges o icones</h4>
-            <button class="selectable bg-transparent text-left w-full text-gray-300 hover:text-indigo-600 focus:outline-none" onclick="window.location.href='icons.html'">
-                Visuals atractives que representen (exercicis, plans, entrenadors, seguiment)
-            </button>
-        </div>
-
-        <div class="mt-12 text-center">
-            <p class="text-lg leading-8 text-gray-300">Per a més informació o per personalitzar un pla, si us plau, contacta'ns.</p>
-            <a href="contacte.html" class="inline-block mt-4 rounded-lg bg-indigo-600 px-4 py-2 text-white font-semibold hover:bg-indigo-500">Contacta'ns</a>
         </div>
     </div>
 </div>
 
 <footer class="bg-gray-900 text-white py-4">
     <div class="text-center">
-        <p>&copy; 2024 La teva empresa. Tots els drets reservats.</p>
+        <p>&copy; 2024 Mammuts Fitness App. Tots els drets reservats.</p>
     </div>
 </footer>
 
