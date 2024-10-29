@@ -432,3 +432,18 @@ footer {
     height: 100px; /* Ajusta aquest valor per fer el logo més gran o més petit */
     width: auto; /* Manté l'amplada automàtica per preservar la proporció */
 }
+.login-button {
+    padding: 10px 20px; /* Espaciat interior per fer més gran el recuadre */
+    background-color: black; /* Color de fons del recuadre */
+    color: #FFF; /* Color del text */
+    border-radius: 5px; /* Bordes arrodonits */
+    border: 2px solid black; /* Bord en un color diferent */
+    text-align: center; /* Centrar el text dins del recuadre */
+    transition: background-color 0.3s, transform 0.3s; /* Transicions suaus */
+}
+
+.login-button:hover {
+    background-color: #cf4f3e; /* Color de fons en passar el ratolí */
+    transform: scale(1.05); /* Lleuger augment de mida al passar el ratolí */
+}
+

@@ -1,5 +1,3 @@
-
-
 $(function() {
     var tab = $('.tabs h3 a');
     tab.on('click', function(event) {
