@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How to Design a FAQ Webpage in a SEO Way With Categories</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+
+    <style>
+        body {
+            font-family: Verdana, 'Roboto', sans-serif, Monospace;
+            background: #f0f8ff; /* Color de fondo claro y atractivo */
+            line-height: 1.5;
+            color: #333; /* Texto oscuro para mejor legibilidad */
+        }
+        main {
+            max-width: 80%;
+            margin: 10px auto;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid green;
+        }
+        img {
+            max-width: 100%;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        .title {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .accordion__item {
+            margin-bottom: 10px;
+        }
+        .accordion__item__header {
+            background-color: #e7f3fe; /* Fondo de encabezado atractivo */
+            color: #333; /* Texto oscuro */
+            padding: 15px;
+            cursor: pointer;
+            position: relative;
+            font-family: Arial;
+            font-weight: 400;
+            font-size: 20px;
+            border: 1px solid #b3c7e6; /* Borde suave */
+            transition: background-color 0.3s; /* Transición para el hover */
+        }
+        .accordion__item__header:hover {
+            background-color: #d0e4ff; /* Cambio de color al pasar el mouse */
+        }
+        .accordion__item__header::before {
+            height: 15px;
+            width: 15px;
+            content: "";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            transition: 0.5s all;
+            transform: rotate(45deg);
+            border-right: 2px solid #000;
+            border-bottom: 2px solid #000;
+        }
+        .accordion__item__header.active {
+            background-color: #33a0ff; /* Color de fondo activo */
+            color: #fff; /* Texto blanco */
+        }
+        .accordion__item__header.active::before {
+            transform: rotate(-135deg);
+            top: 23px;
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+        }
+        .accordion__item__content {
+            overflow-y: auto;
+            padding: 0;
+            display: none;
+        }
+        .testbtn {
+            border: 1px solid #99cc44 !important;
+            border-left: 5px solid #99cc44 !important;
+            border-right: 5px solid #99cc44 !important;
+            border-top: 5px solid #99cc44 !important;
+            border-bottom: 5px solid #99cc44 !important;
+            border-radius: 25px;
+            margin-right: 10px;
+        }
+        /* Responsive layout */
+        @media screen and (max-width: 800px) {
+            .testbtn {
+                width: 100%;
+                height: auto;
+                padding: 0 !important;
+                margin: 1px !important;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="zoom_wrapper" class="w3-animate-zoom">
+
+    <div class="w3-panel">
+        <h1 class="title" style="vertical-align: middle; margin-top: 10px; margin-bottom: 10px;">Frequently Asked Questions</h1>
+    </div>
+
+    <div class="w3-bar w3-theme center">
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" style="font-size: 24px" onclick="openCategory(event,'Category1')">Category1</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" style="font-size: 24px" onclick="openCategory(event,'Category2')">Category2</button>
+        <button class="w3-bar-item w3-button testbtn w3-padding-16" style="font-size: 24px" onclick="openCategory(event,'Category3')">Category3</button>
+    </div>
+
+    <br><br>
+
+    <div id="Category1" class="w3-container category w3-animate-opacity">
+        <main>
+            <div class="container">
+                <div class="accordion">
+
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            What is an FAQ page?
+                        </div>
+                        <div class="accordion__item__content">
+                            <p>Frequently Asked Questions (FAQ) pages contain a list of commonly asked questions and answers on a website about topics such as hours, shipping and handling, product information, and return policies.</p>
+                            <p>It’s no secret that the best companies put their customers first.
+                                <br><br>
+                                95% of consumers believe that a good customer experience is important to brand loyalty. Providing a top-notch customer experience can be expensive, time-consuming, and complicated to put into practice.
+                                <br><br>
+                                Sure there are chatbots, support lines, and customer reviews to help shoppers on their path to purchase, but there’s one forgotten customer service tactic that is cost-effective and streamlined. That tactic is an FAQ page.
+                                <br><br>
+                                FAQ pages went out of style for a bit because companies viewed them as outdated and unattractive forms of communication. Now they are on most websites because they save time for both the customer and employees. It’s easy to get carried away with the design and content on the FAQ page. In this guide, you’ll learn all there is to know about crafting an effective FAQ page. Plus, get inspired with 30 best-in-class examples.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            Why you should make an FAQ page?
+                        </div>
+                        <div class="accordion__item__content">
+                            <p>An FAQ page is a time-saving customer service tactic that provides the most commonly asked questions and answers for current or potential customers.</p>
+                            <p>Before diving into how to make an FAQ page, you need to know why having one is so important. There are so many reasons beyond improving the customer experience for perfecting your FAQ page. Keep in mind the importance of an FAQ page when <a href="/articles/e-commerce-website" rel="noopener" target="_blank">developing your own e-commerce website</a> so you can make sure it increases sales and not the other way around.</p>
+                            <h3>Saves time</h3>
+                            <p>This reason might be the most obvious, but it’s a clear benefit of an FAQ page. Not only does the FAQ page save customers time, but it also saves employees time as well. Having an FAQ page ensures customers don’t have to sit on the phone for hours waiting for simple answers and employees don’t have to individually answer all questions.</p>
+                            <p>Companies dedicate a large portion of their budgets to customer service teams. When these teams don’t have to focus on answering the frequently asked questions, they can serve other customer issues in a more timely manner.</p>
+                            <h3>Earns trust</h3>
+                            <p>Information is available at the click of a button, but as we all know, information is not always true. Because of this, customers are more skeptical than ever before. They hunt for products by sifting through reviews, looking at the product on multiple websites, and doing price checking across the internet.</p>
+                            <p>If your brand seems to understand the customer’s pain point and address it through a seamless user experience, the shopper will become a loyal customer.</p>
+                            <p>One of the most common pain points is when shoppers are wondering something about a product or service and there’s no information addressing that question. The customers think to themselves, “I can’t be the only person who’s wondering this,” yet the answer is nowhere to be found. This is a surefire way to guarantee they close the window and go to your competitor’s website.</p>
+                            <p>By creating a comprehensive FAQ page you can assure customers get the answer they need and keep shopping on your site.</p>
+                            <h3>Provides new insights</h3>
+                            <p>It’s difficult to get into the head of a customer. One way to do this is to look at what questions customers frequently ask your support team. You might find the common questions are different than you expected, which can help improve your products and services.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="Category2" class="w3-container category w3-animate-opacity" style="display:none;">
+        <main>
+            <div class="container">
+                <div class="accordion">
+
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            How can I contact support?
+                        </div>
+                        <div class="accordion__item__content">
+                            <p>You can contact our support team via email at support@example.com or through our live chat available on our website.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            What payment methods do you accept?
+                        </div>
+                        <div class="accordion__item__content">
+                            <p>We accept major credit cards, PayPal, and bank transfers. For more details, please visit our payment information page.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            Can I return a product?
+                        </div>
+                        <div class="accordion__item__content">
+                            <p>Yes, we offer a 30-day return policy. If you're not satisfied with your purchase, please follow the return instructions provided in your order confirmation email.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="Category3" class="w3-container category w3-animate-opacity" style="display:none;">
+        <main>
+            <div class="container">
+                <div class="accordion">
+
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            How long does shipping take?
+                        </div>
+                        <div class="accordion__item__content">
+                            <p>Shipping times vary depending on your location. Typically, domestic shipping takes 3-5 business days, while international shipping can take 7-14 business days.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            Do you ship internationally?
+                        </div>
+                        <div class="accordion__item__content">
+                            <p>Yes, we ship to many countries around the world. Please check our shipping policy for more details on international shipping.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            How do I track my order?
+                        </div>
+                        <div class="accordion__item__content">
+                            <p>Once your order has shipped, you will receive a tracking number via email. You can use this number to track your order on our website.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</div>
+
+<script>
+    function openCategory(evt, categoryName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("category");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("w3-bar-item");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-theme", "");
+        }
+        document.getElementById(categoryName).style.display = "block";
+        evt.currentTarget.className += " w3-theme";
+    }
+
+    var acc = document.getElementsByClassName("accordion__item__header");
+    for (var j = 0; j < acc.length; j++) {
+        acc[j].onclick = function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
