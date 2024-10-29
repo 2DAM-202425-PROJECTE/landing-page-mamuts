@@ -1,6 +1,97 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    display: none; /* Ocultem el banner per defecte */
+    z-index: 1000;
+}
+
+.cookie-banner p {
+    margin: 0;
+    display: inline-block;
+}
+
+.cookie-banner a {
+    color: #ffcc00; /* Color del link */
+}
+
+.cookie-banner button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* Estils globals */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin-top: 20px;
+}
+/*Perfils*/
+#carrousel {
+    display: flex;
+    justify-content: center; /* Centra el carrusel horizontalmente */
+    align-items: center; /* Centra el carrusel verticalmente */
+}
+
+.owl-carousel {
+    display: flex; /* Permite que los items estén en fila */
+    justify-content: center; /* Centra los items en el carrusel */
+}
+
+.owl-carousel .item {
+    display: flex;
+    justify-content: center; /* Centra el contenido del elemento item */
+    align-items: flex-start; /* Alínea los elementos en la parte superior */
+    margin: 10px; /* Espacio entre cada perfil */
+}
+
+.profile-card {
+    border: 1px solid #ccc; /* Color y grosor del borde */
+    border-radius: 15px; /* Bordes más redondeados */
+    padding: 10px; /* Espaciado interno reducido */
+    background-color: #f9f9f9; /* Color de fondo */
+    text-align: center; /* Centra el contenido */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra del recuadro */
+    transition: transform 0.2s; /* Efecto de transición al pasar el mouse */
+    max-width: 220px; /* Ancho máximo del recuadro */
+    display: flex; /* Permite alinear elementos dentro del recuadro */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra horizontalmente el contenido */
+}
+
+.profile-card:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.profile-photo {
+    width: 80%; /* Ajusta la imagen al 80% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-bottom: 10px; /* Espacio inferior para separar la imagen del texto */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-left: auto; /* Centra la imagen horizontalmente */
+    margin-right: auto; /* Centra la imagen horizontalmente */
+}
+.name, .age, .experience, .description {
+    margin: 5px 0; /* Espacio entre los textos */
+}
+
 
 * {
     margin: 0;
@@ -241,7 +332,6 @@ body {
     font-size: 62.5%;
     font-family: 'Roboto', Arial, Helvetica, Sans-serif, Verdana; /* Fuente general */
     line-height: 1.6; /* Espaciado entre líneas */
-    padding: 20px; /* Espaciado alrededor del contenido */
 }
 
 /* Estilos del header */
@@ -325,10 +415,9 @@ footer {
     }
 
     button {
-        width: 100%; /* Botones ocupan todo el ancho en móviles */
+        width: 100%;
     }
 }
-=======
 .fixed-background {
     background-image: url('fondo.jpg'); /* Canvia 'fondo.jpg' pel camí de la teva imatge */
     background-attachment: fixed; /* Fa que el fons sigui fix */
@@ -340,22 +429,21 @@ footer {
     display: block;
 }
 .logo {
-    height: 70px; /* Ajusta aquest valor per fer el logo més gran o més petit */
+    height: 100px; /* Ajusta aquest valor per fer el logo més gran o més petit */
     width: auto; /* Manté l'amplada automàtica per preservar la proporció */
 }
-.login-link {
-    display: inline-block; /* Fa que l'enllaç es comporti com un bloc */
-    padding: 0.5rem 1rem; /* Espai interior al voltant del text */
-    background-color: black; /* Fons semitransparent negre */
-    border: 2px solid black; /* Bord de color negre */
-    border-radius: 0.5rem; /* Arrodoniment dels corners */
-    color: white; /* Color del text negre */
-    text-decoration: none; /* Elimina l'estil de subratllat de l'enllaç */
-    transition: background-color 0.3s, color 0.3s; /* Transició suau per a l'efecte hover */
+.login-button {
+    padding: 10px 20px; /* Espaciat interior per fer més gran el recuadre */
+    background-color: black; /* Color de fons del recuadre */
+    color: #FFF; /* Color del text */
+    border-radius: 5px; /* Bordes arrodonits */
+    border: 2px solid black; /* Bord en un color diferent */
+    text-align: center; /* Centrar el text dins del recuadre */
+    transition: background-color 0.3s, transform 0.3s; /* Transicions suaus */
 }
 
-/* Canvia el color del fons i el text en passar el ratolí */
-.login-link:hover {
-    background-color: black; /* Fons negre al passar el ratolí */
-    color: white; /* Color del text blanc al passar el ratolí */
+.login-button:hover {
+    background-color: #cf4f3e; /* Color de fons en passar el ratolí */
+    transform: scale(1.05); /* Lleuger augment de mida al passar el ratolí */
 }
+
