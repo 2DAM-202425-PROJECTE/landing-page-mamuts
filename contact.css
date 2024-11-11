@@ -19,8 +19,7 @@ h4 {
     line-height: 1.5;
 }
 
-/* ///// inputs /////*/
-
+/* ///// inputs ///// */
 input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
     font-size: 0.75em;
     color: #999;
@@ -61,17 +60,21 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 
 input,
 textarea {
-    padding: 30px;
-    border: 0;
+    padding: 20px;
+    border: 2px solid #444; /* Borde gris oscuro */
     width: 100%;
     font-size: 1rem;
     background-color: #2d2d2d;
     color: white;
-    border-radius: 4px;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: border-color 0.3s ease; /* Transición para el borde */
 }
 
 input:focus,
-textarea:focus { outline: 0; }
+textarea:focus {
+    outline: none; /* Quitar el borde predeterminado al enfocarse */
+    border-color: #4b8cfb; /* Borde azul cuando están enfocados */
+}
 
 input:focus ~ span,
 textarea:focus ~ span {
@@ -91,6 +94,18 @@ textarea {
     margin: 20px auto 25px auto;
 }
 
+/* Recuadro para el formulario */
+.form-wrap {
+    background-color: #2d2d2d;
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #444; /* Color del borde */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra del recuadro */
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Botón de envío */
 .submit-btn {
     float: right;
     padding: 7px 35px;
@@ -129,12 +144,34 @@ input[type=checkbox]:checked + label {
     color: #f00;
     font-style: normal;
 }
-.logo {
-    width: 100px;
-    height: 100px;
-    margin-left: 0;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+/* Estilos para mostrar la bandera dentro del select */
+.flag-select {
+    background-repeat: no-repeat;
+    background-position: left 8px center;
+    padding-left: 35px; /* Espacio para la bandera */
 }
+
+/* Estilos para mostrar la bandera en las opciones del select */
+.flag-option {
+    background-repeat: no-repeat;
+    background-position: left 8px center;
+    padding-left: 35px;
+    padding-right: 10px; /* Nuevo */
+    background-size: 20px 15px;
+    height: 30px;
+    line-height: 30px;
+}
+/* Estilo personalizado para el campo del teléfono */
+.iti__flag-container {
+    background-color: gray; /* Fondo blanco para la bandera */
+}
+
+.iti__selected-flag {
+    background-color: gray !important; /* Fondo blanco para el contenedor del prefijo */
+}
+
+.iti__intl-tel-input input[type="tel"] {
+    border: 1px solid gray !important; /* Borde blanco para el input */
+}
+
