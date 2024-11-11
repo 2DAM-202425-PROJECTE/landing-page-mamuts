@@ -22,14 +22,7 @@
                 <img class="h-16 w-auto" src="logo.png" alt="Logo Mamuts">
             </a>
         </div>
-        <div class="flex lg:hidden">
-            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
-                <span class="sr-only">Open main menu</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-            </button>
-        </div>
+
         <div class="hidden lg:flex lg:gap-x-12">
             <a href="comentaris.html" class="text-sm font-semibold leading-6 text-white">Product</a>
             <a href="contact.html" class="text-sm font-semibold leading-6 text-white">Features</a>
@@ -41,17 +34,27 @@
         </div>
     </nav>
 
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
-        <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 z-50"></div>
+    <!-- Botón para abrir el menú, ubicado en la esquina superior derecha -->
+    <button type="button" id="open-menu" class="absolute top-4 right-4 text-black p-2">
+        <span class="sr-only">Open menu</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+    </button>
+
+    <!-- Contenedor del menú móvil -->
+    <div class="lg:hidden hidden" role="dialog" aria-modal="true" id="mobile-menu">
+        <!-- Fondo -->
+        <div class="fixed inset-0 z-50 bg-gray-900 opacity-50" id="backdrop"></div>
+
         <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="-m-1.5 p-1.5">
                     <span class="sr-only">Mamuts</span>
                     <img class="h-8 w-auto" src="logo.png" alt="Logo Mamuts">
                 </a>
-                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <!-- Botón de cerrar -->
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="close-menu">
                     <span class="sr-only">Close menu</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -73,10 +76,33 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Selecciona los botones y el menú móvil
+        const openButton = document.getElementById('open-menu');
+        const closeButton = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const backdrop = document.getElementById('backdrop');
+
+        // Mostrar el menú cuando se hace clic en el botón de abrir
+        openButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden'); // Muestra el menú móvil
+        });
+
+        // Ocultar el menú cuando se hace clic en el botón de cerrar o en el fondo
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden'); // Oculta el menú móvil
+        });
+        backdrop.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden'); // Oculta el menú móvil
+        });
+    </script>
 </header>
 
 
-<main>
+
+
+    <main>
     <!-- Sección de Introducción -->
     <section class="introduction bg-gray-800 py-24 sm:py-32 text-center">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -172,7 +198,7 @@
     }
 
 </script>
-
+</header>
 
 
 <div class="benefits-section bg-gray-900 py-24 sm:py-32">
@@ -225,7 +251,7 @@
                 </div>
                 <div class="profile-card">
                     <img src="foto_perfil.png" alt="Ivan Martinez" class="profile-photo">
-                    <h2 class="name">Ivan Martinez</h2>
+                    <h2 class="name">Ivan</h2>
                     <p class="age">Edat: 19 anys</p>
                     <p class="experience">Experiència: 1 any en programació web</p>
                     <p class="description">Descripció: Ivan és un programador que ha creat diverses pàgines web durant els seus estudis.</p>
