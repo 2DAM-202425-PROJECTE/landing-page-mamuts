@@ -5,98 +5,88 @@
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <title>Plans Personalitzats</title>
-    <style>
-        /* Añadiendo estilo para el efecto de elevación */
-        .plan {
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza la transición */
-        }
-        .plan:hover {
-            transform: translateY(-10px); /* Eleva el plan hacia arriba */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Añade sombra para el efecto de profundidad */
-        }
-    </style>
+    <meta name="description" content="Entrenaments adaptats a la teva disponibilitat. Aconsegueix els teus objectius amb flexibilitat total.">
+    <title>Adaptats a la Teva Disponibilitat</title>
 </head>
 
-<body>
-<header class="absolute inset-x-0 top-0 z-50">
+<body class="bg-gray-900 text-white">
+
+<!-- Header -->
+<header class="absolute inset-x-0 top-0 z-50 bg-gray-800">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
             <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">La teva empresa</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
             </a>
         </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Inicia sessió <span aria-hidden="true">&rarr;</span></a>
+        <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Obre el menú principal</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
         </div>
     </nav>
 </header>
 
-<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center">
-
+<!-- Main Content -->
+<main class="relative isolate overflow-hidden py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center">
-            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Plans Personalitzats</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Aquí pots trobar els nostres plans personalitzats adaptats a les teves necessitats.</p>
+            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Entrenaments Adaptats a la Teva Disponibilitat</h2>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Cada entrenament s'adapta a les teves necessitats i horaris per maximitzar els teus resultats.</p>
         </div>
 
-        <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10 mt-10">
+        <!-- Estadísticas Cards -->
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 lg:grid-cols-4 mt-10">
 
-            <!-- Plan Bàsic -->
-            <a href="plan-basic.html" class="bg-gray-800 p-6 rounded-lg shadow-lg block plan">
-                <h3 class="text-xl font-bold">Pla Bàsic</h3>
-                <p class="mt-4">Ideal per a iniciatives petites.</p>
+            <!-- Entrenaments a mesura -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-clock text-indigo-500 text-3xl"></i> Entrenaments a mesura</h3>
+                <p class="mt-4">El sistema s'adapta a la teva disponibilitat per fer-te l'entrenament més efectiu possible.</p>
                 <ul class="mt-2 list-disc list-inside text-gray-300">
-                    <li>1 sessió de consultoria mensual</li>
-                    <li>Accés a materials formatius</li>
-                    <li>Suport per correu electrònic</li>
+                    <li>Entrenaments flexibles segons els teus horaris</li>
+                    <li>Accés a qualsevol moment del dia</li>
                 </ul>
-                <p class="mt-4 text-lg font-bold">50€ / mes</p>
-            </a>
+            </div>
 
-            <!-- Plan Avançat -->
-            <a href="plan-avancat.html" class="bg-gray-800 p-6 rounded-lg shadow-lg block plan">
-                <h3 class="text-xl font-bold">Pla Avançat</h3>
-                <p class="mt-4">Perfecte per a petites empreses.</p>
+            <!-- Flexibilitat Total -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-sync-alt text-indigo-500 text-3xl"></i> Flexibilitat Total</h3>
+                <p class="mt-4">Pots ajustar els entrenaments segons les teves responsabilitats diàries sense restriccions.</p>
                 <ul class="mt-2 list-disc list-inside text-gray-300">
-                    <li>2 sessions de consultoria mensuals</li>
-                    <li>Accés a materials formatius i webinars</li>
-                    <li>Suport telefònic prioritari</li>
+                    <li>Accés a entrenaments en qualsevol moment</li>
+                    <li>Adapta'ls a les teves necessitats</li>
                 </ul>
-                <p class="mt-4 text-lg font-bold">100€ / mes</p>
-            </a>
+            </div>
 
-            <!-- Plan Professional -->
-            <a href="plan-professional.html" class="bg-gray-800 p-6 rounded-lg shadow-lg block plan">
-                <h3 class="text-xl font-bold">Pla Professional</h3>
-                <p class="mt-4">Ideal per a empreses mitjanes.</p>
+            <!-- Monitoratge constant -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-chart-line text-indigo-500 text-3xl"></i> Monitoratge constant</h3>
+                <p class="mt-4">El sistema ajusta els entrenaments segons el teu rendiment i necessitats de manera continuada.</p>
                 <ul class="mt-2 list-disc list-inside text-gray-300">
-                    <li>4 sessions de consultoria mensuals</li>
-                    <li>Accés a materials formatius, webinars i esdeveniments</li>
-                    <li>Suport telefònic i per correu electrònic</li>
+                    <li>Monitoratge del teu progrés</li>
+                    <li>Ajustos segons resultats obtinguts</li>
                 </ul>
-                <p class="mt-4 text-lg font-bold">200€ / mes</p>
-            </a>
+            </div>
 
-            <!-- Plan Premium -->
-            <a href="plan-premium.html" class="bg-gray-800 p-6 rounded-lg shadow-lg block plan">
-                <h3 class="text-xl font-bold">Pla Premium</h3>
-                <p class="mt-4">La solució completa per a empreses grans.</p>
+            <!-- Objectius -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-trophy text-indigo-500 text-3xl"></i> Aconsegueix els teus objectius</h3>
+                <p class="mt-4">Supera els teus límits amb un seguiment personalitzat per aconseguir els teus objectius de benestar.</p>
                 <ul class="mt-2 list-disc list-inside text-gray-300">
-                    <li>Sessions de consultoria il·limitades</li>
-                    <li>Accés exclusiu a materials i esdeveniments</li>
-                    <li>Suport personalitzat 24/7</li>
+                    <li>Objectius a mida per a cada nivell</li>
+                    <li>Seguiment i millores constants</li>
                 </ul>
-                <p class="mt-4 text-lg font-bold">500€ / mes</p>
-            </a>
+            </div>
 
         </div>
+
     </div>
-</div>
+</main>
 
+<!-- Footer -->
 <footer class="bg-gray-900 text-white py-4">
     <div class="text-center">
         <p>&copy; 2024 Mammuts Fitness App. Tots els drets reservats.</p>

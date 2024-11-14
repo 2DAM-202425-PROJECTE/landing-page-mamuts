@@ -5,18 +5,17 @@
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Estadístiques visuals per monitoritzar el teu progrés i millorar el teu aprenentatge.">
     <title>Estadístiques Visuals</title>
 </head>
 
-<body>
-<header class="absolute inset-x-0 top-0 z-50">
+<body class="bg-gray-900 text-white">
+
+<!-- Header -->
+<header class="absolute inset-x-0 top-0 z-50 bg-gray-800">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">La teva empresa</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-            </a>
+            <!-- El logo ha sido eliminado -->
         </div>
         <div class="flex lg:hidden">
             <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
@@ -26,49 +25,65 @@
                 </svg>
             </button>
         </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Producte</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Característiques</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Mercat</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Empresa</a>
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Inicia sessió <span aria-hidden="true">&rarr;</span></a>
-        </div>
     </nav>
 </header>
 
-<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+<!-- Main Content -->
+<main class="relative isolate overflow-hidden py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Estadístiques Visuals</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Monitora el teu progrés amb estadístiques visuals que t'ajuden a prendre decisions informades.</p>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Monitora el teu progrés amb estadístiques visuals que t'ajuden a prendre decisions informades per millorar el teu aprenentatge i assolir els teus objectius més ràpidament.</p>
         </div>
 
-        <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10 mt-10">
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">Progrés General</h3>
-                <p class="mt-4">Visualitza la teva evolució amb gràfics que mostren el teu rendiment al llarg del temps.</p>
-                <img src="grafico_progres.png" alt="Gràfic de Progrés" class="mt-4" /> <!-- Asegúrate de que la imagen esté en la carpeta correcta -->
+        <!-- Estadísticas Cards -->
+        <div class="grid grid-cols-1 gap-y-12 text-base font-semibold leading-7 text-white sm:grid-cols-2 lg:grid-cols-4 mt-12">
+
+            <!-- Progrés General -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-chart-line text-indigo-500"></i> Progrés General</h3>
+                <p class="mt-4">Visualitza la teva evolució amb gràfics que mostren el teu rendiment al llarg del temps. Aquests gràfics et permeten observar les teves millores en diferents àrees, com força, flexibilitat i resistència, comparant el teu progrés d'una sessió a l'altra.</p>
+                <p style="margin-bottom: 20px;"></p> <!-- Espacio entre los parrafos -->
+
+                <p class="mt-4 text-gray-300">Aquesta visualització t'ajuda a veure clarament els teus avanços i a identificar àrees en què necessites concentrar-te més. Els gràfics interactius també et permeten fer zoom i filtrar per períodes específics per obtenir dades més detallades.</p>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">Feedback d'Usuaris</h3>
-                <p class="mt-4">Consulta les valoracions i comentaris d'altres usuaris per millorar el teu aprenentatge.</p>
+
+            <!-- Feedback d'Usuaris -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-comment-alt text-indigo-500"></i> Feedback d'Usuaris</h3>
+                <p class="mt-4">Consulta les valoracions i comentaris d'altres usuaris per millorar el teu aprenentatge. La nostra plataforma et permet veure els suggeriments i recomanacions de persones que segueixen el mateix camí, ajudant-te a ajustar els teus objectius i mètodes d'entrenament.</p>
+                <div class="mt-4">
+                    <p style="margin-bottom: 20px;"></p> <!-- Espacio entre los parrafos -->
+                    <p class="text-gray-300 mt-2">Els usuaris valoraran els teus avanços i t'ajudaran a millorar, compartint consells i estratègies per afrontar els reptes. A més, pots deixar comentaris i respostes per interactuar amb altres membres de la comunitat.</p>
+                </div>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">Objectius i Metes</h3>
-                <p class="mt-4">Estableix els teus objectius i segueix el teu progrés amb estadístiques personalitzades.</p>
+
+
+            <!-- Objectius i Metes -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-bullseye text-indigo-500"></i> Objectius i Metes</h3>
+                <p class="mt-4">Estableix els teus objectius i segueix el teu progrés amb estadístiques personalitzades per a cada meta. Podràs veure en quina mesura estàs aconseguint els teus objectius en temps real, amb indicadors visuals que t'ajuden a mantenir-te enfocat.</p>
+                <div class="mt-4">
+                    <p style="margin-bottom: 20px;"></p> <!-- Espacio entre los parrafos -->
+                    <p class="text-gray-300 mt-2">Aquestes metes personalitzades inclouen objectius a curt, mitjà i llarg termini, i t'ajuden a establir un camí clar per aconseguir-los. Els gràfics personalitzats mostren l'evolució dels teus objectius en diferents períodes.</p>
+                </div>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold">Comparativa</h3>
-                <p class="mt-4">Compara el teu rendiment amb el de la comunitat per veure on pots millorar.</p>
+
+            <!-- Comparativa -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-chart-line text-indigo-500"></i> Comparativa</h3>
+                <p class="mt-4">Compara el teu rendiment amb el de la comunitat per veure on pots millorar i on destaca el teu rendiment. Podràs veure les teves estadístiques comparades amb les d'altres usuaris que estan seguint programes similars al teu.</p>
+                <div class="mt-4">
+                    <p style="margin-bottom: 20px;"></p> <!-- Espacio entre los parrafos -->
+                    <p class="text-gray-300 mt-2">Aquesta funció et permet veure on et situïxes en relació a altres usuaris i identificar les àrees en què tens un rendiment superior. També et proporciona recomanacions personalitzades per superar els teus punts febles.</p>
+                </div>
             </div>
         </div>
 
     </div>
-</div>
-</div>
+</main>
 
+<!-- Footer -->
 <footer class="bg-gray-900 text-white py-4">
     <div class="text-center">
         <p>&copy; 2024 Mammuts Fitness App. Tots els drets reservats.</p>

@@ -4,57 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mammuts Fitness App</title>
     <link rel="stylesheet" href="style.css">
-    <title>Fitness App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* Estilos para los recuadros de características */
+        .feature-box {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px); /* Mueve el recuadro hacia arriba al hacer hover */
+        }
+
+        .feature-box:active {
+            transform: translateY(5px); /* Al hacer clic, el recuadro se mueve un poco hacia abajo */
+        }
+    </style>
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-900 text-white font-sans">
+
+<!-- Header -->
 <header class="bg-gray-800 py-6">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        <h1 class="text-4xl font-bold">Fitness App</h1>
+        <h1 class="text-4xl font-bold text-white">Mammuts Fitness App</h1>
         <nav class="mt-4">
-            <a href="index.html" class="text-gray-300 hover:text-indigo-600">Inici</a>
+            <a href="index.html" class="text-gray-300 hover:text-indigo-600 text-lg font-semibold mx-2">Inici</a>
+            <a href="PoliticaPrivacitat.html" class="text-gray-300 hover:text-indigo-600 text-lg font-semibold mx-2">Política de Privacitat</a>
         </nav>
     </div>
 </header>
 
-<main>
-    <div class="fitness-app-section bg-gray-800 py-24 sm:py-32">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Fitness App: Entrena a la Teva Manera</h2>
-            <p class="mt-6 text-lg text-gray-300">
-                Una Fitness App és una aplicació dissenyada per ajudar-te a gestionar i millorar la teva activitat física. Amb les nostres eines i recursos, pots personalitzar el teu entrenament, fer seguiment del teu progrés i connectar-te amb una comunitat activa.
+<!-- Main Section -->
+<main class="py-16 px-6 sm:px-16">
+    <div class="max-w-7xl mx-auto">
+        <section class="text-center">
+            <h2 class="text-3xl font-semibold text-white">Transforma la teva vida amb Mammuts Fitness App</h2>
+            <p class="mt-4 text-lg text-gray-300">
+                La nostra aplicació t'ajuda a portar un seguiment del teu entrenament, alimentació i benestar. Amb característiques personalitzades, pots aconseguir els teus objectius més ràpidament!
             </p>
+        </section>
 
-            <h3 class="text-2xl font-bold tracking-tight text-white mt-10">Funcionalitats Clau</h3>
-            <div class="features mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                <div class="feature text-left text-gray-300">
-                    <h4 class="text-lg font-semibold"><i class="fas fa-mobile-alt"></i> Entrenaments Personalitzats</h4>
-                    <p>Desenvolupa plans d'entrenament adaptats a les teves necessitats i objectius.</p>
-                </div>
-                <div class="feature text-left text-gray-300">
-                    <h4 class="text-lg font-semibold"><i class="fas fa-chart-bar"></i> Seguiment del Progrés</h4>
-                    <p>Monitoritza el teu progrés amb gràfics visuals i estadístiques detallades.</p>
-                </div>
-                <div class="feature text-left text-gray-300">
-                    <h4 class="text-lg font-semibold"><i class="fas fa-comments"></i> Comunitat de Suport</h4>
-                    <p>Connecta amb altres usuaris, comparteix experiències i obtén consells.</p>
-                </div>
-                <div class="feature text-left text-gray-300">
-                    <h4 class="text-lg font-semibold"><i class="fas fa-cog"></i> Integració de Tecnologia</h4>
-                    <p>Utilitza dispositius intel·ligents per a un seguiment més precís de la teva activitat.</p>
-                </div>
+        <!-- Features Section -->
+        <section id="features" class="mt-16">
+            <h3 class="text-2xl font-semibold text-center text-white">Característiques</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- Enlace a la página de entrenamientos -->
+                <a href="entrenaments.html" class="feature-box bg-gray-700 p-6 rounded-lg cursor-pointer">
+                    <i class="fas fa-dumbbell text-4xl text-indigo-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-white">Entrenaments Personalitzats</h4>
+                    <p class="mt-2 text-gray-300">Crea entrenaments adaptats als teus objectius i nivells de forma fàcil.</p>
+                </a>
+                <!-- Enlace a la página de progreso -->
+                <a href="progres.html" class="feature-box bg-gray-700 p-6 rounded-lg cursor-pointer">
+                    <i class="fas fa-chart-line text-4xl text-indigo-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-white">Seguiment de Progrés</h4>
+                    <p class="mt-2 text-gray-300">Monitoritza el teu progrés diari i setmanal per mantenir-te motivat.</p>
+                </a>
+                <!-- Enlace a la página de alimentación -->
+                <a href="alimentacio.html" class="feature-box bg-gray-700 p-6 rounded-lg cursor-pointer">
+                    <i class="fas fa-utensils text-4xl text-indigo-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-white">Pla d'Alimentació</h4>
+                    <p class="mt-2 text-gray-300">Accedeix a plans d'alimentació saludable personalitzats segons les teves necessitats.</p>
+                </a>
             </div>
-        </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="mt-16 text-center">
+        </section>
     </div>
 </main>
 
-<footer class="bg-gray-800 py-6 mt-10">
+<!-- Footer -->
+<footer class="bg-gray-800 py-6 mt-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <p class="text-gray-300">&copy; 2024 Mammuts Fitness App. Tots els drets reservats.</p>
+
     </div>
 </footer>
+
 </body>
 
 </html>
