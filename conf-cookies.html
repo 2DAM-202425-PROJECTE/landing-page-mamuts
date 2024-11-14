@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configura les teves Preferències de Cookies</title>
+  <style>
+    /* (Estils iguals que abans) */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #0066cc;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .description {
+      font-size: 0.9em;
+      color: #666;
+      margin-left: 26px;
+      display: block;
+      margin-top: 4px;
+    }
+
+    button {
+      background-color: #0066cc;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+<h1>Configura les teves Preferències de Cookies</h1>
+<form id="cookie-form">
+  <label>
+    <input type="checkbox" name="cookies_necessaries" checked disabled> Cookies Necessàries
+    <span class="description">Aquestes cookies són essencials per al funcionament bàsic del lloc web.</span>
+  </label>
+
+  <label>
+    <input type="checkbox" name="cookies_analitiques"> Cookies Analítiques
+    <span class="description">Ens ajuden a entendre com interactues amb el lloc per millorar-lo.</span>
+  </label>
+
+  <label>
+    <input type="checkbox" name="cookies_personalitzades"> Cookies de Personalització
+    <span class="description">Ens permeten oferir contingut personalitzat segons les teves preferències.</span>
+  </label>
+
+  <button type="submit">Guardar Preferències</button>
+</form>
+
+<script>
+  // Event listener per guardar les preferències
+  document.getElementById("cookie-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita el refresc de la pàgina
+    localStorage.setItem("cookiesAccepted", "true"); // Guarda preferència en localStorage
+    window.location.href = "index.html"; // Redirigeix a la pàgina principal
+  });
+</script>
+</body>
+</html>

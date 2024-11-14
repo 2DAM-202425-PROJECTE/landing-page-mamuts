@@ -198,7 +198,6 @@
     }
 
 </script>
-</header>
 
 
 <div class="benefits-section bg-gray-900 py-24 sm:py-32">
@@ -337,8 +336,8 @@
 </div>
 <!--newleter-->
 <div class="subscription-banner">
-    <p class="banner-text">ÚNETE AL CLUB Y GANA 250 PUNTOS PARA GASTARLOS EN RECOMPENSAS</p>
-    <button class="subscribe-button" onclick="showPopup()">SUSCRÍBETE GRATIS &rarr;</button>
+    <p class="banner-text">SUBSCRIU-TE PER REBRE TOTES LES NOVETATS</p>
+    <button class="subscribe-button" onclick="showPopup()">SUSCRÍBETE GRATIS</button>
 </div>
 
 <!-- Popup para ingresar el correo -->
@@ -354,11 +353,6 @@
 
         <input type="email" id="email-input" placeholder="DIRECCIÓN DE CORREO ELECTRÓNICO" required>
 
-        <label class="checkbox-container">
-            <input type="checkbox" id="stay-logged-in">
-            Mantener sesión iniciada. Aplicable a todas las opciones.
-            <span class="checkmark"></span>
-        </label>
 
         <button onclick="subscribe()">CONTINUAR &rarr;</button>
 
@@ -406,24 +400,22 @@
     </div>
 </footer>
 
-<div id="cookie-banner" class="cookie-banner">
-    <p>Utilitzem cookies per millorar la teva experiència. Si continues navegant, acceptes la nostra <a href="#privacy-policy">política de privadesa</a>.</p>
-    <button id="accept-cookies">Acceptar Cookies</button>
+<!-- Banner de cookies -->
+<div id="cookie-banner">
+    <p>Aquest lloc utilitza cookies per millorar l'experiència de l'usuari. Pots acceptar o configurar les teves preferències. Llegeix la nostra <a href="politica-cookies.html" target="_blank">Política de Cookies</a> per obtenir més informació.</p>
+    <div>
+        <button onclick="acceptCookies()">Acceptar</button>
+        <button onclick="rejectCookies()">Rebutjar</button>
+        <a href="conf-cookies.html"><button>Configura</button></a>
+    </div>
 </div>
 
+<script src="cookies.js"></script>
 <script>
+    // Comprova si l'usuari ja ha expressat la seva preferència per les cookies
     window.onload = function() {
-        const cookieBanner = document.getElementById('cookie-banner');
-        const acceptButton = document.getElementById('accept-cookies');
-
-        // Comprova si l'usuari ja ha acceptat les cookies
-        if (!localStorage.getItem('cookiesAccepted')) {
-            cookieBanner.style.display = 'block'; // Mostra el banner
-        }
-
-        acceptButton.onclick = function() {
-            localStorage.setItem('cookiesAccepted', 'true'); // Guarda l'elecció a localStorage
-            cookieBanner.style.display = 'none'; // Amaga el banner
+        if (localStorage.getItem("cookiesPreference")) {
+            document.getElementById("cookie-banner").style.display = "none";
         }
     }
 </script>
