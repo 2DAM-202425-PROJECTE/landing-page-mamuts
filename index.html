@@ -24,7 +24,7 @@
         </div>
 
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="comentaris.html" class="text-sm font-semibold leading-6 text-white">Product</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white">Product</a>
             <a href="contact.html" class="text-sm font-semibold leading-6 text-white">Features</a>
             <a href="#" class="text-sm font-semibold leading-6 text-white">Marketplace</a>
             <a href="PoliticaPrivacitat.html" class="text-sm font-semibold leading-6 text-white">Política de privacitat</a>
@@ -34,13 +34,17 @@
         </div>
     </nav>
 
-    <!-- Botón para abrir el menú, ubicado en la esquina superior derecha -->
-    <button type="button" id="open-menu" class="absolute top-4 right-4 text-black p-2">
-        <span class="sr-only">Open menu</span>
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 6h18M3 18h18" />
-        </svg>
-    </button>
+    <!-- Sección de introducción -->
+    <section class="introduction py-24 sm:py-32 text-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl font-bold tracking-tight text-white">Benvingut a la Fitness App</h2>
+            <p class="mt-6 text-lg text-gray-300">
+                La nostra aplicació de fitness et permet entrenar de manera intel·ligent i adaptada a les teves necessitats.
+                Explora les nostres funcionalitats i millora el teu rendiment físic.
+            </p>
+            <a href="FitnessApp.html" class="mt-10 inline-block bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Descobreix més sobre la Fitness App</a>
+        </div>
+    </section>
 
     <!-- Contenedor del menú móvil -->
     <div class="lg:hidden hidden" role="dialog" aria-modal="true" id="mobile-menu">
@@ -77,6 +81,15 @@
         </div>
     </div>
 
+    <!-- Botón para abrir el menú, ubicado en la esquina superior derecha -->
+    <button type="button" id="open-menu" class="absolute top-4 right-4 text-black p-2 lg:hidden">
+        <span class="sr-only">Open menu</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+    </button>
+
+
     <script>
         // Selecciona los botones y el menú móvil
         const openButton = document.getElementById('open-menu');
@@ -99,7 +112,90 @@
     </script>
 </header>
 
+    <main>
+    <!-- Sección de Beneficis destacats -->
+    <div class="benefits-section bg-gray-900 py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Entrena de manera intel·ligent, millora ràpidament</h2>
+            <h3 class="text-2xl font-bold tracking-tight text-white mt-10">Beneficis destacats:</h3>
+            <div class="benefits mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
+                <div class="benefit text-left text-gray-300">
+                    <h4 class="text-lg font-semibold"><i class="fas fa-calendar-alt"></i> Plans personalitzats</h4>
+                    <button class="selectable bg-transparent text-left w-full text-gray-300 hover:text-indigo-600 focus:outline-none" onclick="showDetail('personalizedPlans')">Veure més</button>
+                </div>
+                <div class="benefit text-left text-gray-300">
+                    <h4 class="text-lg font-semibold"><i class="fas fa-chart-line"></i> Seguiment de progressos</h4>
+                    <button class="selectable bg-transparent text-left w-full text-gray-300 hover:text-indigo-600 focus:outline-none" onclick="showDetail('progressTracking')">Veure més</button>
+                </div>
+                <div class="benefit text-left text-gray-300">
+                    <h4 class="text-lg font-semibold"><i class="fas fa-users"></i> Comunitat activa</h4>
+                    <button class="selectable bg-transparent text-left w-full text-gray-300 hover:text-indigo-600 focus:outline-none" onclick="showDetail('activeCommunity')">Veure més</button>
+                </div>
+                <div class="benefit text-left text-gray-300">
+                    <h4 class="text-lg font-semibold"><i class="fas fa-cogs"></i> Integració de tecnologia</h4>
+                    <button class="selectable bg-transparent text-left w-full text-gray-300 hover:text-indigo-600 focus:outline-none" onclick="showDetail('techIntegration')">Veure més</button>
+                </div>
+            </div>
+            <div id="details" class="mt-10 text-left text-gray-300 hidden">
+                <h5 class="text-lg font-semibold" id="detail-title"></h5>
+                <p id="detail-content"></p>
+            </div>
+        </div>
+    </div>
 
+    <!-- Sección de Beneficis Clau -->
+    <section class="benefits-section">
+        <h2 class="text-3xl font-bold text-center text-white">Beneficis Clau</h2>
+        <div class="benefits" style="display: grid; grid-template-columns: 1fr;">
+            <div class="benefit" onclick="window.location.href='AdaptatsALaTevaDispobilitat.html';">
+                <h3>Adaptats a la Teva Disponibilitat</h3>
+                <p>Descobreix com adaptar els teus entrenaments a la teva agenda.</p>
+            </div>
+            <div class="benefit" onclick="window.location.href='GuiaProfessionalEnCadaSessio.html';">
+                <h3>Guia Professional en Cada Sessió</h3>
+                <p>Accedeix a la guia d'un professional durant les teves sessions.</p>
+            </div>
+            <div class="benefit" onclick="window.location.href='ModificaElTeuProgresAmbEstadistiquesVisuals.html';">
+                <h3>Modifica el Teu Progrés amb Estadístiques Visuals</h3>
+                <p>Utilitza estadístiques visuals per a monitoritzar el teu progrés.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    function showDetail(detailType) {
+        const title = document.getElementById('detail-title');
+        const content = document.getElementById('detail-content');
+        const detailsSection = document.getElementById('details');
+
+        switch (detailType) {
+            case 'personalizedPlans':
+                title.textContent = 'Plans Personalitzats';
+                content.textContent = 'Els nostres plans d’entrenament són personalitzats segons les teves necessitats i objectius.';
+                break;
+            case 'progressTracking':
+                title.textContent = 'Seguiment de Progressos';
+                content.textContent = 'Segueix el teu progrés amb gràfics i estadístiques visuals que t’ajuden a millorar.';
+                break;
+            case 'activeCommunity':
+                title.textContent = 'Comunitat Activa';
+                content.textContent = 'Uneix-te a la nostra comunitat d’usuaris per compartir experiències i motivació.';
+                break;
+            case 'techIntegration':
+                title.textContent = 'Integració de Tecnologia';
+                content.textContent = 'Utilitzem la tecnologia més recent per ajudar-te a aconseguir els teus objectius.';
+                break;
+            default:
+                title.textContent = '';
+                content.textContent = '';
+                break;
+        }
+
+        detailsSection.classList.remove('hidden');
+    }
+
+</script>
 
 
     <main>
@@ -179,10 +275,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
+<div class="text-center">
 
-
-        <div class="text-center">
                 <h1 class="text-4xl font-bold tracking-tight text-gray-300 sm:text-6xl text-center mx-auto">Qui som?</h1>
                 <p class="mt-6 text-lg leading-8 text-gray-350">Som una petita empresa formada per 4 integrants que ha creat una app de fitness que gestiona els teus <br>entrenaments, t'ajuda a millorar i et mostra les millores que has optingut.</p>
             </div>
@@ -285,7 +382,8 @@
 </div>
 <!--newleter-->
 <div class="subscription-banner">
-    <p class="banner-text">SUBSCRIU-TE PER REBRE TOTES LES NOVETATS</p>
+
+  <p class="banner-text">SUBSCRIU-TE PER REBRE TOTES LES NOVETATS</p>
     <button class="subscribe-button" onclick="showPopup()">SUSCRÍBETE GRATIS</button>
 </div>
 
@@ -317,35 +415,42 @@
 </div>
 
 <script src="letters.js"></script>
-<footer class="bg-white dark:bg-gray-900">
-    <div class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
-        <a href="#">
-            <img class="w-auto h-7" src="https://merakiui.com/images/full-logo.svg" alt="">
-        </a>
-
-        <p class="text-sm text-gray-600 dark:text-gray-300">© Copyright 2021. All Rights Reserved.</p>
-
-        <div class="flex -mx-2">
-            <div class="flex -mx-2">
-                <a href="https://www.instagram.com/mamutsoficials/" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Instagram">
-                    <img src="insta.png" alt="Instagram" class="w-5 h-5" />
-                </a>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Contacto -->
+        <div class="footer-section contact-info">
+            <div class="contact-item">
+                <i class="icon-location"></i>
+                <p><strong>Find us</strong><br>1010 Avenue, sw 54321, Chandigarh</p>
             </div>
-
-
-            <a href="https://www.facebook.com/profile.php?id=61568082219128" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Facebook">
-                <img src="face.png" alt="Facebook" class="w-5 h-5" />
-            </a>
-
-            <a href="https://mail.google.com/mail/u/1/#inbox" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Gmail">
-                <img src="gmail.png" alt="Gmail" class="w-5 h-5" />
-            </a>
-
-
-            <a href="https://github.com/orgs/2DAM-202425-PROJECTE/teams/grup-p1-g1" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Github">
-                <img src="github.png" alt="Github" class="w-5 h-5" />
-            </a>
+            <div class="contact-item">
+                <i class="icon-phone"></i>
+                <p><strong>Call us</strong><br>9876543210</p>
+            </div>
+            <div class="contact-item">
+                <i class="icon-email"></i>
+                <p><strong>Mail us</strong><br>mamutsoficials@gmail.com</p>
+            </div>
         </div>
+
+        <!-- Información de la compañía -->
+        <div class="footer-section about">
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=61568082219128" class="social-icon facebook"></a>
+                <a href="https://www.instagram.com/mamutsoficials/" class="social-icon instagram"></a> <!-- Enlace de Instagram -->
+                <a href="https://github.com/orgs/2DAM-202425-PROJECTE/teams/grup-p1-g1" class="social-icon github"></a>    <!-- Enlace de GitHub -->
+        </div>
+
+        <!-- Enlaces útiles -->
+        <div class="footer-section useful-links">
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Q&A.html">Q&A</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
     </div>
 </footer>
 
