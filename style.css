@@ -478,7 +478,7 @@ footer {
 /*newleter*/
 /* Estilo general para la barra de suscripción */
 .subscription-banner {
-    background-color: #FFFF4D; /* Fondo amarillo */
+    background-color: #0a72bd; /* Fondo amarillo */
     padding: 20px;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -494,7 +494,7 @@ footer {
 .banner-text {
     font-size: 20px;
     font-weight: bold;
-    color: #000;
+    color: #dddddd;
     margin: 0;
 }
 
@@ -530,7 +530,7 @@ footer {
 }
 
 .popup-content {
-    background-color: #fff;
+    background-color: #1F2937;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -552,7 +552,7 @@ footer {
 
 .popup-content p {
     font-size: 14px;
-    color: #333;
+    color: #c1bfbf;
     margin: 8px 0;
 }
 
@@ -588,7 +588,7 @@ footer {
 }
 
 .terms a, .privacy-notice a {
-    color: #000;
+    color: #ffffff;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -612,4 +612,38 @@ footer {
     font-size: 24px;
     color: #666;
     cursor: pointer;
+}
+
+/*Cookies*/
+/* Estil per al bàner de cookies */
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+#cookie-banner p {
+    margin: 0;
+    flex: 1;
+}
+
+#cookie-banner button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#cookie-banner button:hover {
+    background-color: #005bb5;
 }
