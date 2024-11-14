@@ -356,22 +356,147 @@ button:hover {
     transition: background-color 0.3s;
 }
 
-/* Estilos del footer */
-footer {
-    background-color: #1F2937; /* Gray-900 */
-    color: #9CA3AF; /* Gray-500 */
-    padding: 1rem 0;
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 1rem; /* Ajusta el tamaño según tus necesidades */
 }
 
-/* Estilos de los detalles */
-#details {
-    border-top: 1px solid #4B5563; /* Gray-600 */
-    padding-top: 1rem;
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    text-align: center; /* Centrar el texto del footer */
-    margin-top: 20px; /* Espaciado superior */
-    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
 
+.contact-info .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-info .icon-location,
+.contact-info .icon-phone,
+.contact-info .icon-email {
+    font-size: 24px;
+    color: #ff4f0f;
+    margin-right: 10px;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+.about .logo {
+    font-size: 24px;
+    color: #ff4f0f;
+    font-weight: bold;
+}
+
+.about .logo span {
+    color: #fff;
+}
+
+.about p {
+    margin: 10px 0 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.social-icon.facebook {
+    background-image: url(face.png);
+}
+
+.social-icon.instagram {
+    background-image: url(insta.png);
+}
+
+.social-icon.github {
+    background-image: url(github.png);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+
+.useful-links h2, .subscribe h2 {
+    color: #ff4f0f;
+    margin-bottom: 15px;
+}
+
+.useful-links ul {
+    list-style: none;
+}
+
+.useful-links ul li {
+    margin-bottom: 10px;
+}
+
+.useful-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.useful-links ul li a:hover {
+    color: #fff;
+}
+
+.subscribe p {
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.subscribe form {
+    display: flex;
+    border: 1px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.subscribe input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.subscribe-button {
+    background-color: #ff4f0f;
+    padding: 0 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.subscribe-button::before {
+    content: "➤";
+    color: #fff;
 }
 
 /* Responsividad */
