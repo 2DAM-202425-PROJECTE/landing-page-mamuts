@@ -335,7 +335,45 @@
         </div>
     </div>
 </div>
+<!--newleter-->
+<div class="subscription-banner">
+    <p class="banner-text">ÚNETE AL CLUB Y GANA 250 PUNTOS PARA GASTARLOS EN RECOMPENSAS</p>
+    <button class="subscribe-button" onclick="showPopup()">SUSCRÍBETE GRATIS &rarr;</button>
+</div>
 
+<!-- Popup para ingresar el correo -->
+<div class="popup-overlay" id="popup-overlay">
+    <div class="popup-content">
+        <span class="close-button" onclick="closePopup()">&times;</span>
+        <div class="popup-logo">
+            <img src="logo.png" alt="Logo del Club"> <!-- Reemplaza con la ruta de tu logo -->
+        </div>
+        <h2>LAS RECOMPENSAS DEL CLUB TE ESPERAN</h2>
+        <p>Realiza pedidos sin gastos de envío, consigue códigos de descuento y productos exclusivos en el club.</p>
+        <p><strong>Inicia sesión o regístrate. ¡Es gratis!</strong></p>
+
+        <input type="email" id="email-input" placeholder="DIRECCIÓN DE CORREO ELECTRÓNICO" required>
+
+        <label class="checkbox-container">
+            <input type="checkbox" id="stay-logged-in">
+            Mantener sesión iniciada. Aplicable a todas las opciones.
+            <span class="checkmark"></span>
+        </label>
+
+        <button onclick="subscribe()">CONTINUAR &rarr;</button>
+
+        <p class="terms">
+            Al hacer clic en "Continuar", aceptas los <a href="#">Términos y condiciones del Club</a>.
+        </p>
+
+        <p class="privacy-notice">
+            AVISO DE PRIVACIDAD<br>
+            Tus datos personales se utilizan para gestionar tu membresía en el club, conforme a nuestra <a href="#">Política de privacidad</a>.
+        </p>
+    </div>
+</div>
+
+<script src="letters.js"></script>
 <!-- Pie de página -->
 <footer class="bg-white dark:bg-gray-900">
     <div class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
