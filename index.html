@@ -27,7 +27,7 @@
             <a href="#" class="text-sm font-semibold leading-6 text-white">Product</a>
             <a href="contact.html" class="text-sm font-semibold leading-6 text-white">Features</a>
             <a href="#" class="text-sm font-semibold leading-6 text-white">Marketplace</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-white">Company</a>
+            <a href="PoliticaPrivacitat.html" class="text-sm font-semibold leading-6 text-white">Política de privacitat</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="login.html" class="text-sm font-semibold leading-6 text-black login-link login-button">Log in <span aria-hidden="true">&rarr;</span></a>
@@ -71,7 +71,7 @@
                         <a href="comentaris.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
                         <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
                         <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Politica de la Privacitat</a>
                     </div>
                     <div class="py-6">
                         <a href="login.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
@@ -88,6 +88,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 6h18M3 18h18" />
         </svg>
     </button>
+
 
     <script>
         // Selecciona los botones y el menú móvil
@@ -196,40 +197,89 @@
 
 </script>
 
-<div class="benefits-section bg-gray-900 py-24 sm:py-32">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Entrena de manera intel·ligent, millora ràpidament</h2>
-        <h3 class="text-2xl font-bold tracking-tight text-white mt-10">Beneficis destacats:</h3>
-        <div class="benefits mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
-            <div class="benefit text-left text-gray-300">
-                <h4 class="text-lg font-semibold"><i class="fas fa-calendar-alt"></i> Plans personalitzats</h4>
-                <button class="selectable bg-transparent text-left w-full text-gray-300 hover:text-indigo-600 focus:outline-none" onclick="window.location.href='AdaptatsALaTevaDispobilitat.html' ">
-                    Adaptats a la teva disponibilitat de temps i objectius
-                </button>
-            </div>
-            <div class="benefit text-left text-gray-300">
-                <h4 class="text-lg font-semibold"><i class="fas fa-user-tie"></i> Entrenadors virtuals</h4>
-                <button class="selectable bg-transparent text-left w-full text-gray-300 hover:text-indigo-600 focus:outline-none" onclick="window.location.href='GuiaProfessionalEnCadaSessio.html'">
-                    Guia professional en cada sessió
-                </button>
-            </div>
-            <div class="benefit text-left text-gray-300">
-                <h4 class="text-lg font-semibold"><i class="fas fa-chart-line"></i> Estadístiques Visuals</h4>
-                <button class="selectable bg-transparent text-left w-full text-gray-300 hover:text-indigo-600 focus:outline-none" onclick="window.location.href='ModificaElTeuProgresAmbEstadistiquesVisuals.html'">
-                    Monitora el teu progrés amb estadístiques visuals
-                </button>
-            </div>
-            <div class="benefit text-left text-gray-300">
-                <h4 class="text-lg font-semibold"><i class="fas fa-images"></i> Imatges o icones</h4>
-                <button class="selectable bg-transparent text-left w-full text-gray-300 hover:text-indigo-600 focus:outline-none" onclick="window.location.href='icons.html'">
-                    Visuals atractives que representen (exercicis, plans, entrenadors, seguiment)
-                </button>
+
+    <main>
+    <!-- Sección de Introducción -->
+    <section class="introduction bg-gray-800 py-24 sm:py-32 text-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl font-bold tracking-tight text-white">Benvingut a la Fitness App</h2>
+            <p class="mt-6 text-lg text-gray-300">
+                La nostra aplicació de fitness et permet entrenar de manera intel·ligent i adaptada a les teves necessitats.
+                Explora les nostres funcionalitats i millora el teu rendiment físic.
+            </p>
+            <a href="FitnessApp.html" class="mt-10 inline-block bg-indigo-600 text-white py-4 px-8 text-xl font-semibold rounded-lg hover:bg-indigo-700 transition duration-300">Descobreix més sobre la Fitness App</a>
+        </div>
+    </section>
+
+
+<script>
+    function showDetail(detailType) {
+        const title = document.getElementById('detail-title');
+        const content = document.getElementById('detail-content');
+        const detailsSection = document.getElementById('details');
+
+        switch (detailType) {
+            case 'personalizedPlans':
+                title.textContent = 'Plans Personalitzats';
+                content.textContent = 'Els nostres plans d’entrenament són personalitzats segons les teves necessitats i objectius.';
+                break;
+            case 'progressTracking':
+                title.textContent = 'Seguiment de Progressos';
+                content.textContent = 'Segueix el teu progrés amb gràfics i estadístiques visuals que t’ajuden a millorar.';
+                break;
+            case 'activeCommunity':
+                title.textContent = 'Comunitat Activa';
+                content.textContent = 'Uneix-te a la nostra comunitat d’usuaris per compartir experiències i motivació.';
+                break;
+            case 'techIntegration':
+                title.textContent = 'Integració de Tecnologia';
+                content.textContent = 'Utilitzem la tecnologia més recent per ajudar-te a aconseguir els teus objectius.';
+                break;
+            default:
+                title.textContent = '';
+                content.textContent = '';
+                break;
+        }
+
+        detailsSection.classList.remove('hidden');
+    }
+
+</script>
+
+
+        <div class="benefits-section bg-gray-900 py-24 sm:py-32">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Entrena de manera intel·ligent, millora ràpidament</h2>
+                <h3 class="text-2xl font-bold tracking-tight text-white mt-10">Beneficis destacats:</h3>
+                <div class="benefits mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
+                    <!-- Cuadro 1 -->
+                    <a href="AdaptatsALaTevaDispobilitat.html" class="benefit text-left text-gray-300 transform transition duration-300 ease-in-out hover:scale-105 hover:translate-y-2 cursor-pointer">
+                        <h4 class="text-lg font-semibold"><i class="fas fa-calendar-alt"></i> Plans personalitzats</h4>
+                        <p>Adaptats a la teva disponibilitat de temps i objectius</p>
+                    </a>
+                    <!-- Cuadro 2 -->
+                    <a href="GuiaProfessionalEnCadaSessio.html" class="benefit text-left text-gray-300 transform transition duration-300 ease-in-out hover:scale-105 hover:translate-y-2 cursor-pointer">
+                        <h4 class="text-lg font-semibold"><i class="fas fa-user-tie"></i> Entrenadors virtuals</h4>
+                        <p>Guia professional en cada sessió</p>
+                    </a>
+                    <!-- Cuadro 3 -->
+                    <a href="ModificaElTeuProgresAmbEstadistiquesVisuals.html" class="benefit text-left text-gray-300 transform transition duration-300 ease-in-out hover:scale-105 hover:translate-y-2 cursor-pointer">
+                        <h4 class="text-lg font-semibold"><i class="fas fa-chart-line"></i> Estadístiques Visuals</h4>
+                        <p>Monitora el teu progrés amb estadístiques visuals</p>
+                    </a>
+                    <!-- Cuadro 4 -->
+                    <a href="icons.html" class="benefit text-left text-gray-300 transform transition duration-300 ease-in-out hover:scale-105 hover:translate-y-2 cursor-pointer">
+                        <h4 class="text-lg font-semibold"><i class="fas fa-images"></i> Imatges o icones</h4>
+                        <p>Visuals atractives que representen (exercicis, plans, entrenadors, seguiment)</p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <div class="text-center">
+
                 <h1 class="text-4xl font-bold tracking-tight text-gray-300 sm:text-6xl text-center mx-auto">Qui som?</h1>
                 <p class="mt-6 text-lg leading-8 text-gray-350">Som una petita empresa formada per 4 integrants que ha creat una app de fitness que gestiona els teus <br>entrenaments, t'ajuda a millorar i et mostra les millores que has optingut.</p>
             </div>
@@ -332,8 +382,9 @@
 </div>
 <!--newleter-->
 <div class="subscription-banner">
-    <p class="banner-text">ÚNETE AL CLUB Y GANA 250 PUNTOS PARA GASTARLOS EN RECOMPENSAS</p>
-    <button class="subscribe-button" onclick="showPopup()">SUSCRÍBETE GRATIS &rarr;</button>
+
+  <p class="banner-text">SUBSCRIU-TE PER REBRE TOTES LES NOVETATS</p>
+    <button class="subscribe-button" onclick="showPopup()">SUSCRÍBETE GRATIS</button>
 </div>
 
 <!-- Popup para ingresar el correo -->
@@ -349,11 +400,6 @@
 
         <input type="email" id="email-input" placeholder="DIRECCIÓN DE CORREO ELECTRÓNICO" required>
 
-        <label class="checkbox-container">
-            <input type="checkbox" id="stay-logged-in">
-            Mantener sesión iniciada. Aplicable a todas las opciones.
-            <span class="checkmark"></span>
-        </label>
 
         <button onclick="subscribe()">CONTINUAR &rarr;</button>
 
@@ -408,24 +454,22 @@
     </div>
 </footer>
 
-<div id="cookie-banner" class="cookie-banner">
-    <p>Utilitzem cookies per millorar la teva experiència. Si continues navegant, acceptes la nostra <a href="#privacy-policy">política de privadesa</a>.</p>
-    <button id="accept-cookies">Acceptar Cookies</button>
+<!-- Banner de cookies -->
+<div id="cookie-banner">
+    <p>Aquest lloc utilitza cookies per millorar l'experiència de l'usuari. Pots acceptar o configurar les teves preferències. Llegeix la nostra <a href="politica-cookies.html" target="_blank">Política de Cookies</a> per obtenir més informació.</p>
+    <div>
+        <button onclick="acceptCookies()">Acceptar</button>
+        <button onclick="rejectCookies()">Rebutjar</button>
+        <a href="conf-cookies.html"><button>Configura</button></a>
+    </div>
 </div>
 
+<script src="cookies.js"></script>
 <script>
+    // Comprova si l'usuari ja ha expressat la seva preferència per les cookies
     window.onload = function() {
-        const cookieBanner = document.getElementById('cookie-banner');
-        const acceptButton = document.getElementById('accept-cookies');
-
-        // Comprova si l'usuari ja ha acceptat les cookies
-        if (!localStorage.getItem('cookiesAccepted')) {
-            cookieBanner.style.display = 'block'; // Mostra el banner
-        }
-
-        acceptButton.onclick = function() {
-            localStorage.setItem('cookiesAccepted', 'true'); // Guarda l'elecció a localStorage
-            cookieBanner.style.display = 'none'; // Amaga el banner
+        if (localStorage.getItem("cookiesPreference")) {
+            document.getElementById("cookie-banner").style.display = "none";
         }
     }
 </script>

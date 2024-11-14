@@ -1,96 +1,78 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    display: none; /* Ocultem el banner per defecte */
-    z-index: 1000;
-}
-
-.cookie-banner p {
-    margin: 0;
-    display: inline-block;
-}
-
-.cookie-banner a {
-    color: #ffcc00; /* Color del link */
-}
-
-.cookie-banner button {
-    background-color: #ffcc00;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    margin-left: 15px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-/* Estils globals */
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Puedes cambiarlo a 'Roboto' si lo prefieres */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+    font-size: 62.5%; /* Tamaño de fuente base, ajusta según tus necesidades */
+    color: #E5E7EB; /* Gray-300 */
+    background-color: #1F2937; /* Gray-900 */
 }
+/*body {
+    background: #2e2a2a;
+    color: #f5f5f5;
+    font-size: 62.5%;
+    font-family: 'Roboto', Arial, Helvetica, Sans-serif, Verdana, serif;
+    line-height: 1.6;
+}
+*/
+
 
 h1 {
     margin-top: 20px;
 }
 /*Perfils*/
-#carrousel {
-    display: flex;
-    justify-content: center; /* Centra el carrusel horizontalmente */
-    align-items: center; /* Centra el carrusel verticalmente */
-}
 
-.owl-carousel {
-    display: flex; /* Permite que los items estén en fila */
-    justify-content: center; /* Centra los items en el carrusel */
-}
-
-.owl-carousel .item {
+.container {
     display: flex;
-    justify-content: center; /* Centra el contenido del elemento item */
-    align-items: flex-start; /* Alínea los elementos en la parte superior */
-    margin: 10px; /* Espacio entre cada perfil */
+    justify-content: center;
+    gap: 20px; /* Espacio entre tarjetas */
+    flex-wrap: nowrap; /* Evita que los perfiles se desplacen a una nueva línea */
 }
 
 .profile-card {
-    border: 1px solid #ccc; /* Color y grosor del borde */
-    border-radius: 15px; /* Bordes más redondeados */
-    padding: 10px; /* Espaciado interno reducido */
-    background-color: #f9f9f9; /* Color de fondo */
-    text-align: center; /* Centra el contenido */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra del recuadro */
-    transition: transform 0.2s; /* Efecto de transición al pasar el mouse */
-    max-width: 220px; /* Ancho máximo del recuadro */
-    display: flex; /* Permite alinear elementos dentro del recuadro */
-    flex-direction: column; /* Coloca los elementos en columna */
-    align-items: center; /* Centra horizontalmente el contenido */
+    background-color: #d8d8d8;
+    border-radius: 10px; /* Bordes redondeados */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease;
 }
 
 .profile-card:hover {
-    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+    transform: translateY(-10px); /* Efecto de elevación en hover */
 }
 
 .profile-photo {
-    width: 80%; /* Ajusta la imagen al 80% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    margin-bottom: 10px; /* Espacio inferior para separar la imagen del texto */
-    display: block; /* Asegura que la imagen se comporte como un bloque */
-    margin-left: auto; /* Centra la imagen horizontalmente */
-    margin-right: auto; /* Centra la imagen horizontalmente */
+    display: block;
+    margin: 0 auto 15px; /* Centra la foto y agrega espacio inferior */
+    border-radius: 50%; /* Foto de perfil redonda */
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Ajusta la imagen dentro del círculo */
 }
-.name, .age, .experience, .description {
-    margin: 5px 0; /* Espacio entre los textos */
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin: 10px 0 5px;
 }
+
+.age,
+.experience,
+.description {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+
+
+
 
 
 * {
@@ -132,9 +114,6 @@ a {
     width: 0;
     clear: both;
 }
-/** ========================
- * Contenedor
- ============================*/
 .pricing-wrapper {
     width: 960px;
     margin: 40px auto 0;
@@ -203,7 +182,7 @@ a {
 
 .table-list li:before {
     content: "\f00c";
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', serif;
     color: #3fab91;
     display: inline-block;
     position: relative;
@@ -261,7 +240,7 @@ a {
     border-radius: 2px;
     font-weight: 700;
     font-size: 1.4em;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
@@ -275,9 +254,7 @@ a {
     background: #228799;
 }
 
-/** ================
- * Responsive
- ===================*/
+
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     .pricing-wrapper {
         width: 768px;
@@ -325,99 +302,150 @@ a {
     margin-bottom: 20px; /* Espaciado entre las tablas de precios */
 }
 
-/* Estilos globales */
-body {
-    background: #2e2a2a; /* Color de fondo oscuro */
-    color: #f5f5f5; /* Color del texto */
-    font-size: 62.5%;
-    font-family: 'Roboto', Arial, Helvetica, Sans-serif, Verdana; /* Fuente general */
-    line-height: 1.6; /* Espaciado entre líneas */
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* Estilos del header */
-header {
-    padding: 20px;
-    text-align: center;
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
 }
 
-/* Encabezados */
-h1, h2, h3, h4 {
-    color: #ffffff; /* Color de los encabezados */
-    margin-bottom: 10px; /* Espaciado debajo de los encabezados */
+nav a:hover {
+    color: #3B82F6; /* Blue-500 */
 }
 
-/* Estilo de las secciones */
-main {
-    max-width: 800px; /* Ancho máximo del contenido */
-    margin: 0 auto; /* Centrar contenido */
-    padding: 20px; /* Espaciado interno */
-    background-color: #282828; /* Fondo de las secciones */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
-}
-
-/* Galería de imágenes */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Diseño de cuadrícula */
-    gap: 20px;
-    padding: 20px;
-}
-
-.gallery img {
-    width: 100%;
-    border-radius: 8px; /* Esquinas redondeadas */
-    transition: transform 0.3s; /* Efecto de hover */
-}
-
-.gallery img:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
-}
-
-/* Estilo de los botones */
+/* Estilos de los botones */
 button {
-    background-color: #201f30; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 15px; /* Espaciado interno */
-    cursor: pointer; /* Cambiar cursor al pasar el mouse */
-    transition: background-color 0.3s; /* Transición suave */
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: color 0.3s;
 }
 
-/* Efecto hover para botones */
 button:hover {
-    background-color: #1f1f2f; /* Color más oscuro al pasar el mouse */
+    color: #3B82F6; /* Blue-500 */
 }
 
-/* Estilos de listas */
-ul {
-    list-style-type: none; /* Sin viñetas */
-    padding-left: 0; /* Sin padding izquierdo */
+/* Sección de beneficios */
+.benefits-section {
+    padding: 2rem 1rem;
 }
 
-li {
-    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+.benefit {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.benefit:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.selectable {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
 }
 
 /* Estilos del footer */
 footer {
-    padding: 10px 0;
+    background-color: #1F2937; /* Gray-900 */
+    color: #9CA3AF; /* Gray-500 */
+    padding: 1rem 0;
+}
+
+/* Estilos de los detalles */
+#details {
+    border-top: 1px solid #4B5563; /* Gray-600 */
+    padding-top: 1rem;
+
     text-align: center; /* Centrar el texto del footer */
     margin-top: 20px; /* Espaciado superior */
     font-size: 0.9em; /* Tamaño de fuente más pequeño */
+
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 600px) {
-    main {
-        padding: 10px; /* Reducir padding en pantallas pequeñas */
-    }
-
-    button {
-        width: 100%;
+/* Responsividad */
+@media (min-width: 640px) {
+    .benefits {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+
+
+@media (min-width: 1024px) {
+    .benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Estilos de fondo */
+.fixed-background {
+    background-color: rgba(31, 41, 55, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilos para enlaces de login */
+.login-link {
+    position: relative;
+}
+
+.login-link::after {
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.login-link:hover::after {
+    transform: translateX(5px);
+}
+
+/* Estilos generales */
+
+
+/* Estilos para la sección de Fitness App */
+.fitness-app-section {
+    background-color: #1a202c; /* Color de fondo */
+    padding: 40px; /* Espacio interno */
+    margin: 20px; /* Espacio externo */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.fitness-app-section h2,
+.fitness-app-section h3 {
+    text-align: left; /* Centra el título */
+    font-size: 2.5rem; /* Tamaño del texto del título */
+    color: #fff; /* Color del texto */
+}
+
+.fitness-app-section p {
+    text-align: justify; /* Justifica el texto para mejor lectura */
+    margin: 20px 0; /* Margen vertical entre párrafos */
+    color: #cbd5e1; /* Color del texto */
+}
+
+/* Espaciado adicional para mejorar la legibilidad */
+.container {
+    max-width: 800px; /* Ancho máximo para el contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 0 20px; /* Espaciado lateral */
+}
+
+
+
+
 .fixed-background {
     background-image: url('fondo.jpg'); /* Canvia 'fondo.jpg' pel camí de la teva imatge */
     background-attachment: fixed; /* Fa que el fons sigui fix */
@@ -447,3 +475,175 @@ footer {
     transform: scale(1.05); /* Lleuger augment de mida al passar el ratolí */
 }
 
+/*newleter*/
+/* Estilo general para la barra de suscripción */
+.subscription-banner {
+    background-color: #0a72bd; /* Fondo amarillo */
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre texto y botón */
+    position: relative;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+/* Estilo para el texto */
+.banner-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #dddddd;
+    margin: 0;
+}
+
+/* Estilo para el botón de suscripción */
+.subscribe-button {
+    background-color: #000;
+    color: #FFF;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #333;
+}
+
+/* CSS para el popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #1F2937;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 400px;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.popup-logo img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.popup-content h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.popup-content p {
+    font-size: 14px;
+    color: #c1bfbf;
+    margin: 8px 0;
+}
+
+.popup-content input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.popup-content button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.popup-content button:hover {
+    background-color: #333;
+}
+
+.terms, .privacy-notice {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.terms a, .privacy-notice a {
+    color: #ffffff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+}
+
+/*Cookies*/
+/* Estil per al bàner de cookies */
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+#cookie-banner p {
+    margin: 0;
+    flex: 1;
+}
+
+#cookie-banner button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#cookie-banner button:hover {
+    background-color: #005bb5;
+}

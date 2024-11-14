@@ -5,8 +5,29 @@
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Imatges o icones per a exercicis i plans">
+    <meta name="description" content="Exercicis compostos per a treballar tot el cos">
     <title>Imatges o Icònes</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .gallery div {
+            text-align: center;
+        }
+        .gallery p {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,11 +36,7 @@
         <div class="flex lg:flex-1">
             <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">La teva empresa</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Logo de l'empresa">
             </a>
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-300">Inicia sessió <span aria-hidden="true">&rarr;</span></a>
         </div>
     </nav>
 </header>
@@ -28,20 +45,34 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Imatges o Icònes</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Visuals atractives que representen exercicis, plans, entrenadors i seguiment.</p>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Exercicis compostos per a treballar tot el cos</p>
         </div>
 
         <div class="benefit text-left text-gray-300 mt-10">
-            <h4 class="text-lg font-semibold"><i class="fas fa-images"></i> Galeria d'Imatges</h4>
-            <p>Aquí pots incloure imatges o icones que representin els teus serveis.</p>
-            <div class="gallery mt-4">
-                <img src="path_to_image_1.jpg" alt="Descripció de la imatge 1" class="rounded shadow-lg">
-                <img src="path_to_image_2.jpg" alt="Descripció de la imatge 2" class="rounded shadow-lg">
-                <img src="path_to_image_3.jpg" alt="Descripció de la imatge 3" class="rounded shadow-lg">
-                <img src="path_to_image_4.jpg" alt="Descripció de la imatge 4" class="rounded shadow-lg">
-                <img src="path_to_image_5.jpg" alt="Descripció de la imatge 5" class="rounded shadow-lg">
-                <img src="path_to_image_6.jpg" alt="Descripció de la imatge 6" class="rounded shadow-lg">
-                <!-- Agrega más imágenes según sea necesario -->
+            <div class="gallery">
+                <!-- Espalda -->
+                <div>
+                    <img src="espalda.jpeg" alt="Exercici per a l'esquena">
+                    <p>Exercici per a l'esquena: Treballa els músculs de l'esquena, com el dorsal i el trapezi.</p>
+                </div>
+
+                <!-- Pecho -->
+                <div>
+                    <img src="pecho.png" alt="Exercici per al pit">
+                    <p>Exercici per al pit: Enfocat en els músculs del pit com el pectoral major i menor.</p>
+                </div>
+
+                <!-- Brazos -->
+                <div>
+                    <img src="brazos.png" alt="Exercici per als braços">
+                    <p>Exercici per als braços: Treballa els bíceps, tríceps i els músculs de les espatlles.</p>
+                </div>
+
+                <!-- Pierna -->
+                <div>
+                    <img src="pierna.png" alt="Exercici per a les cames">
+                    <p>Exercici per a les cames: Concentra't en els músculs dels quàdriceps, isquiotibials i glútis.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -49,7 +80,7 @@
 
 <footer class="bg-gray-900 text-white py-4">
     <div class="text-center">
-        <p>&copy; 2024 La teva empresa. Tots els drets reservats.</p>
+        <p>&copy; 2024 Mammuts Fitness App. Tots els drets reservats.</p>
     </div>
 </footer>
 
