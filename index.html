@@ -8,12 +8,14 @@
     <title>Inici - Fitness App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <meta name="description" content="">
-    <link rel="icon" href="logo.png" type="image/png">
 </head>
 
 <body>
+<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 fixed-background">
+    <img src="fondo.jpg" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center">
+</div>
 <header class="absolute inset-x-0 top-0 z-50">
-    <nav class="flex items-center justify-between p-6 lg:px-8 bg-black border-b-2 border-gray-300 shadow-[0_4px_6px_rgba(0,0,0,0.1)] rounded-b-2xl" aria-label="Global">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
             <a href="index.html" class="-m-1.5 p-1.5">
                 <span class="sr-only">Mamuts</span>
@@ -23,7 +25,7 @@
 
         <div class="hidden lg:flex lg:gap-x-12">
             <a href="#" class="text-sm font-semibold leading-6 text-white">Product</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-white">Features</a>
+            <a href="contact.html" class="text-sm font-semibold leading-6 text-white">Features</a>
             <a href="#" class="text-sm font-semibold leading-6 text-white">Marketplace</a>
             <a href="PoliticaPrivacitat.html" class="text-sm font-semibold leading-6 text-white">Política de privacitat</a>
         </div>
@@ -31,6 +33,19 @@
             <a href="login.html" class="text-sm font-semibold leading-6 text-black login-link login-button">Log in <span aria-hidden="true">&rarr;</span></a>
         </div>
     </nav>
+
+    <!-- Sección de introducción -->
+    <section class="introduction py-24 sm:py-32 text-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl font-bold tracking-tight text-white">Benvingut a la Fitness App</h2>
+            <p class="mt-6 text-lg text-gray-300">
+                La nostra aplicació de fitness et permet entrenar de manera intel·ligent i adaptada a les teves necessitats.
+                Explora les nostres funcionalitats i millora el teu rendiment físic.
+            </p>
+            <a href="FitnessApp.html" class="mt-10 inline-block bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Descobreix més sobre la Fitness App</a>
+        </div>
+    </section>
+
     <!-- Contenedor del menú móvil -->
     <div class="lg:hidden hidden" role="dialog" aria-modal="true" id="mobile-menu">
         <!-- Fondo -->
@@ -53,10 +68,10 @@
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
+                        <a href="comentaris.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
                         <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
                         <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-                        <a href="PoliticaPrivacitat.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Politica de la Privacitat</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Politica de la Privacitat</a>
                     </div>
                     <div class="py-6">
                         <a href="login.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
@@ -67,7 +82,8 @@
     </div>
 
     <!-- Botón para abrir el menú, ubicado en la esquina superior derecha -->
-    <button type="button" id="open-menu" class="absolute top-4 right-4 text-white p-2 lg:hidden">        <span class="sr-only">Open menu</span>
+    <button type="button" id="open-menu" class="absolute top-4 right-4 text-black p-2 lg:hidden">
+        <span class="sr-only">Open menu</span>
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 6h18M3 18h18" />
         </svg>
@@ -130,17 +146,6 @@
 
 </script>
 
-<!-- Sección de introducción -->
-<section class="introduction py-24 sm:py-32 text-center">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <h2 class="text-4xl font-bold tracking-tight text-white">Benvingut a la Fitness App</h2>
-        <p class="mt-6 text-lg text-gray-300">
-            La nostra aplicació de fitness et permet entrenar de manera intel·ligent i adaptada a les teves necessitats.
-            Explora les nostres funcionalitats i millora el teu rendiment físic.
-        </p>
-        <a href="FitnessApp.html" class="mt-10 inline-block bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Descobreix més sobre la Fitness App</a>
-    </div>
-</section>
 
         <div class="benefits-section bg-gray-900 py-24 sm:py-32">
             <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
@@ -170,12 +175,16 @@
                 </div>
             </div>
         </div>
-<div class="text-center">
-    <h1 class="text-4xl font-bold tracking-tight text-gray-300 sm:text-6xl text-center mx-auto">Qui som?</h1>
-    <p class="mt-6 text-lg leading-8 text-gray-350">Som una petita empresa formada per 4 integrants que ha creat una app de fitness que gestiona els teus <br>entrenaments, t'ajuda a millorar i et mostra les millores que has optingut.</p>
+    </main>
 </div>
-<br>
- <!--Perfils-->
+
+<div class="text-center">
+
+                <h1 class="text-4xl font-bold tracking-tight text-gray-300 sm:text-6xl text-center mx-auto">Qui som?</h1>
+                <p class="mt-6 text-lg leading-8 text-gray-350">Som una petita empresa formada per 4 integrants que ha creat una app de fitness que gestiona els teus <br>entrenaments, t'ajuda a millorar i et mostra les millores que has optingut.</p>
+            </div>
+        <br>
+        <!--Perfils-->
         <div id="carrousel">
             <div class="container profile-container">
                 <div class="profile-card">
@@ -306,6 +315,7 @@
 </div>
 
 <script src="letters.js"></script>
+
         <footer class="footer">
             <div class="footer-container">
                 <!-- Contacto -->
@@ -339,8 +349,6 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="Q&A.html">Q&A</a></li>
                             <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="PoliticaPrivacitat.html">Politica de Privacitat</a></li>
-
                         </ul>
                     </div>
                 </div>

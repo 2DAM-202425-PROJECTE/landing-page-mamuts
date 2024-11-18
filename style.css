@@ -8,7 +8,7 @@ body {
     line-height: 1.6; /* Mejora la legibilidad del texto */
     font-size: 62.5%; /* Tamaño de fuente base, ajusta según tus necesidades */
     color: #E5E7EB; /* Gray-300 */
-    background-color: #111827; /* Gray-900 */
+    background-color: #1F2937; /* Gray-900 */
 }
 /*body {
     background: #2e2a2a;
@@ -423,15 +423,15 @@ button:hover {
 }
 
 .social-icon.facebook {
-    background-image: url(public/face.png);
+    background-image: url(face.png);
 }
 
 .social-icon.instagram {
-    background-image: url(public/insta.png);
+    background-image: url(insta.png);
 }
 
 .social-icon.github {
-    background-image: url(public/github.png);
+    background-image: url(github.png);
 }
 
 .social-icon {
@@ -495,6 +495,7 @@ button:hover {
 }
 
 .subscribe-button::before {
+    content: "➤";
     color: #fff;
 }
 
@@ -571,7 +572,7 @@ button:hover {
 
 
 .fixed-background {
-    background-image: url('public/fondo.jpg'); /* Canvia 'fondo.jpg' pel camí de la teva imatge */
+    background-image: url('fondo.jpg'); /* Canvia 'fondo.jpg' pel camí de la teva imatge */
     background-attachment: fixed; /* Fa que el fons sigui fix */
     background-size: cover; /* Asegura que la imatge cobreixi tot el contenidor */
     background-position: center; /* Centra la imatge en el contenidor */
@@ -771,3 +772,624 @@ button:hover {
 #cookie-banner button:hover {
     background-color: #005bb5;
 }
+/* Estils exclusius per a PolíticaPrivacitat.html */
+body.privacy-policy {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    color: #ffffff;
+
+    /* Imatge de fons */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.privacy-policy h1,
+body.privacy-policy h2,
+body.privacy-policy h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5em;
+}
+
+body.privacy-policy p,
+body.privacy-policy ul li {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+body.privacy-policy a {
+    color: #4f46e5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body.privacy-policy a:hover {
+    color: #7c3aed;
+}
+
+/* Header Styles */
+body.privacy-policy header {
+    background: rgba(45, 55, 72, 0.9);
+    padding: 2em 1em;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+body.privacy-policy header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+body.privacy-policy nav a {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 1em;
+    color: #cbd5e0;
+}
+
+body.privacy-policy nav a:hover {
+    color: #4f46e5;
+}
+
+/* Main Content Styles */
+body.privacy-policy main {
+    padding: 4em 1.5em;
+    background: rgba(26, 32, 44, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 2em auto;
+}
+
+body.privacy-policy section {
+    margin-bottom: 3em;
+}
+
+body.privacy-policy h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 2px solid #4f46e5;
+    padding-bottom: 0.5em;
+}
+
+body.privacy-policy ul {
+    list-style-type: disc;
+    margin-left: 1.5em;
+}
+
+body.privacy-policy ul li {
+    margin-bottom: 0.5em;
+}
+
+/* Footer Styles */
+body.privacy-policy footer {
+    background: rgba(45, 55, 72, 0.9);
+    text-align: center;
+    padding: 1.5em 1em;
+    margin-top: 4em;
+}
+
+body.privacy-policy footer p {
+    font-size: 0.875rem;
+    color: #cbd5e0;
+}
+
+/* Utility Classes */
+body.privacy-policy .text-center {
+    text-align: center;
+}
+
+body.privacy-policy .text-lg {
+    font-size: 1.125rem;
+}
+
+body.privacy-policy .mt-4 {
+    margin-top: 1em;
+}
+
+body.privacy-policy .mt-10 {
+    margin-top: 2.5em;
+}
+
+body.privacy-policy .mb-12 {
+    margin-bottom: 3em;
+}
+
+body.privacy-policy .pl-6 {
+    padding-left: 1.5em;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    body.privacy-policy main {
+        padding: 4em 3em;
+    }
+}
+
+@media (min-width: 1024px) {
+    body.privacy-policy header {
+        padding: 3em 1em;
+    }
+
+    body.privacy-policy nav a {
+        margin: 0 1.5em;
+    }
+
+    body.privacy-policy main {
+        padding: 5em 6em;
+    }
+}
+/* Estils exclusius per a "Adaptats a la Teva Disponibilitat" */
+body.availability-page {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    color: #ffffff;
+
+    /* Imatge de fons */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.availability-page h1,
+body.availability-page h2,
+body.availability-page h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5em;
+}
+
+body.availability-page p,
+body.availability-page ul li {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+body.availability-page a {
+    color: #4f46e5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body.availability-page a:hover {
+    color: #7c3aed;
+}
+
+/* Header Styles */
+body.availability-page header {
+    background: rgba(45, 55, 72, 0.9);
+    padding: 2em 1em;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+body.availability-page header nav a {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 1em;
+    color: #cbd5e0;
+}
+
+body.availability-page header nav a:hover {
+    color: #4f46e5;
+}
+
+/* Main Content Styles */
+body.availability-page main {
+    padding: 4em 1.5em;
+    background: rgba(26, 32, 44, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 2em auto;
+}
+
+body.availability-page .text-center {
+    text-align: center;
+}
+
+body.availability-page .text-lg {
+    font-size: 1.125rem;
+}
+
+body.availability-page .mt-4 {
+    margin-top: 1em;
+}
+
+body.availability-page .mt-10 {
+    margin-top: 2.5em;
+}
+
+body.availability-page .mb-12 {
+    margin-bottom: 3em;
+}
+
+body.availability-page .pl-6 {
+    padding-left: 1.5em;
+}
+
+/* Estatístiques Cards */
+body.availability-page .grid {
+    display: grid;
+    gap: 2rem;
+}
+
+body.availability-page .bg-gray-800 {
+    background-color: #2d3748;
+}
+
+body.availability-page .hover\:bg-indigo-700:hover {
+    background-color: #4c51bf;
+}
+
+body.availability-page .text-indigo-500 {
+    color: #6366f1;
+}
+
+body.availability-page .text-3xl {
+    font-size: 2rem;
+}
+
+body.availability-page .shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.availability-page .transition {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Footer Styles */
+body.availability-page footer {
+    background: rgba(45, 55, 72, 0.9);
+    text-align: center;
+    padding: 1.5em 1em;
+    margin-top: 4em;
+}
+
+body.availability-page footer p {
+    font-size: 0.875rem;
+    color: #cbd5e0;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    body.availability-page main {
+        padding: 4em 3em;
+    }
+}
+
+@media (min-width: 1024px) {
+    body.availability-page header {
+        padding: 3em 1em;
+    }
+
+    body.availability-page header nav a {
+        margin: 0 1.5em;
+    }
+
+    body.availability-page main {
+        padding: 5em 6em;
+    }
+}
+/* Estils per al títol en la pàgina "Adaptats a la Teva Disponibilitat" */
+body.availability-page main .text-center h2 {
+    font-size: 2.5rem; /* Ajustar la mida per a pantalles grans */
+    line-height: 1.2;
+    font-weight: bold;
+    color: white;
+    padding-top: 2em; /* Afegir espai per a no xocar amb el capçal */
+    padding-bottom: 1em;
+    text-align: center;
+    word-wrap: break-word; /* Permet que el títol es divideixi si és necessari */
+    white-space: normal; /* Permet que el títol es trenqui en diverses línies si és necessari */
+}
+
+body.availability-page main .text-center h2 {
+    font-size: 6vw; /* Ajusta la mida en funció de l'amplada de la finestra per pantalles petites */
+}
+
+/* Mantenir un bon espai entre les seccions */
+body.availability-page .mt-6 {
+    margin-top: 1.5rem;
+}
+
+/* En dispositius grans */
+@media (min-width: 1024px) {
+    body.availability-page main .text-center h2 {
+        font-size: 4rem; /* Mida més gran en pantalles grans */
+    }
+}
+
+/* En dispositius petits */
+@media (max-width: 640px) {
+    body.availability-page main .text-center h2 {
+        font-size: 5rem; /* Mida més petita per a dispositius petits */
+    }
+}
+/* Estils exclusius per a "Guia Professional" */
+body.guia-page {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    color: #ffffff;
+
+    /* Imatge de fons */
+    background-image: url('ruta/a/la/imatge-de-fons.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Encabezados */
+body.guia-page h1,
+body.guia-page h2,
+body.guia-page h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+/* Estil per als paràgrafs i llistes */
+body.guia-page p,
+body.guia-page ul li {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+/* Estil dels enllaços */
+body.guia-page a {
+    color: #4f46e5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body.guia-page a:hover {
+    color: #7c3aed;
+}
+
+/* Header */
+body.guia-page header {
+    background: rgba(45, 55, 72, 0.9);
+    padding: 2em 1em;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+body.guia-page header nav a {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 1em;
+    color: #cbd5e0;
+}
+
+body.guia-page header nav a:hover {
+    color: #4f46e5;
+}
+
+/* Main Content */
+body.guia-page main {
+    padding: 4em 1.5em;
+    background: rgba(26, 32, 44, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 2em auto;
+}
+
+body.guia-page .text-center {
+    text-align: center;
+}
+
+body.guia-page .text-lg {
+    font-size: 1.125rem;
+}
+
+body.guia-page .mt-4 {
+    margin-top: 1em;
+}
+
+body.guia-page .mt-10 {
+    margin-top: 2.5em;
+}
+
+body.guia-page .mb-12 {
+    margin-bottom: 3em;
+}
+
+body.guia-page .pl-6 {
+    padding-left: 1.5em;
+}
+
+/* Estadístiques Cards */
+body.guia-page .grid {
+    display: grid;
+    gap: 2rem;
+}
+
+body.guia-page .bg-gray-800 {
+    background-color: #2d3748;
+}
+
+body.guia-page .hover\:bg-indigo-700:hover {
+    background-color: #4c51bf;
+}
+
+body.guia-page .text-indigo-500 {
+    color: #6366f1;
+}
+
+body.guia-page .text-3xl {
+    font-size: 2rem;
+}
+
+body.guia-page .shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.guia-page .transition {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Footer */
+body.guia-page footer {
+    background: rgba(45, 55, 72, 0.9);
+    text-align: center;
+    padding: 1.5em 1em;
+    margin-top: 4em;
+}
+
+body.guia-page footer p {
+    font-size: 0.875rem;
+    color: #cbd5e0;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    body.guia-page main {
+        padding: 4em 3em;
+    }
+}
+
+@media (min-width: 1024px) {
+    body.guia-page header {
+        padding: 3em 1em;
+    }
+
+    body.guia-page header nav a {
+        margin: 0 1.5em;
+    }
+
+    body.guia-page main {
+        padding: 5em 6em;
+    }
+}
+/* Header Styles */
+body.guia-page header {
+    background: rgba(45, 55, 72, 0.9);
+    padding: 2em 1em;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    position: relative; /* Aseguramos que no tape el contenido */
+    z-index: 10; /* Aseguramos que el encabezado no tape otros elementos */
+}
+
+/* Main Content */
+body.guia-page main {
+    padding: 4em 1.5em;
+    background: rgba(26, 32, 44, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 2em auto;
+    z-index: 1; /* Aseguramos que el contenido no quede tapado */
+    position: relative;
+}
+
+
+
+/* Estilo de los Iconos en las Tarjetas */
+.card i {
+    font-size: 2rem;
+    color: #4f46e5; /* text-indigo-600 */
+    margin-right: 0.5rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2d3748; /* bg-gray-800 */
+    text-align: center;
+    padding: 1.5em 1em;
+}
+
+footer p {
+    font-size: 0.875rem;
+    color: #cbd5e0; /* text-gray-300 */
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-indigo-600 {
+    color: #4f46e5;
+}
+
+.text-indigo-400:hover {
+    color: #7c3aed;
+}
+
+.text-gray-300 {
+    color: #ffffff;
+}
+
+.bg-gray-800 {
+    background-color: #2d3748;
+}
+
+.bg-gray-900 {
+    background-color: #1a202c;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.mt-4 {
+    margin-top: 1em;
+}
+
+.mt-10 {
+    margin-top: 2.5em;
+}
+
+.mb-12 {
+    margin-bottom: 3em;
+}
+
+.list-disc {
+    list-style-type: disc;
+}
+
+.pl-6 {
+    padding-left: 1.5em;
+}
+
+.space-y-2 > :not(template) ~ :not(template) {
+    margin-top: 0.5em;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    main {
+        padding: 4em 3em;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 3em 1em;
+    }
+
+    nav a {
+        margin: 0 1.5em;
+    }
+
+    main {
+        padding: 5em 6em;
+    }
+}
+
