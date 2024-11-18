@@ -1,279 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>How to Design a FAQ Webpage in a SEO Way With Categories</title>
-
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <title>Preguntas Frecuentes - App Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
+        /* Estilos globales */
         body {
-            font-family: Verdana, 'Roboto', sans-serif, Monospace;
-            background: #f0f8ff; /* Color de fondo claro y atractivo */
-            line-height: 1.5;
-            color: #333; /* Texto oscuro para mejor legibilidad */
-        }
-        main {
-            max-width: 80%;
-            margin: 10px auto;
-        }
-        .center {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f8; /* Fondo gris claro */
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 3px solid green;
+            min-height: 100vh;
+            color: #333; /* Texto oscuro para contraste */
         }
-        img {
-            max-width: 100%;
+
+        /* Contenedor principal */
+        .faq-container {
+            width: 90%;
+            max-width: 800px;
+            background-color: #ffffff; /* Fondo blanco para el contenedor */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Sombra suave */
         }
-        .container {
-            max-width: 900px;
-            margin: auto;
-        }
-        .title {
+
+        /* Título principal */
+        .faq-title {
             text-align: center;
-            font-family: Arial;
-            margin-top: 50px;
-            margin-bottom: 50px;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #2c3e50; /* Título en un azul oscuro */
+            margin-bottom: 30px;
+            text-transform: uppercase;
         }
-        .accordion__item {
-            margin-bottom: 10px;
+
+        /* Estilo de cada ítem de la lista */
+        .accordion-item {
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .accordion__item__header {
-            background-color: #e7f3fe; /* Fondo de encabezado atractivo */
-            color: #333; /* Texto oscuro */
-            padding: 15px;
+
+        /* Estilo del encabezado de cada pregunta */
+        .accordion-item-header {
+            padding: 20px 30px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #fff;
+            background-color: #3498db; /* Azul vibrante */
             cursor: pointer;
-            position: relative;
-            font-family: Arial;
-            font-weight: 400;
-            font-size: 20px;
-            border: 1px solid #b3c7e6; /* Borde suave */
-            transition: background-color 0.3s; /* Transición para el hover */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .accordion__item__header:hover {
-            background-color: #d0e4ff; /* Cambio de color al pasar el mouse */
+
+        /* Efecto hover sobre las preguntas */
+        .accordion-item-header:hover {
+            background-color: #2980b9; /* Azul más oscuro al hacer hover */
         }
-        .accordion__item__header::before {
-            height: 15px;
-            width: 15px;
-            content: "";
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            transition: 0.5s all;
-            transform: rotate(45deg);
-            border-right: 2px solid #000;
-            border-bottom: 2px solid #000;
+
+        /* Estilo del contenido que se despliega */
+        .accordion-item-content {
+            padding: 20px 30px;
+            background-color: #ecf0f1; /* Gris claro */
+            color: #34495e; /* Texto oscuro para mejor contraste */
+            font-size: 1rem;
+            max-height: 0; /* Inicialmente colapsado */
+            opacity: 0; /* Inicialmente invisible */
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+            border-radius: 8px; /* Bordes redondeados para suavizar */
         }
-        .accordion__item__header.active {
-            background-color: #33a0ff; /* Color de fondo activo */
-            color: #fff; /* Texto blanco */
+
+        /* Mostrar el contenido cuando el ítem está abierto */
+        .accordion-item.open .accordion-item-content {
+            max-height: 500px; /* Ajusta la altura máxima cuando se despliega */
+            opacity: 1; /* Hacerlo visible */
         }
-        .accordion__item__header.active::before {
-            transform: rotate(-135deg);
-            top: 23px;
-            border-right: 2px solid #fff;
-            border-bottom: 2px solid #fff;
-        }
-        .accordion__item__content {
-            overflow-y: auto;
-            padding: 0;
-            display: none;
-        }
-        .testbtn {
-            border: 1px solid #99cc44 !important;
-            border-left: 5px solid #99cc44 !important;
-            border-right: 5px solid #99cc44 !important;
-            border-top: 5px solid #99cc44 !important;
-            border-bottom: 5px solid #99cc44 !important;
-            border-radius: 25px;
-            margin-right: 10px;
-        }
-        /* Responsive layout */
-        @media screen and (max-width: 800px) {
-            .testbtn {
-                width: 100%;
-                height: auto;
-                padding: 0 !important;
-                margin: 1px !important;
-                font-size: 18px;
-            }
+
+        /* Transición suave del contenedor del ítem */
+        .accordion-item:hover {
+            transform: translateY(-5px); /* Eleva el ítem al hacer hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-
 <body>
 
-<div id="zoom_wrapper" class="w3-animate-zoom">
+<div class="faq-container">
+    <h1 class="faq-title">Preguntas Frecuentes - App Fitness</h1>
 
-    <div class="w3-panel">
-        <h1 class="title" style="vertical-align: middle; margin-top: 10px; margin-bottom: 10px;">Frequently Asked Questions</h1>
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            ¿Qué es la aplicación Fitness?
+        </div>
+        <div class="accordion-item-content">
+            <p>La aplicación Fitness es una herramienta diseñada para ayudarte a alcanzar tus objetivos de salud y bienestar. Ofrece planes de entrenamiento, seguimiento de progreso y recomendaciones personalizadas según tus metas.</p>
+        </div>
     </div>
 
-    <div class="w3-bar w3-theme center">
-        <button class="w3-bar-item w3-button testbtn w3-padding-16" style="font-size: 24px" onclick="openCategory(event,'Category1')">Category1</button>
-        <button class="w3-bar-item w3-button testbtn w3-padding-16" style="font-size: 24px" onclick="openCategory(event,'Category2')">Category2</button>
-        <button class="w3-bar-item w3-button testbtn w3-padding-16" style="font-size: 24px" onclick="openCategory(event,'Category3')">Category3</button>
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            ¿Cómo funciona el seguimiento de mis entrenamientos?
+        </div>
+        <div class="accordion-item-content">
+            <p>La app rastrea tus entrenamientos mediante el uso de sensores en tu dispositivo, como el GPS para correr o el acelerómetro para entrenamientos en casa. Al completar tus rutinas, los datos se registran y se muestran en un resumen de progreso.</p>
+        </div>
     </div>
 
-    <br><br>
-
-    <div id="Category1" class="w3-container category w3-animate-opacity">
-        <main>
-            <div class="container">
-                <div class="accordion">
-
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            What is an FAQ page?
-                        </div>
-                        <div class="accordion__item__content">
-                            <p>Frequently Asked Questions (FAQ) pages contain a list of commonly asked questions and answers on a website about topics such as hours, shipping and handling, product information, and return policies.</p>
-                            <p>It’s no secret that the best companies put their customers first.
-                                <br><br>
-                                95% of consumers believe that a good customer experience is important to brand loyalty. Providing a top-notch customer experience can be expensive, time-consuming, and complicated to put into practice.
-                                <br><br>
-                                Sure there are chatbots, support lines, and customer reviews to help shoppers on their path to purchase, but there’s one forgotten customer service tactic that is cost-effective and streamlined. That tactic is an FAQ page.
-                                <br><br>
-                                FAQ pages went out of style for a bit because companies viewed them as outdated and unattractive forms of communication. Now they are on most websites because they save time for both the customer and employees. It’s easy to get carried away with the design and content on the FAQ page. In this guide, you’ll learn all there is to know about crafting an effective FAQ page. Plus, get inspired with 30 best-in-class examples.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            Why you should make an FAQ page?
-                        </div>
-                        <div class="accordion__item__content">
-                            <p>An FAQ page is a time-saving customer service tactic that provides the most commonly asked questions and answers for current or potential customers.</p>
-                            <p>Before diving into how to make an FAQ page, you need to know why having one is so important. There are so many reasons beyond improving the customer experience for perfecting your FAQ page. Keep in mind the importance of an FAQ page when <a href="/articles/e-commerce-website" rel="noopener" target="_blank">developing your own e-commerce website</a> so you can make sure it increases sales and not the other way around.</p>
-                            <h3>Saves time</h3>
-                            <p>This reason might be the most obvious, but it’s a clear benefit of an FAQ page. Not only does the FAQ page save customers time, but it also saves employees time as well. Having an FAQ page ensures customers don’t have to sit on the phone for hours waiting for simple answers and employees don’t have to individually answer all questions.</p>
-                            <p>Companies dedicate a large portion of their budgets to customer service teams. When these teams don’t have to focus on answering the frequently asked questions, they can serve other customer issues in a more timely manner.</p>
-                            <h3>Earns trust</h3>
-                            <p>Information is available at the click of a button, but as we all know, information is not always true. Because of this, customers are more skeptical than ever before. They hunt for products by sifting through reviews, looking at the product on multiple websites, and doing price checking across the internet.</p>
-                            <p>If your brand seems to understand the customer’s pain point and address it through a seamless user experience, the shopper will become a loyal customer.</p>
-                            <p>One of the most common pain points is when shoppers are wondering something about a product or service and there’s no information addressing that question. The customers think to themselves, “I can’t be the only person who’s wondering this,” yet the answer is nowhere to be found. This is a surefire way to guarantee they close the window and go to your competitor’s website.</p>
-                            <p>By creating a comprehensive FAQ page you can assure customers get the answer they need and keep shopping on your site.</p>
-                            <h3>Provides new insights</h3>
-                            <p>It’s difficult to get into the head of a customer. One way to do this is to look at what questions customers frequently ask your support team. You might find the common questions are different than you expected, which can help improve your products and services.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </main>
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            ¿Puedo personalizar mis entrenamientos?
+        </div>
+        <div class="accordion-item-content">
+            <p>Sí, la aplicación permite personalizar los entrenamientos según tu nivel, preferencia y metas. Puedes elegir entre rutinas predefinidas o crear las tuyas propias ajustadas a tus necesidades.</p>
+        </div>
     </div>
 
-    <div id="Category2" class="w3-container category w3-animate-opacity" style="display:none;">
-        <main>
-            <div class="container">
-                <div class="accordion">
-
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            How can I contact support?
-                        </div>
-                        <div class="accordion__item__content">
-                            <p>You can contact our support team via email at support@example.com or through our live chat available on our website.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            What payment methods do you accept?
-                        </div>
-                        <div class="accordion__item__content">
-                            <p>We accept major credit cards, PayPal, and bank transfers. For more details, please visit our payment information page.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            Can I return a product?
-                        </div>
-                        <div class="accordion__item__content">
-                            <p>Yes, we offer a 30-day return policy. If you're not satisfied with your purchase, please follow the return instructions provided in your order confirmation email.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </main>
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            ¿Necesito una suscripción para acceder a todas las funciones?
+        </div>
+        <div class="accordion-item-content">
+            <p>La app es gratuita para funciones básicas, como entrenamientos predefinidos y seguimiento de progreso. Sin embargo, para acceder a funciones premium como planes avanzados, recomendaciones personalizadas y análisis detallado, necesitarás una suscripción.</p>
+        </div>
     </div>
 
-    <div id="Category3" class="w3-container category w3-animate-opacity" style="display:none;">
-        <main>
-            <div class="container">
-                <div class="accordion">
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            ¿Puedo sincronizar mis entrenamientos con otros dispositivos?
+        </div>
+        <div class="accordion-item-content">
+            <p>Sí, la aplicación es compatible con una variedad de dispositivos como relojes inteligentes, pulseras de actividad, y aplicaciones de salud, lo que te permite sincronizar tus datos fácilmente.</p>
+        </div>
+    </div>
 
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            How long does shipping take?
-                        </div>
-                        <div class="accordion__item__content">
-                            <p>Shipping times vary depending on your location. Typically, domestic shipping takes 3-5 business days, while international shipping can take 7-14 business days.</p>
-                        </div>
-                    </div>
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            ¿Cuáles son las recomendaciones para principiantes?
+        </div>
+        <div class="accordion-item-content">
+            <p>Para principiantes, te recomendamos empezar con entrenamientos ligeros y progresivos. La app ofrece rutinas específicas para principiantes que van aumentando gradualmente en dificultad, para evitar lesiones y mejorar tu forma física con el tiempo.</p>
+        </div>
+    </div>
 
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            Do you ship internationally?
-                        </div>
-                        <div class="accordion__item__content">
-                            <p>Yes, we ship to many countries around the world. Please check our shipping policy for more details on international shipping.</p>
-                        </div>
-                    </div>
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            ¿La app ofrece entrenamiento de nutrición?
+        </div>
+        <div class="accordion-item-content">
+            <p>Sí, la aplicación incluye consejos y planes básicos de nutrición adaptados a tus objetivos de fitness. Puedes acceder a recomendaciones sobre dietas y alimentos que complementen tus entrenamientos.</p>
+        </div>
+    </div>
 
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            How do I track my order?
-                        </div>
-                        <div class="accordion__item__content">
-                            <p>Once your order has shipped, you will receive a tracking number via email. You can use this number to track your order on our website.</p>
-                        </div>
-                    </div>
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            ¿Cómo puedo contactar al soporte si tengo problemas con la app?
+        </div>
+        <div class="accordion-item-content">
+            <p>Si tienes problemas o preguntas, puedes ponerte en contacto con nuestro equipo de soporte a través del correo electrónico soporte@appfitness.com o a través de la opción de chat en la app para recibir asistencia en tiempo real.</p>
+        </div>
+    </div>
 
-                </div>
-            </div>
-        </main>
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            ¿Cómo actualizar la app a la última versión?
+        </div>
+        <div class="accordion-item-content">
+            <p>Para actualizar la aplicación, solo tienes que ir a la tienda de aplicaciones de tu dispositivo (App Store para iOS o Google Play para Android) y buscar la opción de actualización. Si hay una nueva versión disponible, podrás descargarla de manera sencilla.</p>
+        </div>
     </div>
 
 </div>
 
 <script>
-    function openCategory(evt, categoryName) {
-        var i, x, tablinks;
-        x = document.getElementsByClassName("category");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("w3-bar-item");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" w3-theme", "");
-        }
-        document.getElementById(categoryName).style.display = "block";
-        evt.currentTarget.className += " w3-theme";
-    }
-
-    var acc = document.getElementsByClassName("accordion__item__header");
-    for (var j = 0; j < acc.length; j++) {
-        acc[j].onclick = function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        }
-    }
+    // Agregar interacción para abrir y cerrar los ítems
+    document.querySelectorAll('.accordion-item-header').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('open');
+        });
+    });
 </script>
 
 </body>
