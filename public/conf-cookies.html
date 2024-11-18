@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Configura les teves Preferències de Cookies</title>
   <style>
-    /* (Estils iguals que abans) */
+    /* Estils globals */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #111827;
       color: #333;
       margin: 0;
       padding: 0;
@@ -20,16 +20,21 @@
     }
 
     h1 {
-      color: #0066cc;
+      color: #dddcdc;
+      font-size: 2rem; /* Tamany de lletra adaptatiu */
+      text-align: center; /* Centra el títol */
+      margin-bottom: 20px;
     }
 
+    /* Estils del formulari */
     form {
       background-color: #fff;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      width: 90%;
-      max-width: 400px;
+      width: 90%; /* Amplada flexible */
+      max-width: 400px; /* Amplada màxima */
+      box-sizing: border-box; /* Inclou el padding dins de l'amplada */
     }
 
     label {
@@ -49,6 +54,7 @@
       margin-top: 4px;
     }
 
+    /* Estil del botó */
     button {
       background-color: #0066cc;
       color: #fff;
@@ -64,6 +70,49 @@
     button:hover {
       background-color: #005bb5;
     }
+
+    /* Media Queries per a dispositius petits */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5rem; /* Redueix el tamany del títol */
+      }
+
+      form {
+        padding: 15px; /* Redueix el padding per pantalles petites */
+        width: 100%; /* Utilitza tot l'ample disponible */
+      }
+
+      .description {
+        font-size: 0.8em; /* Redueix lleugerament el tamany del text descriptiu */
+        margin-left: 20px;
+      }
+
+      button {
+        font-size: 0.9em; /* Botons més petits */
+        padding: 8px 15px;
+      }
+    }
+
+    /* Media Queries per a dispositius molt petits (mòbils) */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      form {
+        padding: 10px;
+      }
+
+      button {
+        font-size: 0.8em;
+        padding: 6px 10px;
+      }
+    }
+
   </style>
 </head>
 <body>
