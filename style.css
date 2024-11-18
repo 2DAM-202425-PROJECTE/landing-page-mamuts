@@ -770,4 +770,9 @@ button:hover {
 
 #cookie-banner button:hover {
     background-color: #005bb5;
+}.fitness-app-section p {
+    text-align: justify;
+    margin: 20px 0;
+    color: #cbd5e1;
 }
+
