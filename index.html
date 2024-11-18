@@ -15,7 +15,7 @@
     <img src="fondo.jpg" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center">
 </div>
 <header class="absolute inset-x-0 top-0 z-50">
-    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <nav class="flex items-center justify-between p-6 lg:px-8 bg-black border-b-2 border-gray-300 shadow-[0_4px_6px_rgba(0,0,0,0.1)] rounded-b-2xl" aria-label="Global">
         <div class="flex lg:flex-1">
             <a href="index.html" class="-m-1.5 p-1.5">
                 <span class="sr-only">Mamuts</span>
@@ -175,8 +175,6 @@
                 </div>
             </div>
         </div>
-    </main>
-</div>
 
 <div class="text-center">
 
@@ -185,38 +183,38 @@
             </div>
         <br>
         <!--Perfils-->
-        <div id="carrousel">
-            <div class="container profile-container">
-                <div class="profile-card">
-                    <img src="foto_perfil.png" alt="Quim Bayarri" class="profile-photo">
-                    <h2 class="name">Quim Bayarri</h2>
-                    <p class="age">Edat: 18 anys</p>
-                    <p class="experience">Experiència: 1 any en disseny gràfic</p>
-                    <p class="description">Descripció: Quim és un jove dissenyador gràfic amb una gran creativitat i passió pel seu treball.</p>
-                </div>
-                <div class="profile-card">
-                    <img src="foto_perfil.png" alt="Ivan Martinez" class="profile-photo">
-                    <h2 class="name">Ivan</h2>
-                    <p class="age">Edat: 19 anys</p>
-                    <p class="experience">Experiència: 1 any en programació web</p>
-                    <p class="description">Descripció: Ivan és un programador que ha creat diverses pàgines web durant els seus estudis.</p>
-                </div>
-                <div class="profile-card">
-                    <img src="foto_perfil.png" alt="Dani Bengochea" class="profile-photo">
-                    <h2 class="name">Dani Bengochea</h2>
-                    <p class="age">Edat: 19 anys</p>
-                    <p class="experience">Experiència: 1 any en màrqueting digital</p>
-                    <p class="description">Descripció: Dani és un apassionat del màrqueting que busca aprendre i créixer en el món digital.</p>
-                </div>
-                <div class="profile-card">
-                    <img src="foto_perfil.png" alt="Andrei Guta" class="profile-photo">
-                    <h2 class="name">Andrei Guta</h2>
-                    <p class="age">Edat: 18 anys</p>
-                    <p class="experience">Experiència: 1 any en administració de sistemes</p>
-                    <p class="description">Descripció: Andrei és un jove tècnic en sistemes que ha treballat en la gestió de servidors i suport tècnic.</p>
-                </div>
-            </div>
+<div>
+    <div class="container profile-container">
+        <div class="profile-card">
+            <img src="foto_perfil.png" alt="Quim Bayarri" class="profile-photo">
+            <h2 class="name">Quim Bayarri</h2>
+            <p class="age">Edat: 18 anys</p>
+            <p class="experience">Experiència: 1 any en disseny gràfic</p>
+            <p class="description">Descripció: Quim és un jove dissenyador gràfic amb una gran creativitat i passió pel seu treball.</p>
         </div>
+        <div class="profile-card">
+            <img src="foto_perfil.png" alt="Ivan Martinez" class="profile-photo">
+            <h2 class="name">Ivan Martinez</h2>
+            <p class="age">Edat: 19 anys</p>
+            <p class="experience">Experiència: 1 any en programació web</p>
+            <p class="description">Descripció: Ivan és un programador que ha creat diverses pàgines web durant els seus estudis.</p>
+        </div>
+        <div class="profile-card">
+            <img src="foto_perfil.png" alt="Dani Bengochea" class="profile-photo">
+            <h2 class="name">Dani Bengochea</h2>
+            <p class="age">Edat: 19 anys</p>
+            <p class="experience">Experiència: 1 any en màrqueting digital</p>
+            <p class="description">Descripció: Dani és un apassionat del màrqueting que busca aprendre i créixer en el món digital.</p>
+        </div>
+        <div class="profile-card">
+            <img src="foto_perfil.png" alt="Andrei Guta" class="profile-photo">
+            <h2 class="name">Andrei Guta</h2>
+            <p class="age">Edat: 18 anys</p>
+            <p class="experience">Experiència: 1 any en administració de sistemes</p>
+            <p class="description">Descripció: Andrei és un jove tècnic en sistemes que ha treballat en la gestió de servidors i suport tècnic.</p>
+        </div>
+    </div>
+</div>
 
 <!-- Contenedor -->
 <div class="pricing-wrapper clearfix">
@@ -280,79 +278,72 @@
         </div>
     </div>
 </div>
+
 <!--newleter-->
 <div class="subscription-banner">
 
   <p class="banner-text">SUBSCRIU-TE PER REBRE TOTES LES NOVETATS</p>
-    <button class="subscribe-button" onclick="showPopup()">SUSCRÍBETE GRATIS</button>
+    <button class="subscribe-button" onclick="showPopup()">SUBSCRIU-TE GRATIS</button>
 </div>
 
 <!-- Popup para ingresar el correo -->
 <div class="popup-overlay" id="popup-overlay">
     <div class="popup-content">
         <span class="close-button" onclick="closePopup()">&times;</span>
-        <div class="popup-logo">
-            <img src="logo.png" alt="Logo del Club"> <!-- Reemplaza con la ruta de tu logo -->
-        </div>
-        <h2>LAS RECOMPENSAS DEL CLUB TE ESPERAN</h2>
-        <p>Realiza pedidos sin gastos de envío, consigue códigos de descuento y productos exclusivos en el club.</p>
-        <p><strong>Inicia sesión o regístrate. ¡Es gratis!</strong></p>
 
-        <input type="email" id="email-input" placeholder="DIRECCIÓN DE CORREO ELECTRÓNICO" required>
+        <h2>LES TEVES METES ESPORTIVES T'ESPEREN!</h2>
+        <br>
+        <p>Accedeix a plans d'entrenament personalitzats, seguiment de progrés i consells nutricionals exclusius.</p>
+        <p><strong>Uneix-te avui mateix i comença a transformar-te.</strong></p>
+        <br>
 
+        <input type="email" id="email-input" placeholder="INTRODUEIX EL TEU CORREU ELECTRÒNIC" required>
 
-        <button onclick="subscribe()">CONTINUAR &rarr;</button>
-
-        <p class="terms">
-            Al hacer clic en "Continuar", aceptas los <a href="#">Términos y condiciones del Club</a>.
-        </p>
-
-        <p class="privacy-notice">
-            AVISO DE PRIVACIDAD<br>
-            Tus datos personales se utilizan para gestionar tu membresía en el club, conforme a nuestra <a href="#">Política de privacidad</a>.
-        </p>
+        <button onclick="subscribe()">COMENÇA &rarr;</button>
     </div>
 </div>
 
 <script src="letters.js"></script>
-        <footer class="footer">
-            <div class="footer-container">
-                <!-- Contacto -->
-                <div class="footer-section contact-info">
-                    <div class="contact-item">
-                        <i class="icon-location"></i>
-                        <p><strong>Find us</strong><br>1010 Avenue, sw 54321, Chandigarh</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="icon-phone"></i>
-                        <p><strong>Call us</strong><br>9876543210</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="icon-email"></i>
-                        <p><strong>Mail us</strong><br>mamutsoficials@gmail.com</p>
-                    </div>
-                </div>
 
-                <!-- Información de la compañía -->
-                <div class="footer-section about">
-                    <div class="social-media">
-                        <a href="https://www.facebook.com/profile.php?id=61568082219128" class="social-icon facebook"></a>
-                        <a href="https://www.instagram.com/mamutsoficials/" class="social-icon instagram"></a> <!-- Enlace de Instagram -->
-                        <a href="https://github.com/orgs/2DAM-202425-PROJECTE/teams/grup-p1-g1" class="social-icon github"></a>    <!-- Enlace de GitHub -->
-                    </div>
-
-                    <!-- Enlaces útiles -->
-                    <div class="footer-section useful-links">
-                        <h2>Useful Links</h2>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="Q&A.html">Q&A</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Contacto -->
+        <div class="footer-section contact-info">
+            <div class="contact-item">
+                <i class="icon-location"></i>
+                <p><strong>Find us</strong><br>1010 Avenue, sw 54321, Chandigarh</p>
             </div>
-        </footer>
+            <div class="contact-item">
+                <i class="icon-phone"></i>
+                <p><strong>Call us</strong><br>9876543210</p>
+            </div>
+            <div class="contact-item">
+                <i class="icon-email"></i>
+                <p><strong>Mail us</strong><br>mamutsoficials@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- Información de la compañía -->
+        <div class="footer-section about">
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=61568082219128" class="social-icon facebook"></a>
+                <a href="https://www.instagram.com/mamutsoficials/" class="social-icon instagram"></a> <!-- Enlace de Instagram -->
+                <a href="https://github.com/orgs/2DAM-202425-PROJECTE/teams/grup-p1-g1" class="social-icon github"></a>    <!-- Enlace de GitHub -->
+            </div>
+
+            <!-- Enlaces útiles -->
+            <div class="footer-section useful-links">
+                <h2>Useful Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Q&A.html">Q&A</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
 <!-- Banner de cookies -->
 <div id="cookie-banner">
     <p>Aquest lloc utilitza cookies per millorar l'experiència de l'usuari. Pots acceptar o configurar les teves preferències. Llegeix la nostra <a href="politica-cookies.html" target="_blank">Política de Cookies</a> per obtenir més informació.</p>
