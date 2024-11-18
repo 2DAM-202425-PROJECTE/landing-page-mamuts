@@ -8,7 +8,7 @@ body {
     line-height: 1.6; /* Mejora la legibilidad del texto */
     font-size: 62.5%; /* Tamaño de fuente base, ajusta según tus necesidades */
     color: #E5E7EB; /* Gray-300 */
-    background-color: #1F2937; /* Gray-900 */
+    background-color: #111827; /* Gray-900 */
 }
 /*body {
     background: #2e2a2a;
@@ -69,6 +69,7 @@ h1 {
     color: #666;
     margin: 5px 0;
 }
+
 
 
 
@@ -305,18 +306,20 @@ a {
 
 
 nav {
-    border-bottom-left-radius: 30px; /* Bordes inferiors arrodonits i amb una corba més gran */
-    border-bottom-right-radius: 30px; /* Bordes inferiors arrodonits i amb una corba més gran */
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3); /* Il·luminació LED fixa */
-    background: linear-gradient(to bottom, #000000, #333333); /* Fons degradat per donar profunditat */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* Apliquem l'efecte de il·luminació constant a tot el temps */
-nav:hover {
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3); /* Il·luminació LED constant */
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
 }
 
-
+nav a:hover {
+    color: #3B82F6; /* Blue-500 */
+}
 
 /* Estilos de los botones */
 button {
@@ -746,17 +749,14 @@ button:hover {
     color: #fff;
     padding: 20px;
     display: flex;
-    flex-wrap: wrap; /* Permet que els elements es reorganitzin */
     justify-content: space-between;
     align-items: center;
     font-size: 16px;
-    z-index: 1000; /* Assegura que el bàner estigui al davant */
 }
 
 #cookie-banner p {
     margin: 0;
-    flex: 1 1 60%; /* Permet que el text ocupi un espai proporcional */
-    line-height: 1.5;
+    flex: 1;
 }
 
 #cookie-banner button {
@@ -765,39 +765,9 @@ button:hover {
     border: none;
     padding: 10px 20px;
     margin-left: 10px;
-    margin-top: 10px; /* Afegeix espai entre botons en pantalles petites */
     cursor: pointer;
-    border-radius: 5px; /* Estil rodó per als botons */
-    transition: background-color 0.3s; /* Animació suau per al hover */
 }
 
 #cookie-banner button:hover {
     background-color: #005bb5;
-}
-
-#cookie-banner a button {
-    background-color: #ffcc00; /* Color distintiu per a "Configura" */
-    color: #333;
-}
-
-#cookie-banner a button:hover {
-    background-color: #e6b800;
-}
-
-/* Estils responsius */
-@media (max-width: 768px) {
-    #cookie-banner {
-        flex-direction: column; /* Reorganitza els elements en columna */
-        text-align: center; /* Centra el text */
-        padding: 15px;
-    }
-
-    #cookie-banner p {
-        flex: 1 1 100%; /* Text ocupa tot l'ample */
-        margin-bottom: 10px;
-    }
-
-    #cookie-banner button {
-        margin-left: 0; /* Elimina l'espai lateral en botons */
-    }
 }
