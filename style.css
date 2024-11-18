@@ -8,7 +8,7 @@ body {
     line-height: 1.6; /* Mejora la legibilidad del texto */
     font-size: 62.5%; /* Tamaño de fuente base, ajusta según tus necesidades */
     color: #E5E7EB; /* Gray-300 */
-    background-color: #1F2937; /* Gray-900 */
+    background-color: #111827; /* Gray-900 */
 }
 /*body {
     background: #2e2a2a;
@@ -304,21 +304,20 @@ a {
 
 
 
+
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    border-bottom-left-radius: 30px; /* Bordes inferiors arrodonits i amb una corba més gran */
+    border-bottom-right-radius: 30px; /* Bordes inferiors arrodonits i amb una corba més gran */
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3); /* Il·luminació LED fixa */
+    background: linear-gradient(to bottom, #000000, #333333); /* Fons degradat per donar profunditat */
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
+/* Apliquem l'efecte de il·luminació constant a tot el temps */
+nav:hover {
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3); /* Il·luminació LED constant */
 }
 
-nav a:hover {
-    color: #3B82F6; /* Blue-500 */
-}
+
 
 /* Estilos de los botones */
 button {
@@ -770,7 +769,8 @@ button:hover {
 
 #cookie-banner button:hover {
     background-color: #005bb5;
-}.fitness-app-section p {
+}
+.fitness-app-section p {
     text-align: justify;
     margin: 20px 0;
     color: #cbd5e1;
