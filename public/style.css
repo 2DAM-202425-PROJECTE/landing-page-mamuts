@@ -774,3 +774,19 @@ button:hover {
     color: #cbd5e1;
 }
 
+.horizontal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 1rem; /* Espaciado entre columnas */
+}
+@media (max-width: 768px) {
+    .horizontal-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+}
+@media (max-width: 480px) {
+    .horizontal-grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}
+

@@ -11,7 +11,6 @@
     <link href="tailwind.css" rel="stylesheet">
 
 </head>
-
 <body class="bg-gray-900 text-white font-sans privacy-policy">
 
 <!-- Header -->
@@ -115,87 +114,44 @@
 </header>
 
 <!-- Main Content -->
-<main class="py-16 px-6 sm:px-16 mt-24">
-    <div class="max-w-7xl mx-auto">
+<main class="relative isolate overflow-hidden py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Estadístiques Visuals</h2>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Monitora el teu progrés amb estadístiques visuals que t'ajuden a prendre decisions informades per millorar el teu aprenentatge i assolir els teus objectius més ràpidament.</p>
+        </div>
+        <br>
 
-        <!-- Introducció -->
-        <section class="mb-12">
-            <p class="text-lg text-gray-300 leading-relaxed">
-                La nostra política de privacitat està dissenyada per explicar quina informació personal recollim, com la utilitzem i les mesures que prenem per protegir la teva privacitat. Al fer servir la nostra aplicació, acceptes els termes descrits en aquesta política.
-            </p>
-        </section>
+        <!-- Estadísticas Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-base font-semibold leading-7 text-white mt-12">
+            <!-- Progrés General -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-chart-line text-indigo-500"></i> Progrés General</h3>
+                <p class="mt-4">Visualitza la teva evolució amb gràfics que mostren el teu rendiment al llarg del temps. Aquests gràfics et permeten observar les teves millores en diferents àrees, com força, flexibilitat i resistència, comparant el teu progrés d'una sessió a l'altra.</p>
+                <p class="mt-4 text-gray-300">Aquesta visualització t'ajuda a veure clarament els teus avanços i a identificar àrees en què necessites concentrar-te més. Els gràfics interactius també et permeten fer zoom i filtrar per períodes específics per obtenir dades més detallades.</p>
+            </div>
 
-        <!-- Informació que recollim -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold">1. Informació que recollim</h2>
-            <p class="mt-4 text-lg text-gray-300">
-                Recollim informació personal per millorar la teva experiència dins de la nostra aplicació, com per exemple:
-            </p>
-            <ul class="list-disc pl-6 mt-4 space-y-2">
-                <li>Nom i correu electrònic per gestionar el teu compte</li>
-                <li>Informació sobre la teva activitat física i seguiment de la salut</li>
-                <li>Dispositius que utilitzes per sincronitzar dades (rellotges intel·ligents, etc.)</li>
-            </ul>
-        </section>
+            <!-- Feedback d'Usuaris -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-comment-alt text-indigo-500"></i> Feedback d'Usuaris</h3>
+                <p class="mt-4">Consulta les valoracions i comentaris d'altres usuaris per millorar el teu aprenentatge. La nostra plataforma et permet veure els suggeriments i recomanacions de persones que segueixen el mateix camí, ajudant-te a ajustar els teus objectius i mètodes d'entrenament.</p>
+                <p class="mt-4 text-gray-300">Els usuaris valoraran els teus avanços i t'ajudaran a millorar, compartint consells i estratègies per afrontar els reptes. A més, pots deixar comentaris i respostes per interactuar amb altres membres de la comunitat.</p>
+            </div>
 
-        <!-- Com utilitzem la informació -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold">2. Com utilitzem la teva informació</h2>
-            <p class="mt-4 text-lg text-gray-300">
-                Utilitzem la teva informació personal per les següents finalitats:
-            </p>
-            <ul class="list-disc pl-6 mt-4 space-y-2">
-                <li>Proporcionar-te els serveis personalitzats dins de l'aplicació</li>
-                <li>Millorar les funcionalitats i el rendiment de l'aplicació</li>
-                <li>Enviar-te notificacions relatives al teu rendiment i benestar</li>
-            </ul>
-        </section>
+            <!-- Objectius i Metes -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-bullseye text-indigo-500"></i> Objectius i Metes</h3>
+                <p class="mt-4">Estableix els teus objectius i segueix el teu progrés amb estadístiques personalitzades per a cada meta. Podràs veure en quina mesura estàs aconseguint els teus objectius en temps real, amb indicadors visuals que t'ajuden a mantenir-te enfocat.</p>
+                <p class="mt-4 text-gray-300">Aquestes metes personalitzades inclouen objectius a curt, mitjà i llarg termini, i t'ajuden a establir un camí clar per aconseguir-los. Els gràfics personalitzats mostren l'evolució dels teus objectius en diferents períodes.</p>
+            </div>
 
-        <!-- Protecció de la informació -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold">3. Protecció de la teva informació</h2>
-            <p class="mt-4 text-lg text-gray-300">
-                Prenem les mesures necessàries per garantir que la teva informació estigui segura. Utilitzem tècniques de xifratge i altres pràctiques de seguretat per protegir les dades emmagatzemades.
-            </p>
-        </section>
-
-        <!-- Compartició de dades amb tercers -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold">4. Compartició de dades amb tercers</h2>
-            <p class="mt-4 text-lg text-gray-300">
-                No compartim la teva informació personal amb tercers sense el teu consentiment, excepte en els casos següents:
-            </p>
-            <ul class="list-disc pl-6 mt-4 space-y-2">
-                <li>Si és requerit per llei</li>
-                <li>Per millorar els serveis a través de proveïdors externs que ajuden a gestionar l'aplicació</li>
-            </ul>
-        </section>
-
-        <!-- Drets de l'usuari -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold">5. Drets de l'usuari</h2>
-            <p class="mt-4 text-lg text-gray-300">
-                Tens dret a accedir, rectificar o eliminar la teva informació personal en qualsevol moment. Si desitges exercir algun d'aquests drets, contacta amb nosaltres a través del nostre correu electrònic.
-            </p>
-        </section>
-
-        <!-- Canvis en la política -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold">6. Canvis en la Política de Privacitat</h2>
-            <p class="mt-4 text-lg text-gray-300">
-                Ens reservem el dret de modificar aquesta política en qualsevol moment. Totes les modificacions seran publicades a aquesta pàgina i entraran en vigor en el moment de la seva publicació.
-            </p>
-        </section>
-
-        <!-- Contacte -->
-        <section>
-            <h2 class="text-2xl font-semibold">7. Contacte</h2>
-            <p class="mt-4 text-lg text-gray-300">
-                Si tens qualsevol dubte o pregunta sobre aquesta política de privacitat, no dubtis a contactar-nos a través del nostre correu electrònic:
-                <a href="mailto:mamutsoficials@gmail.com" class="text-indigo-600 hover:text-indigo-400">mamutsoficials@gmail.com</a>.
-            </p>
-        </section>
-
+            <!-- Comparativa -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <h3 class="text-xl font-bold"><i class="fas fa-chart-line text-indigo-500"></i> Comparativa</h3>
+                <p class="mt-4">Compara el teu rendiment amb el de la comunitat per veure on pots millorar i on destaca el teu rendiment. Podràs veure les teves estadístiques comparades amb les d'altres usuaris que estan seguint programes similars al teu.</p>
+                <p class="mt-4 text-gray-300">Aquesta funció et permet veure on et situïxes en relació a altres usuaris i identificar les àrees en què tens un rendiment superior. També et proporciona recomanacions personalitzades per superar els teus punts febles.</p>
+            </div>
+        </div>
     </div>
 </main>
 
