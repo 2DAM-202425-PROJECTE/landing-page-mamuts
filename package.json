@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build-css": "tailwindcss build style.css -o output.css",
-    "build": "vite build",
+    "build-css": "tailwindcss build public/style.css -o output.css",
+    "build": "vite build && npx tailwindcss -i ./tailwind.css -o ./dist/tailwind.css --minify",
     "preview": "vite preview --base=/landing-page-mamuts/"
   },
   "devDependencies": {

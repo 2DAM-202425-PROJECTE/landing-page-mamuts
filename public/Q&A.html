@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntes Freqüents - Mammuts Fitness App</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="logo.png" type="image/png">
+    <link href="tailwind.css" rel="stylesheet">
     <style>
         body {
             background-color: #111827; /* Fondo oscuro */
@@ -67,12 +68,6 @@
             display: block;
         }
 
-        .accordion-item {
-            margin-bottom: 10px;
-            border-bottom: 1px solid #4a5568; /* Solo la línea debajo de la pregunta */
-            overflow: hidden;
-        }
-
         .accordion-item-header {
             padding: 15px 20px;
             background-color: #4a5568;
@@ -80,8 +75,15 @@
             font-size: 1.25rem;
             color: #fff;
             transition: background-color 0.3s, transform 0.3s;
-            border: none; /* Eliminamos el borde */
+            border: none;
+            overflow: hidden; /* Añadir esta línea */
         }
+
+        .accordion-item-header:hover {
+            background-color: #2b6cb0;
+            transform: scale(1.02); /* Reducir el efecto de escala */
+        }
+
 
         .accordion-item-header:hover {
             background-color: #2b6cb0;
@@ -153,9 +155,7 @@
         }
     </style>
 </head>
-<body>
-<header class="absolute inset-x-0 top-0 z-50">
-    <!-- Main page logo -->
+<body>    <header class="absolute inset-x-0 top-0 z-50">
     <a href="index.html" class="absolute top-4 left-4 -m-1.5 p-1.5 lg:hidden">
         <span class="sr-only">Mamuts</span>
         <img class="h-16 w-auto" src="logo.png" alt="Logo Mamuts">
@@ -171,9 +171,9 @@
         </div>
 
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#" class="text-sm font-semibold leading-6 text-white">Product</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-white">Features</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-white">Marketplace</a>
+            <a href="contact.html" class="text-sm font-semibold leading-6 text-white">Contactan's</a>
+            <a href="Q&A.html" class="text-sm font-semibold leading-6 text-white">Q&A</a>
+            <a href="FitnessApp.html" class="text-sm font-semibold leading-6 text-white">Sobre Nosaltres</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="login.html" class="text-sm font-semibold leading-6 text-white login-link login-button">Log in <span aria-hidden="true">&rarr;</span></a>
@@ -203,9 +203,9 @@
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
+                        <a href="contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contactan's</a>
+                        <a href="Q&A.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Q&A</a>
+                        <a href="FitnessApp.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sobre Nosaltres</a>
                     </div>
                     <div class="py-6">
                         <a href="login.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
@@ -215,17 +215,44 @@
         </div>
     </div>
 
-    <!-- Botón del menú móvil -->
-    <div class="flex items-center justify-end p-6 lg:hidden">
-        <button type="button" class="text-black" id="open-menu">
-            <span class="sr-only">Open menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-    </div>
-</header>
+    <!-- Botón para abrir el menú, ubicado en la esquina superior derecha -->
+    <button type="button" id="open-menu" class="absolute top-4 right-4 text-white p-2 lg:hidden">
+        <span class="sr-only">Open menu</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+    </button>
 
+    <script>
+        // Selecciona los botones y el menú móvil
+        const openButton = document.getElementById('open-menu');
+        const closeButton = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const backdrop = document.getElementById('backdrop');
+
+        // Mostrar el menú cuando se hace clic en el botón de abrir
+        openButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden'); // Muestra el menú móvil
+            setTimeout(() => {
+                mobileMenu.classList.remove('translate-x-full'); // Desliza el menú desde la derecha
+            }, 10); // Espera un pequeño tiempo antes de aplicar la animación
+        });
+
+        // Ocultar el menú cuando se hace clic en el botón de cerrar o en el fondo
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full'); // Desliza el menú fuera de la pantalla
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden'); // Oculta el menú después de la animación
+            }, 300); // Después de la duración de la animación
+        });
+        backdrop.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full'); // Desliza el menú fuera de la pantalla
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden'); // Oculta el menú después de la animación
+            }, 300); // Después de la duración de la animación
+        });
+    </script>
+</header>
 <main class="max-w-6xl mx-auto">
     <div class="faq-container">
         <h2 class="faq-title">Preguntes Freqüents</h2>
@@ -233,35 +260,43 @@
         <!-- Botones de pestañas -->
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'tab1')">General</button>
-            <button class="tab-button" onclick="openTab(event, 'tab2')">Tècnica</button>
-            <button class="tab-button" onclick="openTab(event, 'tab3')">Preus</button>
+            <button class="tab-button" onclick="openTab(event, 'tab2')">Funcions</button>
+            <button class="tab-button" onclick="openTab(event, 'tab3')">Seguretat i Privacitat</button>
         </div>
 
-        <!-- Pestañas -->
+        <!-- Pestaña General -->
         <div class="faq-section active" id="tab1">
-            <!-- Pregunta 1 -->
             <div class="accordion-item">
-                <div class="accordion-item-header" onclick="toggleAccordion(event)">Què és el Mamuts Fitness App?</div>
-                <div class="accordion-item-content">Mamuts Fitness App és una aplicació que t'ajuda a portar un seguiment dels teus entrenaments i nutrició personalitzats.</div>
+                <div class="accordion-item-header" onclick="toggleAccordion(event)">Què és Mamuts Fitness App?</div>
+                <div class="accordion-item-content">Mamuts Fitness App és una aplicació que t'ajuda a portar un seguiment dels teus entrenaments i la teva alimentació de forma personalitzada.</div>
             </div>
-            <!-- Pregunta 2 -->
             <div class="accordion-item">
-                <div class="accordion-item-header" onclick="toggleAccordion(event)">Com puc registrar-me?</div>
-                <div class="accordion-item-content">Només cal que facis clic al botó "Registra't" i ompli les dades necessàries.</div>
+                <div class="accordion-item-header" onclick="toggleAccordion(event)">Com puc començar a utilitzar l'aplicació?</div>
+                <div class="accordion-item-content">Pots descarregar Mamuts Fitness App des de la teva botiga d'aplicacions i registrar-te amb les teves dades per començar a crear el teu perfil.</div>
             </div>
         </div>
+
+        <!-- Pestaña Funcions -->
         <div class="faq-section" id="tab2">
-            <!-- Pregunta 1 -->
             <div class="accordion-item">
-                <div class="accordion-item-header" onclick="toggleAccordion(event)">Quines funcions té l'aplicació?</div>
-                <div class="accordion-item-content">L'aplicació et permet crear el teu pla d'entrenament personalitzat i portar un control de la teva alimentació.</div>
+                <div class="accordion-item-header" onclick="toggleAccordion(event)">Quines funcions ofereix l'aplicació?</div>
+                <div class="accordion-item-content">L'aplicació inclou seguiment d'entrenaments, monitorització de la teva dieta, estadístiques del teu progrés i recomanacions personalitzades.</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header" onclick="toggleAccordion(event)">Es poden compartir plans amb altres usuaris?</div>
+                <div class="accordion-item-content">Sí, pots compartir els teus plans d'entrenament amb altres usuaris i col·laborar per aconseguir objectius comuns.</div>
             </div>
         </div>
+
+        <!-- Pestaña Seguretat i Privacitat -->
         <div class="faq-section" id="tab3">
-            <!-- Pregunta 1 -->
             <div class="accordion-item">
-                <div class="accordion-item-header" onclick="toggleAccordion(event)">Quins són els preus?</div>
-                <div class="accordion-item-content">Els nostres plans comencen des de 9,99€/mes per l'accés bàsic a l'aplicació.</div>
+                <div class="accordion-item-header" onclick="toggleAccordion(event)">Com es protegeixen les meves dades personals?</div>
+                <div class="accordion-item-content">Mamuts Fitness App utilitza encriptació avançada per garantir que les teves dades estiguin segures i només accessibles per tu.</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header" onclick="toggleAccordion(event)">Puc eliminar el meu compte i les meves dades?</div>
+                <div class="accordion-item-content">Sí, pots eliminar el teu compte des de la configuració de l'aplicació, i totes les teves dades seran esborrades de forma permanent.</div>
             </div>
         </div>
     </div>
@@ -300,7 +335,7 @@
                     <li><a href="index.html">Inici</a></li>
                     <li><a href="Q&A.html">Q&A</a></li>
                     <li><a href="contact.html">Contactan's</a></li>
-                    <li><a href="contact.html">Politica de Privacitat</a></li>
+                    <li><a href="PoliticaPrivacitat.html">Politica de Privacitat</a></li>
 
                 </ul>
             </div>
@@ -330,25 +365,32 @@
     }
 
     // Mostrar/Ocultar el menú
-    const openMenuButton = document.getElementById('open-menu');
-    const closeMenuButton = document.getElementById('close-menu');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const backdrop = document.getElementById('backdrop');
-
-    openMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.remove('translate-x-full');
-        mobileMenu.classList.add('translate-x-0');
-    });
-
     closeMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.add('translate-x-full');
         mobileMenu.classList.remove('translate-x-0');
+        mobileMenu.classList.add('translate-x-full');
     });
 
     backdrop.addEventListener('click', () => {
-        mobileMenu.classList.add('translate-x-full');
         mobileMenu.classList.remove('translate-x-0');
+        mobileMenu.classList.add('translate-x-full');
     });
+
+    // Función para asegurar que solo haya una pregunta desplegada
+    function toggleAccordion(evt) {
+        const currentAccordionItem = evt.currentTarget.parentElement;
+        const allAccordionItems = document.querySelectorAll('.accordion-item');
+
+        // Cerrar todos los acordiones excepto el seleccionado
+        allAccordionItems.forEach(item => {
+            if (item !== currentAccordionItem) {
+                item.classList.remove('open');
+            }
+        });
+
+        // Alternar el estado del acordeón seleccionado
+        currentAccordionItem.classList.toggle('open');
+    }
+
 </script>
 </body>
 </html>

@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 /* Estilos generales */
 body {
     margin: 0;
@@ -421,15 +418,15 @@ button:hover {
 }
 
 .social-icon.facebook {
-    background-image: url(public/face.png);
+    background-image: url(face.png);
 }
 
 .social-icon.instagram {
-    background-image: url(public/insta.png);
+    background-image: url(insta.png);
 }
 
 .social-icon.github {
-    background-image: url(public/github.png);
+    background-image: url(github.png);
 }
 
 .social-icon {
@@ -569,7 +566,7 @@ button:hover {
 
 
 .fixed-background {
-    background-image: url('public/fondo.jpg'); /* Canvia 'fondo.jpg' pel camí de la teva imatge */
+    background-image: url('fondo.jpg'); /* Canvia 'fondo.jpg' pel camí de la teva imatge */
     background-attachment: fixed; /* Fa que el fons sigui fix */
     background-size: cover; /* Asegura que la imatge cobreixi tot el contenidor */
     background-position: center; /* Centra la imatge en el contenidor */

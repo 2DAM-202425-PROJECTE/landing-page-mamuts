@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguiment de Progrés | Mammuts Fitness App</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="tailwind.css" rel="stylesheet">
+
 </head>
 
 <body class="bg-gray-900 text-white font-sans">
 
 <header class="absolute inset-x-0 top-0 z-50">
-    <!-- Main page logo -->
     <a href="index.html" class="absolute top-4 left-4 -m-1.5 p-1.5 lg:hidden">
         <span class="sr-only">Mamuts</span>
         <img class="h-16 w-auto" src="logo.png" alt="Logo Mamuts">
@@ -29,12 +30,13 @@
         </div>
 
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#" class="text-sm font-semibold leading-6 text-white">Product</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-white">Features</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-white">Marketplace</a>
+            <a href="contact.html" class="text-sm font-semibold leading-6 text-white">Contactan's</a>
+            <a href="Q&A.html" class="text-sm font-semibold leading-6 text-white">Q&A</a>
+            <a href="FitnessApp.html" class="text-sm font-semibold leading-6 text-white">Sobre Nosaltres</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="login.html" class="text-sm font-semibold leading-6 text-white login-link login-button">Log in <span aria-hidden="true">&rarr;</span></a>        </div>
+            <a href="login.html" class="text-sm font-semibold leading-6 text-white login-link login-button">Log in <span aria-hidden="true">&rarr;</span></a>
+        </div>
     </nav>
 
     <!-- Contenedor del menú móvil con animación -->
@@ -60,9 +62,9 @@
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
+                        <a href="contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contactan's</a>
+                        <a href="Q&A.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Q&A</a>
+                        <a href="FitnessApp.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sobre Nosaltres</a>
                     </div>
                     <div class="py-6">
                         <a href="login.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
@@ -153,10 +155,44 @@
     </div>
 </main>
 
-<!-- Footer -->
-<footer class="bg-gray-800 py-6 mt-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        <p class="text-gray-300">&copy; 2024 Mammuts Fitness App. Tots els drets reservats.</p>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Contacto -->
+        <div class="footer-section contact-info">
+            <div class="contact-item">
+                <i class="icon-location"></i>
+                <p><strong>Find us</strong><br>1010 Avenue, sw 54321, Chandigarh</p>
+            </div>
+            <div class="contact-item">
+                <i class="icon-phone"></i>
+                <p><strong>Call us</strong><br>9876543210</p>
+            </div>
+            <div class="contact-item">
+                <i class="icon-email"></i>
+                <p><strong>Mail us</strong><br>mamutsoficials@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- Información de la compañía -->
+        <div class="footer-section about">
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=61568082219128" class="social-icon facebook"></a>
+                <a href="https://www.instagram.com/mamutsoficials/" class="social-icon instagram"></a> <!-- Enlace de Instagram -->
+                <a href="https://github.com/orgs/2DAM-202425-PROJECTE/teams/grup-p1-g1" class="social-icon github"></a>    <!-- Enlace de GitHub -->
+            </div>
+
+            <!-- Enlaces útiles -->
+            <div class="footer-section useful-links">
+                <h2>Useful Links</h2>
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li><a href="Q&A.html">Q&A</a></li>
+                    <li><a href="contact.html">Contactan's</a></li>
+                    <li><a href="PoliticaPrivacitat.html">Politica de Privacitat</a></li>
+
+                </ul>
+            </div>
+        </div>
     </div>
 </footer>
 
