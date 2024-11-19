@@ -6,11 +6,112 @@
     <title>Contact Us</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <link href="contact.css" rel="stylesheet" type="text/css">
     <!-- Agrega el CSS de intl-tel-input -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link href="tailwind.css" rel="stylesheet">
+
 </head>
 <body>
+<header class="absolute inset-x-0 top-0 z-50">
+    <a href="index.html" class="absolute top-4 left-4 -m-1.5 p-1.5 lg:hidden">
+        <span class="sr-only">Mamuts</span>
+        <img class="h-16 w-auto" src="logo.png" alt="Logo Mamuts">
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav class="flex items-center justify-between p-6 lg:px-8 bg-black border-b-2 border-gray-300 shadow-[0_4px_6px_rgba(0,0,0,0.1)] rounded-b-2xl hidden lg:flex" aria-label="Global">
+        <div class="flex lg:flex-1">
+            <a href="index.html" class="-m-1.5 p-1.5">
+                <span class="sr-only">Mamuts</span>
+                <img class="h-16 w-auto" src="logo.png" alt="Logo Mamuts">
+            </a>
+        </div>
+
+        <div class="hidden lg:flex lg:gap-x-12">
+            <a href="contact.html" class="text-sm font-semibold leading-6 text-white">Contactan's</a>
+            <a href="Q&A.html" class="text-sm font-semibold leading-6 text-white">Q&A</a>
+            <a href="FitnessApp.html" class="text-sm font-semibold leading-6 text-white">Sobre Nosaltres</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="login.html" class="text-sm font-semibold leading-6 text-white login-link login-button">Log in <span aria-hidden="true">&rarr;</span></a>
+        </div>
+    </nav>
+
+    <!-- Contenedor del menú móvil con animación -->
+    <div class="lg:hidden hidden fixed inset-0 z-50 transform translate-x-full transition-all duration-300 ease-in-out" role="dialog" aria-modal="true" id="mobile-menu">
+        <!-- Fondo -->
+        <div class="fixed inset-0 z-40 bg-gray-900 opacity-50" id="backdrop"></div>
+
+        <!-- Menú lateral -->
+        <div class="fixed inset-y-0 right-0 z-50 w-full sm:max-w-sm overflow-y-auto bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Mamuts</span>
+                    <img class="h-8 w-auto" src="logo.png" alt="Logo Mamuts">
+                </a>
+                <!-- Botón de cerrar -->
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="close-menu">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                        <a href="contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contactan's</a>
+                        <a href="Q&A.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Q&A</a>
+                        <a href="FitnessApp.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sobre Nosaltres</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="login.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón para abrir el menú, ubicado en la esquina superior derecha -->
+    <button type="button" id="open-menu" class="absolute top-4 right-4 text-white p-2 lg:hidden">
+        <span class="sr-only">Open menu</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+    </button>
+
+    <script>
+        // Selecciona los botones y el menú móvil
+        const openButton = document.getElementById('open-menu');
+        const closeButton = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const backdrop = document.getElementById('backdrop');
+
+        // Mostrar el menú cuando se hace clic en el botón de abrir
+        openButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden'); // Muestra el menú móvil
+            setTimeout(() => {
+                mobileMenu.classList.remove('translate-x-full'); // Desliza el menú desde la derecha
+            }, 10); // Espera un pequeño tiempo antes de aplicar la animación
+        });
+
+        // Ocultar el menú cuando se hace clic en el botón de cerrar o en el fondo
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full'); // Desliza el menú fuera de la pantalla
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden'); // Oculta el menú después de la animación
+            }, 300); // Después de la duración de la animación
+        });
+        backdrop.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full'); // Desliza el menú fuera de la pantalla
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden'); // Oculta el menú después de la animación
+            }, 300); // Después de la duración de la animación
+        });
+    </script>
+</header>
 <div class="absolute top-0 left-0 m-4">
     <a href="../index.html" class="-m-1.5 p-1.5">
         <span class="sr-only">Mamuts</span>
@@ -66,5 +167,45 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
 <script src="email.js"></script>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Contacto -->
+        <div class="footer-section contact-info">
+            <div class="contact-item">
+                <i class="icon-location"></i>
+                <p><strong>Find us</strong><br>1010 Avenue, sw 54321, Chandigarh</p>
+            </div>
+            <div class="contact-item">
+                <i class="icon-phone"></i>
+                <p><strong>Call us</strong><br>9876543210</p>
+            </div>
+            <div class="contact-item">
+                <i class="icon-email"></i>
+                <p><strong>Mail us</strong><br>mamutsoficials@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- Información de la compañía -->
+        <div class="footer-section about">
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=61568082219128" class="social-icon facebook"></a>
+                <a href="https://www.instagram.com/mamutsoficials/" class="social-icon instagram"></a> <!-- Enlace de Instagram -->
+                <a href="https://github.com/orgs/2DAM-202425-PROJECTE/teams/grup-p1-g1" class="social-icon github"></a>    <!-- Enlace de GitHub -->
+            </div>
+
+            <!-- Enlaces útiles -->
+            <div class="footer-section useful-links">
+                <h2>Useful Links</h2>
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li><a href="Q&A.html">Q&A</a></li>
+                    <li><a href="contact.html">Contactan's</a></li>
+                    <li><a href="PoliticaPrivacitat.html">Politica de Privacitat</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
