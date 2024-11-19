@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/style.css">
-    <link href="tailwind.css" rel="stylesheet">
     <title>Inici - Fitness App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <meta name="description" content="">
@@ -13,8 +12,8 @@
 </head>
 
 <body>
+<header class="absolute inset-x-0 top-0 z-50">
     <!-- Main page logo -->
-    <header class="absolute inset-x-0 top-0 z-50">
     <a href="index.html" class="absolute top-4 left-4 -m-1.5 p-1.5 lg:hidden">
         <span class="sr-only">Mamuts</span>
         <img class="h-16 w-auto" src="logo.png" alt="Logo Mamuts">
@@ -30,12 +29,12 @@
         </div>
 
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="contact.html" class="text-sm font-semibold leading-6 text-white">Contactan's</a>
-            <a href="Q&A.html" class="text-sm font-semibold leading-6 text-white">Q&A</a>
-            <a href="FitnessApp.html" class="text-sm font-semibold leading-6 text-white">Sobre Nosaltres</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white">Product</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white">Features</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white">Marketplace</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="login.html" class="text-sm font-semibold leading-6 text-white login-link login-button">Log in <span aria-hidden="true">&rarr;</span></a>
+            <a href="login.html" class="text-sm font-semibold leading-6 text-black login-link login-button">Log in <span aria-hidden="true">&rarr;</span></a>
         </div>
     </nav>
 
@@ -62,9 +61,9 @@
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
-                        <a href="contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contactan's</a>
-                        <a href="Q&A.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Q&A</a>
-                        <a href="FitnessApp.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sobre Nosaltres</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
                     </div>
                     <div class="py-6">
                         <a href="login.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
@@ -147,7 +146,8 @@
     }
 
 </script>
-<br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
 <!-- Sección de introducción -->
 <section class="introduction py-24 sm:py-32 text-center">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -191,45 +191,6 @@
     </main>
 </div>
 
-<div class="text-center">
-
-                <h1 class="text-4xl font-bold tracking-tight text-gray-300 sm:text-6xl text-center mx-auto">Qui som?</h1>
-                <p class="mt-6 text-lg leading-8 text-gray-350">Som una petita empresa formada per 4 integrants que ha creat una app de fitness que gestiona els teus <br>entrenaments, t'ajuda a millorar i et mostra les millores que has optingut.</p>
-            </div>
-        <br>
-        <!--Perfils-->
-        <div id="carrousel">
-            <div class="container profile-container">
-                <div class="profile-card">
-                    <img src="foto_perfil.png" alt="Quim Bayarri" class="profile-photo">
-                    <h2 class="name">Quim Bayarri</h2>
-                    <p class="age">Edat: 18 anys</p>
-                    <p class="experience">Experiència: 1 any en disseny gràfic</p>
-                    <p class="description">Descripció: Quim és un jove dissenyador gràfic amb una gran creativitat i passió pel seu treball.</p>
-                </div>
-                <div class="profile-card">
-                    <img src="foto_perfil.png" alt="Ivan Martinez" class="profile-photo">
-                    <h2 class="name">Ivan</h2>
-                    <p class="age">Edat: 19 anys</p>
-                    <p class="experience">Experiència: 1 any en programació web</p>
-                    <p class="description">Descripció: Ivan és un programador que ha creat diverses pàgines web durant els seus estudis.</p>
-                </div>
-                <div class="profile-card">
-                    <img src="foto_perfil.png" alt="Dani Bengochea" class="profile-photo">
-                    <h2 class="name">Dani Bengochea</h2>
-                    <p class="age">Edat: 19 anys</p>
-                    <p class="experience">Experiència: 1 any en màrqueting digital</p>
-                    <p class="description">Descripció: Dani és un apassionat del màrqueting que busca aprendre i créixer en el món digital.</p>
-                </div>
-                <div class="profile-card">
-                    <img src="foto_perfil.png" alt="Andrei Guta" class="profile-photo">
-                    <h2 class="name">Andrei Guta</h2>
-                    <p class="age">Edat: 18 anys</p>
-                    <p class="experience">Experiència: 1 any en administració de sistemes</p>
-                    <p class="description">Descripció: Andrei és un jove tècnic en sistemes que ha treballat en la gestió de servidors i suport tècnic.</p>
-                </div>
-            </div>
-        </div>
 <!-- Contenedor -->
 <div class="pricing-wrapper clearfix">
     <!-- Titulo -->
@@ -362,7 +323,7 @@
                             <li><a href="index.html">Inici</a></li>
                             <li><a href="Q&A.html">Q&A</a></li>
                             <li><a href="contact.html">Contactan's</a></li>
-                            <li><a href="PoliticaPrivacitat.html">Politica de Privacitat</a></li>
+                            <li><a href="contact.html">Politica de Privacitat</a></li>
 
                         </ul>
                     </div>
