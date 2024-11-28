@@ -1,3 +1,5 @@
+// public/letters.js
+
 // Mostrar el popup
 function showPopup() {
     document.getElementById("popup-overlay").style.display = "flex";
@@ -7,4 +9,3 @@ function showPopup() {
 function closePopup() {
     document.getElementById("popup-overlay").style.display = "none";
 }
-
