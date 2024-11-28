@@ -15,5 +15,24 @@
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.12",
     "vite": "^5.4.1"
-  }
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.21.1",
+    "node-fetch": "^3.3.2"
+  },
+  "description": "",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2DAM-202425-PROJECTE/landing-page-mamuts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2DAM-202425-PROJECTE/landing-page-mamuts/issues"
+  },
+  "homepage": "https://github.com/2DAM-202425-PROJECTE/landing-page-mamuts#readme"
 }

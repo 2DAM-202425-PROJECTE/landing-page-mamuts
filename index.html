@@ -261,15 +261,13 @@
         </div>
     </div>
 </div>
+    <!-- Subscription Banner -->
+    <div class="subscription-banner">
+        <p class="banner-text">SUBSCRIU-TE PER REBRE TOTES LES NOVETATS</p>
+        <button class="subscribe-button" onclick="showPopup()">SUBSCRIU-TE GRATIS</button>
+    </div>
 
-<!--newleter-->
-<div class="subscription-banner">
-
-    <p class="banner-text">SUBSCRIU-TE PER REBRE TOTES LES NOVETATS</p>
-    <button class="subscribe-button" onclick="showPopup()">SUBSCRIU-TE GRATIS</button>
-</div>
-
-    <!-- Popup para ingresar el correo -->
+    <!-- Popup for email input -->
     <div class="popup-overlay" id="popup-overlay">
         <div class="popup-content">
             <span class="close-button" onclick="closePopup()">&times;</span>
@@ -280,15 +278,27 @@
             <p><strong>Uneix-te avui mateix i comença a transformar-te.</strong></p>
             <br>
 
-            <input type="email" id="email-input" placeholder="INTRODUEIX EL TEU CORREU ELECTRÒNIC" required>
+            <!-- Form Acumbamail (Adaptado) -->
+            <form action="https://acumbamail.com/newform/subscribe/L0CjlHQNgcVlSHzurWqFJ7eOONaBbVLIT42/51730/" method="post" class="yourFormCustomContainer">
+                <input id="email-input" name="email_1" type="email" placeholder="Escriu el teu correu" required>
 
-            <button onclick="subscribe()">COMENÇA &rarr;</button>
+                <!-- Campos ocultos de protección contra spam -->
+                <input type="text" name="a1027805c" tabindex="-1" value="" style="position: absolute; left: -4900px;" aria-hidden="true" id="a1027805c" autocomplete="off"/>
+                <input type="email" name="b1027805c" tabindex="-1" value="" style="position: absolute; left: -5000px;" aria-hidden="true" id="b1027805c" autocomplete="off"/>
+                <input type="checkbox" name="c1027805c" tabindex="-1" style="position: absolute; left: -5100px;" aria-hidden="true" id="c1027805c" autocomplete="off"/>
+
+                <br>
+                <input type="hidden" name="ok_redirect" id="id_redirect" value="/*Puedes insertar aquí la URL a la que quieres redirigir tras un registro válido*/">
+
+                <button type="submit" class="yourButtonCustomStyle">COMENÇA &rarr;</button>
+            </form>
+            <!-- End Form -->
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-    <script src="/public/letters.js"></script>
 
-    <footer class="footer">
+    <script src="letters.js"></script>
+
+<footer class="footer">
             <div class="footer-container">
                 <!-- Contacto -->
                 <div class="footer-section contact-info">
@@ -326,8 +336,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </footer>
+                </div>
+</footer>
 <!-- Banner de cookies -->
 <div id="cookie-banner">
     <p>Aquest lloc utilitza cookies per millorar l'experiència de l'usuari. Pots acceptar o configurar les teves preferències. Llegeix la nostra <a href="politica-cookies.html" target="_blank">Política de Cookies</a> per obtenir més informació.</p>
@@ -347,6 +357,7 @@
         }
     }
 </script>
+    <script type="text/javascript" src="https://acumbamail.com/newform/dynamic/js/L0CjlHQNgcVlSHzurWqFJ7eOONaBbVLIT42/51730/"></script>
 </body>
 
 </html>

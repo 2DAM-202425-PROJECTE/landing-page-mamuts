@@ -27,40 +27,26 @@ body {
     font: 16px/26px "Raleway", sans-serif;
     text-align: center;
     height: 100%;
-    background: -moz-linear-gradient(270deg, rgba(34,46,64,1) 0%, rgba(81,195,184,1) 100%);
-    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(34,46,64,1)), color-stop(100%, rgba(81,195,184,1)));*/
-    background: -webkit-linear-gradient(270deg, rgba(34,46,64,1) 0%, rgba(81,195,184,1) 100%);
-    background: linear-gradient(180deg, rgba(34,46,64,1) 0%, rgba(81,195,184,1) 100%);
-    overflow:hidden;
+    background: -moz-linear-gradient(270deg, rgba(64,64,64,1) 0%, rgba(128,128,128,1) 100%);
+    background: -webkit-linear-gradient(270deg, rgba(64,64,64,1) 0%, rgba(128,128,128,1) 100%);
+    background: linear-gradient(270deg, rgba(64,64,64,1) 0%, rgba(128,128,128,1) 100%);
+    overflow: hidden;
 }
 
 /* BUTTON */
 a.button {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    height: auto;
-    padding: .8rem 1.0rem;
-    font-size: .8rem;
-    line-height: normal;
-    text-transform: uppercase;
-    font-family: 'Proxima Nova', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0;
-    border-radius: 0;
     border: 1px solid #2D515C;
-    text-decoration: none;
     color: #fff;
-    background-color: transparent;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    background: -moz-linear-gradient(48deg, rgba(64,64,64,1) 0%, rgba(128,128,128,1) 100%);
+    background: -webkit-linear-gradient(48deg, rgba(64,64,64,1) 0%, rgba(128,128,128,1) 100%);
+    background: linear-gradient(48deg, rgba(64,64,64,1) 0%, rgba(128,128,128,1) 100%);
 }
 a.button:hover {
-    border-color: #2D515C;
+    border-color: #3e3f40;
     color: #fff;
-    padding: 1.0rem 3.2rem;
+    background: -moz-linear-gradient(48deg, rgba(128,128,128,1) 0%, rgba(64,64,64,1) 100%);
+    background: -webkit-linear-gradient(48deg, rgba(128,128,128,1) 0%, rgba(64,64,64,1) 100%);
+    background: linear-gradient(48deg, rgba(128,128,128,1) 0%, rgba(64,64,64,1) 100%);
 }
 @media only screen and (min-width: 22em) {
     a.button {
@@ -519,25 +505,10 @@ a.button:hover {
     -o-background-size: cover;
     background-size: cover;
 }
-#slideshow .one {
-    background-image: url("http://res.cloudinary.com/dpcloudinary/image/upload/v1506186248/dots.png");
-    background-repeat: no-repeat;
-    background-position: 0% 50%;
-}
-#slideshow .two {
-    background-image: url("http://res.cloudinary.com/dpcloudinary/image/upload/v1506186248/gears.png");
-    background-repeat: no-repeat;
-    background-position: 0% 50%;
-}
-#slideshow .three {
-    background-image: url("http://res.cloudinary.com/dpcloudinary/image/upload/v1506186248/splat.png");
-    background-repeat: no-repeat;
-    background-position: 0% 5%;
-}
-#slideshow .four {
-    background-image: url("http://res.cloudinary.com/dpcloudinary/image/upload/v1506186248/ray.png");
-    background-repeat: no-repeat;
-    background-position: 0% 50%;
+#slideshow .one, #slideshow .two, #slideshow .three, #slideshow .four {
+    background: -moz-linear-gradient(48deg, rgba(64,64,64,1) 0%, rgba(128,128,128,1) 100%);
+    background: -webkit-linear-gradient(48deg, rgba(64,64,64,1) 0%, rgba(128,128,128,1) 100%);
+    background: linear-gradient(48deg, rgba(64,64,64,1) 0%, rgba(128,128,128,1) 100%);
 }
 
 /* FORM ELEMENTS */
