@@ -652,12 +652,16 @@ button:hover {
 
 .popup-content {
     background-color: #1F2937;
+    color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     width: 400px;
     position: relative;
     font-family: Arial, sans-serif;
+}
+#email-input{
+    color: black;
 }
 
 .popup-logo img {
@@ -789,4 +793,6 @@ button:hover {
         grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
     }
 }
-
+.iti__country-list, .iti__selected-flag {
+    color: black;
+}
