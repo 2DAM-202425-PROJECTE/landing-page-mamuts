@@ -6,14 +6,13 @@
     <title>Mamuts</title>
     <link href="css/styleLogIn.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="module" src="js/loginjs.js"></script>
+    <script src="js/loginjs.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="img/logo.png" type="image/png">
-
 </head>
 <body>
-<a href="../index.html" class="logo" target="">
-    <img src="img/logo.png" alt="">
+<a href="../index.html" class="logo">
+    <img src="img/logo.png" alt="Logo Mamuts">
 </a>
 
 <div class="login">
@@ -63,20 +62,18 @@
             <h3>Contacte amb nosaltres</h3>
             <p>Si teniu preguntes sobre aquests termes, podeu contactar amb nosaltres a través de <a href="mailto:dp@dp.com">dp@dp.com</a>.</p>
         </div>
-
         <!-- RECOVERY -->
         <div class="recovery">
             <h2>Recuperació de Contrasenya</h2>
             <p>Introduïu l'<strong>adreça de correu electrònic</strong> o el <strong>nom d'usuari</strong> del compte i <strong>feu clic a Enviar</strong></p>
             <p>Us enviarem instruccions sobre com restablir la vostra contrasenya.</p>
-            <form class="recovery-form" action="" method="post">
-                <input type="text" class="input" id="user_recover" placeholder="Introduïu l'adreça de correu electrònic o el nom d'usuari aquí">
+            <form class="recovery-form" action="../index.html" method="post">
+                <input type="text" class="input" id="user_recover" placeholder="Introduïu l'adreça de correu electrònic o el nom d'usuari aquí" required>
                 <input type="submit" class="button" value="Enviar">
             </form>
             <p class="mssg">S'ha enviat un correu electrònic amb més instruccions.</p>
         </div>
-
-        <!-- SLIDER -->
+        <!-- CONTENIDO PRINCIPAL -->
         <div class="content">
             <!-- SLIDESHOW-->
             <div id="slideshow">
@@ -98,42 +95,57 @@
                 </div>
             </div>
         </div>
-        <!-- FORMULARI D'INICI DE SESSIÓ -->
-        <div class="user">
 
+        <!-- FORMULARIO INICIO DE SESIÓN Y REGISTRO -->
+        <div class="user">
             <div class="form-wrap">
                 <!-- TABS -->
                 <div class="tabs">
                     <h3 class="login-tab"><a class="log-in active" href="#login-tab-content"><span>Iniciar Sessió</span></a></h3>
                     <h3 class="signup-tab"><a class="sign-up" href="#signup-tab-content"><span>Registrar</span></a></h3>
                 </div>
-                <!-- CONTINGUT DE TABS -->
+                <!-- CONTENIDO TABS -->
                 <div class="tabs-content">
-                    <!-- CONTINGUT DE TABS INICI DE SESSIÓ -->
+                    <!-- TAB INICIAR SESIÓN -->
                     <div id="login-tab-content" class="active">
-                        <form id="login-form" class="login-form" action="../index.html" method="post">
+                        <form id="login-form">
                             <input type="text" class="input" id="user_login" autocomplete="off" placeholder="Correu electrònic o Nom d'usuari">
                             <div class="password-wrap">
                                 <input type="password" class="input" id="user_pas" autocomplete="off" placeholder="Contrasenya">
                                 <button type="button" id="togglePassword"><i class="fas fa-eye"></i></button>
                             </div>
-                            <input type="checkbox" class="checkbox" checked id="remember_me">
+                            <input type="checkbox" class="checkbox" id="remember_me" checked>
                             <label for="remember_me">Recorda'm</label>
-                                <input type="submit" class="button" value="Iniciar Sessió">
+                            <input type="submit" class="button" value="Iniciar Sessió">
                         </form>
                         <div class="help-action">
                             <p><i class="fa fa-arrow-left" aria-hidden="true"></i><a class="forgot" href="#">Heu oblidat la contrasenya?</a></p>
                         </div>
                     </div>
-                    <!-- CONTINGUT DE TABS INSCRIPCIÓ -->
+
+                    <!-- TAB REGISTRAR -->
                     <div id="signup-tab-content">
-                        <form id="signup-form" class="signup-form" action="../index.html" method="post">
-                            <input type="email" class="input" id="user_email" autocomplete="off" placeholder="Correu electrònic">
-                            <input type="text" class="input" id="user_name" autocomplete="off" placeholder="Nom d'usuari">
+                        <form id="signup-form">
+                            <!-- Correu electrònic -->
+                            <input type="email" class="input" id="user_email" autocomplete="off" placeholder="Correu electrònic" >
+
+                            <!-- Nom d'usuari -->
+                            <input type="text" class="input" id="user_name" autocomplete="off" placeholder="Nom d'usuari" >
+
+
+                            <!-- Contraseña -->
                             <div class="password-wrap">
-                                <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Contrasenya">
-                                <button type="button" id="togglePasword"><i class="fas fa-eye"></i></button>
+                                <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Contrasenya" >
+                                <button type="button" id="togglePasswordSignup"><i class="fas fa-eye"></i></button>
                             </div>
+
+                            <!-- Confirmar Contraseña -->
+                            <div class="password-wrap">
+                                <input type="password" class="input" id="confirm_pass" autocomplete="off" placeholder="Confirmar contrasenya">
+                                <button type="button" id="toggleConfirmPassword"><i class="fas fa-eye"></i></button>
+                            </div>
+
+                            <!-- Botón de registro -->
                             <input type="submit" class="button" value="Inscripció">
                         </form>
                         <div class="help-action">
@@ -147,40 +159,80 @@
     </div>
 </div>
 <script>
+
+    // Alternar visibilidad de contraseñas (Inicio de Sesión)
     document.getElementById('togglePassword').addEventListener('click', function () {
-        const passwordInput = document.getElementById('user_pas');
-        const toggleButton = this;
+        togglePasswordVisibility('user_pas', this);
+    });
+
+    // Alternar visibilidad de contraseñas (Registro)
+    document.getElementById('togglePasswordSignup').addEventListener('click', function () {
+        togglePasswordVisibility('user_pass', this);
+    });
+
+    // Alternar visibilidad de contraseñas (Confirmar Contraseña)
+    document.getElementById('toggleConfirmPassword').addEventListener('click', function () {
+        togglePasswordVisibility('confirm_pass', this);
+    });
+
+    // Función para alternar la visibilidad de las contraseñas
+    function togglePasswordVisibility(inputId, toggleButton) {
+        const passwordInput = document.getElementById(inputId);
 
         if (passwordInput.type === 'password') {
             passwordInput.type = 'text';
-            toggleButton.innerHTML = '<i class="fas fa-eye-slash"></i>'; // Cambiar a ojo cerrado
+            toggleButton.innerHTML = '<i class="fas fa-eye-slash"></i>'; // Ojo cerrado
         } else {
             passwordInput.type = 'password';
-            toggleButton.innerHTML = '<i class="fas fa-eye"></i>'; // Cambiar a ojo abierto
+            toggleButton.innerHTML = '<i class="fas fa-eye"></i>'; // Ojo abierto
         }
-    });
-
-    document.getElementById('togglePasword').addEventListener('click', function () {
-        const passwordInput = document.getElementById('user_pass');
-        const toggleButton = this;
-
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            toggleButton.innerHTML = '<i class="fas fa-eye-slash"></i>'; // Cambiar a ojo cerrado
-        } else {
-            passwordInput.type = 'password';
-            toggleButton.innerHTML = '<i class="fas fa-eye"></i>'; // Cambiar a ojo abierto
-        }
-    });
+    }
+    // Validación formulario Inicio de Sesión
 
     document.getElementById('login-form').addEventListener('submit', function(event) {
-        //event.preventDefault(); // Prevenir el comportamiento predeterminado
-        window.location.href = 'index.html'; // Redirige a index.html
+        event.preventDefault(); // Evitamos que el formulario se envíe realmente
+        const emailOrUsername = document.getElementById('user_login').value.trim();
+        const password = document.getElementById('user_pas').value.trim();
+        console.log('Email/Username:', emailOrUsername); // Verifica si el valor está correcto
+        console.log('Password:', password);
+        if (!emailOrUsername || !password) {
+            alert('Per favor, completeu tots els camps abans de iniciar sessió.');
+        } else {
+
+            // Redirigir a index.html si la validación es exitosa
+            window.location.href = "../../index.html"; // Usando ruta absoluta
+        }
     });
 
+    // Validación formulario Registro
     document.getElementById('signup-form').addEventListener('submit', function(event) {
-        //event.preventDefault(); // Prevenir el comportamiento predeterminado
-        window.location.href = 'index.html'; // Redirige a index.html
+        event.preventDefault(); // Evitamos que el formulario se envíe realmente
+        const email = document.getElementById('user_email').value.trim();
+        const username = document.getElementById('user_name').value.trim();
+        const password = document.getElementById('user_pass').value.trim();
+        const confirmPassword = document.getElementById('confirm_pass').value.trim();
+
+        // Verificar que todos los campos estén completos
+        if (!email || !username || !password || !confirmPassword) {
+            alert('Per favor, completeu tots els camps abans de registrar-vos.');
+            return;
+        }
+
+        // Verificar si las contraseñas coinciden
+        if (password !== confirmPassword) {
+            alert('Les contrasenyes no coincideixen.');
+            return;
+        }
+
+        // Validación extra para el formato del correo electrónico
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailRegex.test(email)) {
+            alert('Correu electrònic no vàlid.');
+            return;
+        }
+
+        // Si todo es correcto, redirigir a index.html
+        window.location.href = "../../index.html"; // Usando ruta absoluta
     });
 </script>
 </body>

@@ -946,3 +946,21 @@ button {
 button:focus {
     outline: none;
 }
+/* Aseguramos que ambas pestañas se muestren correctamente */
+.tabs-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+}
+
+/* Ocultar las pestañas cuando no están activas */
+#login-tab-content, #signup-tab-content {
+    display: none;
+}
+
+/* Mostrar la pestaña activa */
+.active {
+    display: block;
+}
