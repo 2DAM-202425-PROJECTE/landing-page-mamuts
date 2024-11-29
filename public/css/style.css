@@ -5,16 +5,84 @@ body {
     line-height: 1.6; /* Mejora la legibilidad del texto */
     font-size: 62.5%; /* Tamaño de fuente base, ajusta según tus necesidades */
     color: #E5E7EB; /* Gray-300 */
-    background-color: #111827; /* Gray-900 */
+    background-color: #171717;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
 }
-/*body {
-    background: #2e2a2a;
-    color: #f5f5f5;
-    font-size: 62.5%;
-    font-family: 'Roboto', Arial, Helvetica, Sans-serif, Verdana, serif;
-    line-height: 1.6;
+
+html, body {
+    height: 100%;
 }
-*/
+
+
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+}
+
+.line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.line::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    animation: drop 4s 0s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line:nth-child(1) {
+    margin-left: -25%;
+}
+
+.line:nth-child(1)::after {
+    animation-delay: 2s;
+}
+
+.line:nth-child(3) {
+    margin-left: 25%;
+}
+
+.line:nth-child(3)::after {
+    animation-delay: 2.5s;
+}
+
+@keyframes drop {
+    0% {
+        top: -50%;
+    }
+    100% {
+        top: 110%;
+    }
+}
+
+/* Aplicar fondo a toda la página */
+
+.fondo{
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
 
 h1 {
@@ -511,6 +579,8 @@ button:hover {
 .fixed-background {
     background-color: rgba(31, 41, 55, 0.7);
     backdrop-filter: blur(10px);
+
+
 }
 
 .hidden {
@@ -796,3 +866,100 @@ button:hover {
 .iti__country-list, .iti__selected-flag {
     color: black;
 }
+
+/* Estils del titol */
+:root {
+    --primary-color: #c8dc71;
+    --gradient-color: linear-gradient(180deg, #d2ff00 0%, #00d2ff 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Custom Styles for the Title */
+.type {
+    color: #ffffff;
+    background: -webkit-linear-gradient(25deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem; /* Tamaño grande para destacar como título */
+    font-weight: 700; /* Más grueso para énfasis */
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation: type 2s steps(100) 1.5s 1 normal both, cursor 1s step-end infinite;
+    position: relative;
+    text-transform: uppercase; /* Opcional: convierte a mayúsculas */
+    text-align: center; /* Centra el texto */
+    margin-top: -150px;
+}
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+/* Contenedor principal en columna para apilar los elementos verticalmente */
+.contenedor-flex {
+    display: flex; /* Usamos flexbox */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 100%; /* Ancho completo del contenedor */
+}
+
+/* Contenedor de la imagen */
+.contenedor-imagen {
+    width: 100%; /* Ocupa el ancho completo */
+    text-align: center; /* Centra la imagen */
+    margin-bottom: 20px; /* Un poco de espacio entre la imagen y el recuadro */
+}
+
+/* Estilo de la imagen */
+.imagen {
+    width: 250px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 8px; /* Esquinas redondeadas */
+}
+
+/* Estilo del recuadro */
+.recuadro {
+    padding: 20px;
+    border-radius: 8px; /* Esquinas redondeadas */
+    max-width: 600px; /* Ancho máximo del recuadro */
+    background-color: #4d4e4e; /* Fondo oscuro */
+    margin: 0; /* Eliminar márgenes para que estén pegados */
+}
+
+/* Estilo del texto en el recuadro */
+.recuadro p {
+    color: #ccc; /* Texto claro */
+    font-size: 1.125rem; /* Tamaño de fuente */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Estilo del enlace en el recuadro */
+.recuadro a {
+    font-size: 1rem; /* Tamaño del texto */
+}
+
+
