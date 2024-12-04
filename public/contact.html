@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactan's</title>
+    <title>Contact Us</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -11,7 +11,6 @@
     <!-- Agrega el CSS de intl-tel-input -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link href="tailwind.css" rel="stylesheet">
-    <link rel="icon" href="img/logo.png" type="image/png">
 
 </head>
 <body>
@@ -123,21 +122,21 @@
 
 <div class="flex items-center justify-center min-h-screen">
     <div class="form-wrap">
-        <h1 class="text-2xl font-bold mb-4 text-center">Contactan's</h1>
+        <h1 class="text-2xl font-bold mb-4 text-center">Contact Me</h1>
 
         <form id="my-form">
-            <input type="text" name="name" placeholder="Nom" class="w-full p-2 mb-4 border border-gray-300 rounded" required>
+            <input type="text" name="name" placeholder="Name" class="w-full p-2 mb-4 border border-gray-300 rounded" required>
             <input type="email" name="email" placeholder="Email" class="w-full p-2 mb-4 border border-gray-300 rounded" required>
 
             <div class="flex items-center mb-4">
                 <!-- Input para el teléfono, será transformado por intl-tel-input -->
-                <input type="tel" name="phone" id="phone" placeholder="Numero de Telefon" class="w-full p-2 border border-gray-300 rounded" required>
+                <input type="tel" name="phone" id="phone" placeholder="Phone Number" class="w-full p-2 border border-gray-300 rounded" required>
             </div>
             <input type="hidden" id="phonePrefix" name="phonePrefix">
             <input type="hidden" id="phone-number" name="phone-number">
 
-            <textarea name="message" placeholder="Missatge" class="w-full p-2 mb-4 border border-gray-300 rounded" rows="4" required></textarea>
-            <input type="submit" value="Enviar" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 cursor-pointer">
+            <textarea name="message" placeholder="Message" class="w-full p-2 mb-4 border border-gray-300 rounded" rows="4" required></textarea>
+            <input type="submit" value="Send" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 cursor-pointer">
         </form>
 
     </div>
@@ -170,42 +169,62 @@
 <script src="js/email.js"></script>
 <footer class="footer">
     <div class="footer-container">
-        <!-- Contacte -->
+        <!-- Contacto -->
         <div class="footer-section contact-info">
             <div class="contact-item">
                 <i class="icon-location"></i>
-                <p><strong>Troba'ns</strong><br>1010 Avinguda, sw 54321, Chandigarh</p>
+                <p><strong>Find us</strong><br>1010 Avenue, sw 54321, Chandigarh</p>
             </div>
             <div class="contact-item">
                 <i class="icon-phone"></i>
-                <p><strong>Truca'ns</strong><br>9876543210</p>
+                <p><strong>Call us</strong><br>9876543210</p>
             </div>
             <div class="contact-item">
                 <i class="icon-email"></i>
-                <p><strong>Contactan's</strong><br>mamutsoficials@gmail.com</p>
+                <p><strong>Mail us</strong><br>mamutsoficials@gmail.com</p>
             </div>
         </div>
 
-        <!-- Informació de l'empresa -->
+        <!-- Información de la compañía -->
         <div class="footer-section about">
             <div class="social-media">
                 <a href="https://www.facebook.com/profile.php?id=61568082219128" class="social-icon facebook"></a>
-                <a href="https://www.instagram.com/mamutsoficials/" class="social-icon instagram"></a> <!-- Enllaç d'Instagram -->
-                <a href="https://github.com/orgs/2DAM-202425-PROJECTE/teams/grup-p1-g1" class="social-icon github"></a>    <!-- Enllaç de GitHub -->
+                <a href="https://www.instagram.com/mamutsoficials/" class="social-icon instagram"></a> <!-- Enlace de Instagram -->
+                <a href="https://github.com/orgs/2DAM-202425-PROJECTE/teams/grup-p1-g1" class="social-icon github"></a>    <!-- Enlace de GitHub -->
             </div>
 
-            <!-- Enllaços útils -->
+            <!-- Enlaces útiles -->
             <div class="footer-section useful-links">
-                <h2>Enllaços útils</h2>
+                <h2>Useful Links</h2>
                 <ul>
                     <li><a href="index.html">Inici</a></li>
                     <li><a href="Q&A.html">Q&A</a></li>
                     <li><a href="contact.html">Contactan's</a></li>
-                    <li><a href="PoliticaPrivacitat.html">Política de Privacitat</a></li>
+                    <li><a href="PoliticaPrivacitat.html">Politica de Privacitat</a></li>
+
                 </ul>
             </div>
         </div>
     </div>
 </footer>
+<!-- Banner de cookies -->
+<div id="cookie-banner">
+    <p>Aquest lloc utilitza cookies per millorar l'experiència de l'usuari. Pots acceptar o configurar les teves preferències. Llegeix la nostra <a class="text-blue-500" href="politica-cookies.html" target="_blank">Política de Cookies</a> per obtenir més informació.</p>
+    <div>
+        <button onclick="acceptCookies()">Acceptar</button>
+        <button onclick="rejectCookies()">Rebutjar</button>
+        <a href="conf-cookies.html"><button>Configura</button></a>
+    </div>
+</div>
+
+<script src="/js/cookies.js"></script>
+<script>
+    // Comprova si l'usuari ja ha expressat la seva preferència per les cookies
+    window.onload = function() {
+        if (localStorage.getItem("cookiesPreference")) {
+            document.getElementById("cookie-banner").style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>

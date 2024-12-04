@@ -88,26 +88,19 @@ html, body {
 h1 {
     margin-top: 20px;
 }
-/* Perfils */
-.text-center {
-    margin-bottom: 0; /* Elimina el margen inferior del texto centrado */
-}
-
-#carrousel {
-    margin-top: -150px; /* Reduce el espacio entre "Qui som?" y los perfiles */
-}
+/*Perfils*/
 
 .container {
     display: flex;
     justify-content: center;
     gap: 20px; /* Espacio entre tarjetas */
-    flex-wrap: wrap; /* Permite que los perfiles se desplacen a una nueva línea */
+    flex-wrap: nowrap; /* Evita que los perfiles se desplacen a una nueva línea */
 }
 
 .profile-card {
     background-color: #d8d8d8;
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     padding: 20px;
     text-align: center;
     width: 250px;
@@ -141,43 +134,6 @@ h1 {
     color: #666;
     margin: 5px 0;
 }
-
-/* Media Queries para Responsividad */
-
-/* Pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    #carrousel {
-        margin-top: 20px; /* Ajusta el margen para móviles */
-    }
-    .container {
-        flex-direction: column; /* Coloca las tarjetas en columna */
-        align-items: center; /* Centra las tarjetas */
-        gap: 30px; /* Incrementa el espacio entre tarjetas */
-    }
-    .profile-card {
-        width: 90%; /* Reduce el ancho al 90% del contenedor */
-    }
-}
-
-/* Pantallas medianas (tablets) */
-@media (max-width: 1024px) {
-    .container {
-        flex-wrap: wrap; /* Permite que las tarjetas se ajusten */
-        justify-content: space-evenly; /* Espacio uniforme en tablets */
-    }
-    .profile-card {
-        width: 45%; /* Ajusta el tamaño de las tarjetas */
-    }
-}
-
-/* Pantallas grandes (escritorios) */
-@media (min-width: 1025px) {
-    .container {
-        flex-wrap: nowrap; /* Mantiene las tarjetas en una fila */
-        gap: 20px; /* Mantiene el espacio entre tarjetas */
-    }
-}
-
 
 
 
@@ -863,15 +819,24 @@ button:hover {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
+    justify-content: center; /* Centra el contingut horitzontalment */
+    align-items: center; /* Centra el contingut verticalment */
+    gap: 20px; /* Espai entre el text i els botons */
     font-size: 16px;
 }
 
 #cookie-banner p {
-    margin: 0;
-    flex: 1;
+    margin: 0; /* Elimina marges */
+    flex: 0; /* No permet que el text ocupi més espai */
+    text-align: center; /* Alineació centrada del text */
+}
+
+/* Contenidor dels botons */
+#cookie-banner .button-container {
+    display: flex;
+    justify-content: center; /* Centra els botons horitzontalment */
+    gap: 10px; /* Espai entre els botons */
 }
 
 #cookie-banner button {
@@ -879,34 +844,61 @@ button:hover {
     color: #fff;
     border: none;
     padding: 10px 20px;
-    margin-left: 10px;
     cursor: pointer;
 }
 
 #cookie-banner button:hover {
     background-color: #005bb5;
 }
+
+/* Responsivitat del bàner */
+@media (max-width: 768px) {
+    #cookie-banner {
+        flex-wrap: wrap; /* Permet el salt de línia si cal */
+        gap: 10px; /* Redueix l'espai en pantalles petites */
+    }
+
+    #cookie-banner p {
+        flex-basis: 100%; /* Força el text a ocupar tota la línia si hi ha poc espai */
+        margin-bottom: 10px; /* Espai inferior només en pantalles petites */
+    }
+
+    #cookie-banner .button-container {
+        flex-basis: 100%; /* Força els botons a ocupar tota la línia si cal */
+        justify-content: center; /* Manté els botons centrats */
+
+    }
+}
+
+
+/* Secció de l'aplicació fitness */
 .fitness-app-section p {
     text-align: justify;
     margin: 20px 0;
     color: #cbd5e1;
 }
 
+/* Disposició en graella horitzontal */
 .horizontal-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
-    gap: 1rem; /* Espaciado entre columnas */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnes iguals */
+    gap: 1rem; /* Espaiat entre columnes */
 }
+
+/* Responsivitat de la graella */
 @media (max-width: 768px) {
     .horizontal-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnes en pantalles petites */
     }
 }
+
 @media (max-width: 480px) {
     .horizontal-grid {
-        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+        grid-template-columns: 1fr; /* 1 columna en pantalles molt petites */
     }
 }
+
+/* Estils de selecció del país */
 .iti__country-list, .iti__selected-flag {
     color: black;
 }
@@ -971,7 +963,6 @@ button:hover {
     max-width: 1200px;
     margin: 0 auto; /* Centramos el contenido en la pantalla */
     padding: 20px; /* Espaciado global */
-    flex-wrap: wrap; /* Permite apilar elementos en pantallas pequeñas */
 }
 
 .contenedor-imagen img {
@@ -986,32 +977,11 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    padding: 10px;
 }
 
 .text-white {
     color: #ffffff;
 }
 
-/* Responsividad para dispositivos móviles */
-@media (max-width: 768px) {
-    .contenedor-horizontal {
-        flex-direction: column; /* Apila elementos */
-        padding: 10px; /* Reduce espacio general */
-    }
 
-    .recuadro {
-        text-align: center; /* Centraliza texto en móviles */
-        padding: 20px 10px;
-    }
 
-    .contenedor-imagen img {
-        max-width: 90%; /* Reduce el ancho de la imagen */
-        margin: 0 auto; /* Centra la imagen */
-    }
-
-    /* Centrar el botón */
-    .recuadro a {
-        margin: 0 auto; /* Centra horizontalmente el botón */
-    }
-}
