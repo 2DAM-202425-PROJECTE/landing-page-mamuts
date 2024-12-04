@@ -84,25 +84,25 @@ $(function() {
 });
 // SWITCH TAB ON SIGN UP CLICK
 $(function() {
-    var tab = $('.tabs h3 a');
-    tab.on('click', function(event) {
-        tab.removeClass('active');
-        $(this).addClass('active');
-        var tab_content = $(this).attr('href');
-        $('div[id$="tab-content"]').removeClass('active');
-        $(tab_content).addClass('active');
-    });
+        var tab = $('.tabs h3 a');
+        tab.on('click', function(event) {
+            tab.removeClass('active');
+            $(this).addClass('active');
+            var tab_content = $(this).attr('href');
+            $('div[id$="tab-content"]').removeClass('active');
+            $(tab_content).addClass('active');
+        });
 
-    // SWITCH TAB ON SIGN UP CLICK
-    $('.sign-up').on('click', function(event) {
+        // SWITCH TAB ON SIGN UP CLICK
+        $('.sign-up').on('click', function(event) {
 
-        // Activate the sign-up tab
-        tab.removeClass('active'); // Remove 'active' class from all tabs
-        $('.tabs h3 a[href="#signup-tab-content"]').addClass('active'); // Add 'active' class to the sign-up tab
+            // Activate the sign-up tab
+            tab.removeClass('active'); // Remove 'active' class from all tabs
+            $('.tabs h3 a[href="#signup-tab-content"]').addClass('active'); // Add 'active' class to the sign-up tab
 
-        // Change the active tab content
-        $('div[id$="tab-content"]').removeClass('active'); // Hide all tab contents
-        $('#signup-tab-content').addClass('active'); // Show the sign-up tab content
-    });
-}
+            // Change the active tab content
+            $('div[id$="tab-content"]').removeClass('active'); // Hide all tab contents
+            $('#signup-tab-content').addClass('active'); // Show the sign-up tab content
+        });
+    }
 );

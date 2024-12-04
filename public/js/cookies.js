@@ -1,3 +1,4 @@
+
 // Funció per acceptar cookies
 function acceptCookies() {
     document.getElementById("cookie-banner").style.display = "none";
@@ -9,3 +10,6 @@ function rejectCookies() {
     document.getElementById("cookie-banner").style.display = "none";
     localStorage.setItem("cookiesPreference", "rejected"); // Guarda la preferència com a "rejected" en localStorage
 }
+
+// Comprova l'estat al carregar la pàgina
+
