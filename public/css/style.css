@@ -88,19 +88,26 @@ html, body {
 h1 {
     margin-top: 20px;
 }
-/*Perfils*/
+/* Perfils */
+.text-center {
+    margin-bottom: 0; /* Elimina el margen inferior del texto centrado */
+}
+
+#carrousel {
+    margin-top: -150px; /* Reduce el espacio entre "Qui som?" y los perfiles */
+}
 
 .container {
     display: flex;
     justify-content: center;
     gap: 20px; /* Espacio entre tarjetas */
-    flex-wrap: nowrap; /* Evita que los perfiles se desplacen a una nueva línea */
+    flex-wrap: wrap; /* Permite que los perfiles se desplacen a una nueva línea */
 }
 
 .profile-card {
     background-color: #d8d8d8;
     border-radius: 10px; /* Bordes redondeados */
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     padding: 20px;
     text-align: center;
     width: 250px;
@@ -133,6 +140,42 @@ h1 {
     font-size: 14px;
     color: #666;
     margin: 5px 0;
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    #carrousel {
+        margin-top: 20px; /* Ajusta el margen para móviles */
+    }
+    .container {
+        flex-direction: column; /* Coloca las tarjetas en columna */
+        align-items: center; /* Centra las tarjetas */
+        gap: 30px; /* Incrementa el espacio entre tarjetas */
+    }
+    .profile-card {
+        width: 90%; /* Reduce el ancho al 90% del contenedor */
+    }
+}
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .container {
+        flex-wrap: wrap; /* Permite que las tarjetas se ajusten */
+        justify-content: space-evenly; /* Espacio uniforme en tablets */
+    }
+    .profile-card {
+        width: 45%; /* Ajusta el tamaño de las tarjetas */
+    }
+}
+
+/* Pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+    .container {
+        flex-wrap: nowrap; /* Mantiene las tarjetas en una fila */
+        gap: 20px; /* Mantiene el espacio entre tarjetas */
+    }
 }
 
 
@@ -963,6 +1006,7 @@ button:hover {
     max-width: 1200px;
     margin: 0 auto; /* Centramos el contenido en la pantalla */
     padding: 20px; /* Espaciado global */
+    flex-wrap: wrap; /* Permite apilar elementos en pantallas pequeñas */
 }
 
 .contenedor-imagen img {
@@ -977,11 +1021,32 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    padding: 10px;
 }
 
 .text-white {
     color: #ffffff;
 }
 
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .contenedor-horizontal {
+        flex-direction: column; /* Apila elementos */
+        padding: 10px; /* Reduce espacio general */
+    }
 
+    .recuadro {
+        text-align: center; /* Centraliza texto en móviles */
+        padding: 20px 10px;
+    }
 
+    .contenedor-imagen img {
+        max-width: 90%; /* Reduce el ancho de la imagen */
+        margin: 0 auto; /* Centra la imagen */
+    }
+
+    /* Centrar el botón */
+    .recuadro a {
+        margin: 0 auto; /* Centra horizontalmente el botón */
+    }
+}
