@@ -1,7 +1,6 @@
 $(function() {
     var tab = $('.tabs h3 a');
     tab.on('click', function(event) {
-        event.preventDefault();
         tab.removeClass('active');
         $(this).addClass('active');
         var tab_content = $(this).attr('href');
@@ -35,7 +34,6 @@ $(function() {
 // SHOW/HIDE PANEL ROUTINE
 $(function() {
     $('.agree,.forgot, #toggle-terms, .log-in, .sign-up').on('click', function(event) {
-        event.preventDefault();
         var terms = $('.terms'),
             recovery = $('.recovery'),
             close = $('#toggle-terms'),
@@ -74,7 +72,7 @@ $(function() {
 // DISPLAY MESSAGE
 $(function() {
     $('.recovery .button').on('click', function(event) {
-        event.preventDefault();
+
         $('.recovery .mssg').addClass('animate');
         setTimeout(function() {
             $('.recovery').swapClass('open', 'closed');
@@ -84,21 +82,10 @@ $(function() {
         }, 2500);
     });
 });
-
-// DISABLE SUBMIT FOR DEMO
-$(function() {
-    $('.button').on('click', function(event) {
-        $(this).stop();
-        event.preventDefault();
-        return false;
-    });
-});
-
 // SWITCH TAB ON SIGN UP CLICK
 $(function() {
     var tab = $('.tabs h3 a');
     tab.on('click', function(event) {
-        event.preventDefault();
         tab.removeClass('active');
         $(this).addClass('active');
         var tab_content = $(this).attr('href');
@@ -108,7 +95,6 @@ $(function() {
 
     // SWITCH TAB ON SIGN UP CLICK
     $('.sign-up').on('click', function(event) {
-        event.preventDefault();
 
         // Activate the sign-up tab
         tab.removeClass('active'); // Remove 'active' class from all tabs
@@ -118,4 +104,5 @@ $(function() {
         $('div[id$="tab-content"]').removeClass('active'); // Hide all tab contents
         $('#signup-tab-content').addClass('active'); // Show the sign-up tab content
     });
-});
+}
+);
