@@ -20,8 +20,7 @@
     "@emailjs/browser": "^4.4.1",
     "emailjs-com": "^3.2.0",
     "express": "^4.21.1",
-    "node-fetch": "^3.3.2",
-    "run": "^1.5.0"
+    "node-fetch": "^3.3.2"
   },
   "description": "",
   "main": "postcss.config.js",
