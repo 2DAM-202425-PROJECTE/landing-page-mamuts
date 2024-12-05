@@ -141,10 +141,6 @@ h1 {
     color: #666;
     margin: 5px 0;
 }
-
-/* Media Queries para Responsividad */
-
-/* Pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     #carrousel {
         margin-top: 20px; /* Ajusta el margen para móviles */
@@ -177,7 +173,6 @@ h1 {
         gap: 20px; /* Mantiene el espacio entre tarjetas */
     }
 }
-
 
 
 
