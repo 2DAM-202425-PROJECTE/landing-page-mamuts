@@ -748,19 +748,18 @@ button:hover {
 .subscribe-button:hover {
     background-color: #333;
 }
-
 /* CSS para el popup */
 .popup-overlay {
-    display: none;
+    display: none; /* Ocultar por defecto */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
     z-index: 1000;
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
 }
 
 .popup-content {
@@ -769,11 +768,45 @@ button:hover {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    width: 400px;
-    position: relative;
+    width: 90%; /* Ajuste para pantallas pequeñas */
+    max-width: 400px; /* Limitar ancho máximo */
+    position: absolute; /* Mantener la posición */
+    top: 50%; /* Posicionar en el medio vertical */
+    left: 50%; /* Posicionar en el medio horizontal */
+    transform: translate(-50%, -50%); /* Centrar usando transform */
+    max-height: 90vh; /* Limitar la altura máxima */
+    overflow-y: auto; /* Agregar desplazamiento si es necesario */
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
-#email-input{
+
+@media screen and (max-width: 768px) {
+    .popup-content {
+        width: 50%; /* Aumentar ancho para pantallas pequeñas */
+        padding: 15px; /* Reducir padding si es necesario */
+        transform: translate(-95%, -50%); /* Centrar usando transform */
+
+    }
+
+    .popup-content h2 {
+        font-size: 16px; /* Ajustar tamaño de texto */
+        margin: 0; /* Eliminar margen superior/inferior */
+    }
+
+    .popup-content p {
+        font-size: 13px;
+        margin: 0; /* Eliminar margen superior/inferior */
+    }
+
+    .popup-content button {
+        font-size: 14px; /* Reducir tamaño de fuente del botón */
+        padding: 8px 16px; /* Ajustar relleno */
+        display: block; /* Asegurar que ocupe toda la línea */
+        margin: 10px auto; /* Centrar el botón con margen */
+    }
+}
+
+#email-input {
     color: black;
 }
 
@@ -851,6 +884,7 @@ button:hover {
     color: #666;
     cursor: pointer;
 }
+
 
 /*Cookies*/
 /* Estil per al bàner de cookies */
@@ -1048,5 +1082,123 @@ button:hover {
     /* Centrar el botón */
     .recuadro a {
         margin: 0 auto; /* Centra horizontalmente el botón */
+    }
+}
+/* Aseguramos que la sección de introducción tenga un contexto de posicionamiento */
+.introduction {
+    position: relative;  /* Necesario para que los elementos hijos con posición absoluta se ubiquen respecto a esta sección */
+}
+
+/* Estilos del contenedor de la imagen */
+.image-container {
+    position: absolute; /* Para que la imagen se quede en la parte superior derecha */
+    margin-top: 140px;
+    margin-right: 50px;
+    top: 0;              /* Alinea la imagen a la parte superior */
+    right: 0;            /* Alinea la imagen a la parte derecha */
+    padding: 10px;       /* Espaciado alrededor de la imagen */
+    text-align: center;  /* Alinea los elementos dentro del contenedor al centro */
+    width: auto;         /* Deja que el contenedor se ajuste al tamaño de la imagen */
+}
+
+/* Estilo de la imagen para que se vea bien */
+.image {
+    width: 150px;        /* Ajusta el tamaño de la imagen */
+    height: auto;        /* Mantiene la relación de aspecto de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    display: block;      /* Cambia el comportamiento de la imagen a bloque */
+    margin-left: auto;   /* Centra la imagen a la izquierda */
+    margin-right: auto;  /* Centra la imagen a la derecha */
+}
+
+/* Contenedor de texto debajo de la imagen */
+.overlay-text {
+    text-align: center;   /* Centra el texto */
+    margin-top: 20px;      /* Ajusta la separación del texto respecto a la imagen */
+    font-size: 1.2rem;     /* Reducimos el tamaño del texto */
+    color: #fff;           /* Color blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mayor legibilidad */
+    line-height: 1.5;      /* Aumenta la altura de línea para mejor legibilidad */
+    max-width: 250px;      /* Limita el ancho del texto para que no ocupe todo el ancho */
+    margin-left: auto;     /* Centra el texto */
+    margin-right: auto;    /* Centra el texto */
+}
+
+/* Estilo del botón */
+.btn-link {
+    display: inline-block; /* Hace que el enlace sea de bloque, similar al botón */
+    margin-top: 20px;      /* Separación del texto de la imagen */
+}
+
+/* Estilos del botón */
+.btn {
+    padding: 12px 24px;        /* Espaciado dentro del botón */
+    font-size: 1.2rem;         /* Tamaño del texto del botón */
+    color: white;              /* Color del texto */
+    background-color: #000;    /* Color de fondo negro */
+    border: none;              /* Sin borde */
+    border-radius: 15px;       /* Bordes redondeados */
+    cursor: pointer;          /* Cambiar cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Animación suave para el color de fondo y sombra */
+}
+
+/* Efecto hover en el botón */
+.btn:hover {
+    background-color: #333;   /* Cambio de color cuando el botón se pasa por encima (gris oscuro) */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3); /* Efecto de resplandor en el hover */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Estilo de la imagen */
+    .image-container {
+        margin-top: 100px;      /* Reducir el margen superior */
+        margin-right: 30px;     /* Reducir el margen derecho */
+        position: relative;     /* Cambiar a relativo para que se pueda mover debajo del texto */
+        top: auto;              /* Eliminar la alineación en la parte superior */
+        right: auto;            /* Eliminar la alineación a la derecha */
+        width: 100%;            /* Hacer que el contenedor ocupe todo el ancho */
+        text-align: center;     /* Asegurarse de que la imagen quede centrada */
+    }
+
+    .image {
+        width: 120px;           /* Reducir el tamaño de la imagen */
+        margin-left: auto;      /* Centrar la imagen */
+        margin-right: auto;     /* Centrar la imagen */
+    }
+
+    .overlay-text {
+        font-size: 1rem;        /* Reducir el tamaño del texto */
+        max-width: 200px;       /* Limitar el ancho del texto */
+    }
+
+    .btn {
+        padding: 10px 20px;      /* Reducir el tamaño del botón */
+        font-size: 1rem;         /* Reducir el tamaño del texto del botón */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (como teléfonos móviles) */
+@media (max-width: 480px) {
+    /* Estilo de la imagen */
+    .image-container {
+        margin-top: 80px;       /* Reducir aún más el margen superior */
+        margin-right: 20px;     /* Reducir aún más el margen derecho */
+        position: relative;     /* Cambiar a relativo para que se pueda mover debajo del texto */
+    }
+
+    .image {
+        width: 100px;           /* Reducir el tamaño de la imagen */
+    }
+
+    .overlay-text {
+        font-size: 0.9rem;      /* Reducir aún más el tamaño del texto */
+        max-width: 180px;       /* Limitar el ancho del texto */
+    }
+
+    .btn {
+        padding: 8px 16px;       /* Reducir aún más el tamaño del botón */
+        font-size: 0.9rem;       /* Reducir el tamaño del texto del botón */
     }
 }
