@@ -782,9 +782,9 @@ button:hover {
 
 @media screen and (max-width: 768px) {
     .popup-content {
-        width: 50%; /* Aumentar ancho para pantallas pequeñas */
+        width: 100%; /* Aumentar ancho para pantallas pequeñas */
         padding: 15px; /* Reducir padding si es necesario */
-        transform: translate(-95%, -50%); /* Centrar usando transform */
+        transform: translate(-50%, -50%); /* Centrar usando transform */
 
     }
 
