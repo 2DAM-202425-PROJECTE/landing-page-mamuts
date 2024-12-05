@@ -110,7 +110,7 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     padding: 20px;
     text-align: center;
-    width: 250px;
+    width: 250px; /* Ancho fijo para las tarjetas */
     transition: transform 0.3s ease;
 }
 
@@ -141,22 +141,27 @@ h1 {
     color: #666;
     margin: 5px 0;
 }
+
+/* Media Queries para Responsividad */
+
+/* Pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     #carrousel {
         margin-top: 20px; /* Ajusta el margen para móviles */
     }
     .container {
-        flex-direction: column; /* Coloca las tarjetas en columna */
-        align-items: center; /* Centra las tarjetas */
-        gap: 30px; /* Incrementa el espacio entre tarjetas */
+        flex-direction: row; /* Mantiene una fila flexible */
+        justify-content: space-evenly; /* Espacio uniforme entre columnas */
+        flex-wrap: wrap; /* Permite que las tarjetas se ajusten */
+        gap: 20px; /* Espacio entre tarjetas */
     }
     .profile-card {
-        width: 90%; /* Reduce el ancho al 90% del contenedor */
+        width: 45%; /* Ocupa el 45% del ancho para que quepan 2 por fila */
     }
 }
 
 /* Pantallas medianas (tablets) */
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .container {
         flex-wrap: wrap; /* Permite que las tarjetas se ajusten */
         justify-content: space-evenly; /* Espacio uniforme en tablets */
@@ -172,8 +177,10 @@ h1 {
         flex-wrap: nowrap; /* Mantiene las tarjetas en una fila */
         gap: 20px; /* Mantiene el espacio entre tarjetas */
     }
+    .profile-card {
+        width: 250px; /* Mantiene un ancho fijo en escritorio */
+    }
 }
-
 
 
 
